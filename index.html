@@ -50,6 +50,8 @@
             --cls-high-bg: #ffedd5;
             --cls-low: #db2777;
             --cls-low-bg: #fce7f3;
+            
+            --graph-bg: #ffffff;
         }
 
         [data-theme="dark"] {
@@ -74,6 +76,8 @@
             --cls-high-bg: #7c2d12;
             --cls-low: #f472b6;
             --cls-low-bg: #701a75;
+            
+            --graph-bg: #1e293b;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -82,29 +86,31 @@
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             background-color: var(--bg);
             color: var(--text);
-            padding-top: calc(16px + env(safe-area-inset-top));
-            padding-bottom: calc(16px + env(safe-area-inset-bottom));
-            padding-left: calc(16px + env(safe-area-inset-left));
-            padding-right: calc(16px + env(safe-area-inset-right));
+            padding: calc(12px + env(safe-area-inset-top)) calc(12px + env(safe-area-inset-right)) calc(12px + env(safe-area-inset-bottom)) calc(12px + env(safe-area-inset-left));
             min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
 
         .container {
             width: 100%;
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             background: var(--card);
             border: 1px solid var(--border);
             border-radius: 16px;
-            padding: 20px;
+            padding: 16px;
             box-shadow: 0 4px 25px rgba(0,0,0,0.02);
+            flex: 1;
+            display: flex;
+            flex-direction: column;
         }
 
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 16px;
+            margin-bottom: 12px;
         }
 
         h1 { font-size: 1.25rem; font-weight: 800; letter-spacing: -0.02em; }
@@ -127,12 +133,12 @@
             background: var(--tab-bg);
             padding: 4px;
             border-radius: 10px;
-            margin-bottom: 16px;
+            margin-bottom: 12px;
         }
 
         .tab-btn {
             flex: 1;
-            min-width: 110px;
+            min-width: 100px;
             padding: 10px 4px;
             border: none;
             background: transparent;
@@ -150,15 +156,16 @@
             box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
 
-        .view-panel { display: none; }
-        .view-panel.active { display: block; }
+        .view-panel { display: none; flex: 1; }
+        .view-panel.active { display: flex; flex-direction: column; }
 
-        /* Zoom Area Mechanics */
+        /* Zoom Area Mechanics Optimization */
         .graph-area {
             position: relative;
             width: 100%;
-            height: 70vh;
-            background: #ffffff;
+            flex: 1;
+            min-height: 60vh;
+            background: var(--graph-bg);
             border-radius: 12px;
             border: 1px solid var(--border);
             overflow: hidden;
@@ -166,9 +173,9 @@
 
         #mermaid-target { width: 100%; height: 100%; min-height: 500px; }
 
-        .interactive-grid { display: flex; flex-direction: column; gap: 12px; }
+        .interactive-grid { display: flex; flex-direction: column; gap: 10px; }
         .step-box { background: var(--tab-bg); padding: 12px; border-radius: 12px; border: 1px solid var(--border); }
-        .step-title { font-size: 0.75rem; font-weight: 700; color: var(--muted); text-transform: uppercase; margin-bottom: 8px; }
+        .step-title { font-size: 0.75rem; font-weight: 700; color: var(--muted); text-transform: uppercase; margin-bottom: 6px; }
         
         .btn-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(90px, 1fr)); gap: 6px; }
         
@@ -186,9 +193,26 @@
         .choice-btn.selected { background: var(--primary); color: white; border-color: var(--primary); }
         .choice-btn:disabled { opacity: 0.25; cursor: not-allowed; }
 
+        /* Audio Action Trigger Icon Element Styles */
+        .audio-trigger-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: var(--primary-light);
+            color: var(--primary);
+            border: none;
+            cursor: pointer;
+            font-size: 0.75rem;
+            transition: transform 0.1s ease;
+        }
+        .audio-trigger-icon:active { transform: scale(0.9); }
+
         /* Output Configuration Display Boxes */
         .result-box {
-            padding: 18px;
+            padding: 14px;
             border-radius: 14px;
             margin-top: 4px;
             display: none;
@@ -204,28 +228,28 @@
         .result-box[data-tone-type="high"] { background-color: var(--tone-high-bg); border-color: var(--tone-high); color: var(--text); }
         .result-box[data-tone-type="rising"] { background-color: var(--tone-rise-bg); border-color: var(--tone-rise); color: var(--text); }
 
-        .res-tone { font-size: 1.5rem; font-weight: 900; margin-bottom: 4px; }
-        .res-rule { font-size: 0.85rem; line-height: 1.4; opacity: 0.85; margin-bottom: 12px; }
+        .res-tone { font-size: 1.35rem; font-weight: 900; margin-bottom: 2px; display: flex; align-items: center; gap: 8px; }
+        .res-rule { font-size: 0.85rem; line-height: 1.4; opacity: 0.85; margin-bottom: 10px; }
         
         .translation-card {
             background: var(--card);
             border: 1px solid var(--border);
             border-radius: 10px;
-            padding: 14px;
+            padding: 10px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.02);
         }
-        .tx-thai { font-size: 2.2rem; font-weight: 800; color: var(--text); }
-        .tx-details { font-size: 0.95rem; color: var(--muted); margin-top: 2px; }
+        .tx-thai { font-size: 2rem; font-weight: 800; color: var(--text); display: flex; align-items: center; gap: 10px; }
+        .tx-details { font-size: 0.9rem; color: var(--muted); margin-top: 2px; }
 
         /* Mnemonics Blueprint Layout styles */
         .m-card {
             background: var(--card);
             border: 1px solid var(--border);
             border-radius: 12px;
-            padding: 16px;
-            margin-bottom: 12px;
+            padding: 14px;
+            margin-bottom: 10px;
         }
-        .m-header { display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 0.95rem; margin-bottom: 6px; }
+        .m-header { display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 0.95rem; margin-bottom: 4px; }
         .m-desc { font-size: 0.85rem; line-height: 1.4; color: var(--muted); }
         
         /* Helper Reference Tags Mapping Styles */
@@ -244,9 +268,9 @@
             display: flex;
             flex-wrap: wrap;
             gap: 4px;
-            margin-bottom: 16px;
+            margin-bottom: 12px;
             border-bottom: 2px solid var(--border);
-            padding-bottom: 6px;
+            padding-bottom: 4px;
         }
         .sub-tab-btn {
             background: transparent;
@@ -265,27 +289,32 @@
         .sub-panel { display: none; }
         .sub-panel.active { display: block; }
 
+        /* Highly Efficient Matrix Responsive Layout Space Allocation */
         .matrix-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-            gap: 10px;
-            margin-top: 10px;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 8px;
+            margin-top: 6px;
         }
+        @media(min-width: 1024px) {
+            .matrix-grid { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+        }
+        
         .char-tile {
             background: var(--card);
             border: 1px solid var(--border);
             border-radius: 10px;
-            padding: 12px;
+            padding: 10px;
             display: flex;
             flex-direction: column;
-            gap: 4px;
+            gap: 2px;
             position: relative;
         }
         .char-tile::before {
             content: '';
             position: absolute;
             left: 0; top: 0; bottom: 0;
-            width: 5px;
+            width: 4px;
             border-top-left-radius: 10px;
             border-bottom-left-radius: 10px;
         }
@@ -293,51 +322,55 @@
         .tile-high::before { background: var(--cls-high); }
         .tile-low::before { background: var(--cls-low); }
 
-        .tile-head { display: flex; align-items: baseline; gap: 8px; }
-        .tile-glyph { font-size: 1.8rem; font-weight: 800; }
-        .tile-name { font-size: 0.85rem; font-weight: 600; color: var(--text); }
+        .tile-head { display: flex; align-items: center; justify-content: space-between; width: 100%; }
+        .tile-glyph-container { display: flex; align-items: baseline; gap: 6px; }
+        .tile-glyph { font-size: 1.6rem; font-weight: 800; }
+        .tile-name { font-size: 0.8rem; font-weight: 600; color: var(--text); }
         .tile-meta { font-size: 0.75rem; color: var(--muted); line-height: 1.3; }
 
         .info-strip {
             background: var(--tab-bg);
             border-left: 4px solid var(--primary);
-            padding: 12px;
+            padding: 10px;
             border-radius: 0 8px 8px 0;
             font-size: 0.85rem;
-            margin-bottom: 16px;
+            margin-bottom: 12px;
             line-height: 1.4;
         }
 
         .engine-container {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 16px;
+            gap: 12px;
+            flex: 1;
         }
         @media(min-width: 768px) {
             .engine-container { grid-template-columns: 1fr 1fr; }
         }
         
+        .input-panel-wrapper { display: flex; flex-direction: column; gap: 6px; }
+        .input-area-header { display: flex; align-items: center; justify-content: space-between; }
+        
         .input-area textarea {
             width: 100%;
-            height: 120px;
-            padding: 12px;
+            height: 100px;
+            padding: 10px;
             border-radius: 10px;
             border: 2px solid var(--border);
             background: var(--card);
             color: var(--text);
             font-family: inherit;
-            font-size: 1.1rem;
+            font-size: 1.25rem;
             resize: none;
+            flex: 1;
         }
-        .input-area textarea:focus {
-            outline: none;
-            border-color: var(--primary);
-        }
+        @media(min-width: 768px) { .input-area textarea { height: 100%; } }
+        .input-area textarea:focus { outline: none; border-color: var(--primary); }
 
         .trace-node {
             border-left: 3px solid var(--border);
-            padding-left: 12px;
-            margin-bottom: 12px;
+            padding-left: 10px;
+            margin-bottom: 10px;
             position: relative;
         }
         .trace-node::before {
@@ -349,8 +382,8 @@
             background: var(--muted);
         }
         .trace-node.success::before { background: var(--tone-low); }
-        .trace-title { font-weight: 700; font-size: 0.85rem; text-transform: uppercase; color: var(--muted); margin-bottom: 2px;}
-        .trace-body { font-size: 0.9rem; line-height: 1.4; }
+        .trace-title { font-weight: 700; font-size: 0.75rem; text-transform: uppercase; color: var(--muted); margin-bottom: 2px;}
+        .trace-body { font-size: 0.85rem; line-height: 1.4; }
     </style>
 </head>
 <body>
@@ -413,12 +446,18 @@
 
                 <div class="result-box" id="output-screen" data-tone-type="mid">
                     <div style="font-size:0.7rem; font-weight:700; text-transform:uppercase; opacity:0.7; margin-bottom:2px;">Calculated Output Accent</div>
-                    <div class="res-tone" id="res-tone-title">Mid Tone —</div>
+                    <div class="res-tone">
+                        <span id="res-tone-title">Mid Tone —</span>
+                        <button class="audio-trigger-icon" id="speak-tone-btn" title="Listen Audio">🔊</button>
+                    </div>
                     <div class="res-rule" id="res-rule-desc">Rule metadata.</div>
                     
                     <div class="translation-card">
                         <div style="font-size:0.65rem; font-weight:800; color:var(--muted); text-transform:uppercase; margin-bottom:6px; letter-spacing:0.02em;">Target Context Word Realization</div>
-                        <div class="tx-thai" id="ctx-thai">กาน</div>
+                        <div class="tx-thai">
+                            <span id="ctx-thai">กาน</span>
+                            <button class="audio-trigger-icon" id="speak-word-btn" title="Listen Word">🔊</button>
+                        </div>
                         <div class="tx-details" id="ctx-details">kaan • "to manage"</div>
                     </div>
                 </div>
@@ -427,8 +466,8 @@
         </div>
 
         <div id="p-flowchart" class="view-panel">
-            <div class="info-strip">
-                <b>Interactive Map Viewport:</b> Use your mouse wheel or double-tap/pinch on mobile devices to dynamically pan and zoom across acoustic calculation boundaries.
+            <div class="info-strip" style="margin-bottom:6px;">
+                <b>Interactive Map Viewport:</b> Use your mouse wheel or double-tap/pinch on mobile devices to dynamically pan and zoom. Theme auto-inverts configurations dynamically.
             </div>
             <div class="graph-area">
                 <div id="mermaid-target"></div>
@@ -444,30 +483,30 @@
 
             <div id="sub-consonants" class="sub-panel active">
                 <div class="info-strip">
-                    Consonants are structured into <b>Mid (9)</b>, <b>High (11)</b>, and <b>Low (24)</b> classes. This fundamental classification acts as the acoustic starting point for all tone calculation operations.
+                    Consonants are structured into <b>Mid (9)</b>, <b>High (11)</b>, and <b>Low (24)</b> classes. Tap 🔊 to hear the character audio pronunciation.
                 </div>
                 <div class="matrix-grid" id="consonant-inject-target"></div>
             </div>
 
             <div id="sub-vowels" class="sub-panel">
                 <div class="info-strip">
-                    Thai vowels are defined by their acoustic duration profile (<b>Short</b> vs. <b>Long</b>). This duration directly changes tone tracking behavior when paired with dead syllable configurations.
+                    Thai vowels are defined by their acoustic duration profile (<b>Short</b> vs. <b>Long</b>). Tap 🔊 to hear the vowel structural accent.
                 </div>
                 <div class="matrix-grid" id="vowel-inject-target"></div>
             </div>
 
             <div id="sub-syllables" class="sub-panel">
                 <div class="info-strip">
-                    Syllables define how speech segments terminate, altering acoustic release patterns and tracking constraints.
+                    Syllables define how speech segments terminate, altering acoustic release patterns.
                 </div>
-                <div style="display: grid; grid-template-columns: 1fr; gap:16px;">
+                <div style="display: grid; grid-template-columns: 1fr; gap:12px;">
                     <div class="m-card" style="border-left: 4px solid var(--tone-low);">
                         <div class="m-header">🟢 Live Syllables (คำเป็น)</div>
                         <div class="m-desc" style="color: var(--text);">
-                            Syllables that end with an uninhibited vocal pathway, allowing the sound to naturally sustain or drift.
+                            Syllables that end with an uninhibited vocal pathway, allowing the sound to naturally sustain.
                             <br/><br/>
                             <b>How to Identify:</b>
-                            <ul style="margin-left: 20px; margin-top: 6px; line-height: 1.5;">
+                            <ul style="margin-left: 20px; margin-top: 4px; line-height: 1.5;">
                                <li>Ends with a <b>Long Vowel</b> with no final consonant stop (e.g., มา - maa).</li>
                                <li>Ends with a continuous sonorant ringing nasal track: <b>-n (น, ณ, ญ, ร, ล, ฬ), -m (ม), -ng (ง)</b>.</li>
                                <li>Ends with semi-vowel vocalic diphthongs: <b>-w (ว), -y (ย)</b>.</li>
@@ -477,10 +516,10 @@
                     <div class="m-card" style="border-left: 4px solid var(--tone-fall);">
                         <div class="m-header">🔴 Dead Syllables (คำตาย)</div>
                         <div class="m-desc" style="color: var(--text);">
-                            Syllables that arrest the air column abruptly, ending with a sharp change in internal mouth pressure.
+                            Syllables that arrest the air column abruptly, ending with a sharp change in pressure.
                             <br/><br/>
                             <b>How to Identify:</b>
-                            <ul style="margin-left: 20px; margin-top: 6px; line-height: 1.5;">
+                            <ul style="margin-left: 20px; margin-top: 4px; line-height: 1.5;">
                                <li>Ends with a <b>Short Vowel</b> and lacks any following consonant stop (e.g., จะ - ja).</li>
                                <li>Ends with an unreleased abrupt plosive stop consonant: <b>-k (ก, ข, ค, ฆ), -p (บ, ป, พ, ฟ, ภ), -t (ด, ต, ถ, ท, ธ, ศ, ษ, ส...)</b>.</li>
                             </ul>
@@ -491,19 +530,24 @@
         </div>
 
         <div id="p-analyzer" class="view-panel">
-            <div class="info-strip">
-                <b>Parsing Engine Workspace:</b> Enter a Thai word below. The engine will decompose the text into component characters, evaluate environmental configurations, and render acoustic derivation metrics.
+            <div class="info-strip" style="margin-bottom:8px;">
+                <b>Parsing Engine Workspace:</b> Enter a Thai word below. The system automatically routes real-time custom audios via native speech synthesizers.
             </div>
             
             <div class="engine-container">
-                <div class="input-area">
-                    <div style="font-weight: 700; font-size:0.85rem; text-transform: uppercase; color:var(--muted); margin-bottom: 6px;">Input Array Target</div>
-                    <textarea id="analyzer-input" placeholder="Type or paste Thai characters here... (e.g., กบ, รัก, พูด, ไก่, ห้า)" oninput="runAcousticAnalysis()"></textarea>
+                <div class="input-panel-wrapper">
+                    <div class="input-area-header">
+                        <div style="font-weight: 700; font-size:0.85rem; text-transform: uppercase; color:var(--muted);">Input Array Target</div>
+                        <button class="audio-trigger-icon" onclick="speakInputText()" style="width:32px; height:32px;" title="Speak Entire Array Input">🔊</button>
+                    </div>
+                    <div class="input-area" style="flex:1; display:flex;">
+                        <textarea id="analyzer-input" placeholder="Type or paste Thai characters here... (e.g., กบ, รัก, พูด, ไก่, ห้า)" oninput="runAcousticAnalysis()"></textarea>
+                    </div>
                 </div>
                 
                 <div>
                     <div style="font-weight: 700; font-size:0.85rem; text-transform: uppercase; color:var(--muted); margin-bottom: 6px;">Real-Time Execution Evaluation Trace</div>
-                    <div id="analyzer-output" style="background: var(--tab-bg); border: 1px solid var(--border); border-radius:10px; padding:14px; min-height:120px;">
+                    <div id="analyzer-output" style="background: var(--tab-bg); border: 1px solid var(--border); border-radius:10px; padding:12px; min-height:120px; height: calc(100% - 24px); overflow-y:auto;">
                         <p style="color: var(--muted); font-size: 0.9rem;">Awaiting target context character parsing initialization parameters...</p>
                     </div>
                 </div>
@@ -611,34 +655,34 @@
 
         // All 32 Complete Vowel Configurations Layout
         const vowelsData = [
-            { char: "-ะ", length: "short", transcription: "a", matching: "กะ (ga)" },
-            { char: "-า", length: "long", transcription: "aa", matching: "กา (gaa)" },
+            { char: "ะ", length: "short", transcription: "a", matching: "กะ (ga)" },
+            { char: "า", length: "long", transcription: "aa", matching: "กา (gaa)" },
             { char: "ิ", length: "short", transcription: "i", matching: "กิ (gi)" },
             { char: "ี", length: "long", transcription: "ii", matching: "กี (gii)" },
             { char: "ึ", length: "short", transcription: "ue", matching: "กึ (gue)" },
             { char: "ื", length: "long", transcription: "uee", matching: "กือ (guee)" },
             { char: "ุ", length: "short", transcription: "u", matching: "กุ (gu)" },
             { char: "ู", length: "long", transcription: "uu", matching: "กู (guu)" },
-            { char: "เ-ะ", length: "short", transcription: "e", matching: "เกะ (ge)" },
-            { char: "เ-", length: "long", transcription: "ee", matching: "เก (gee)" },
-            { char: "แ-ะ", length: "short", transcription: "ae", matching: "แกะ (gae)" },
-            { char: "แ-", length: "long", transcription: "aee", matching: "แก (gaee)" },
-            { char: "โ-ะ", length: "short", transcription: "o", matching: "โกะ (go)" },
-            { char: "โ-", length: "long", transcription: "oo", matching: "โก (goo)" },
-            { char: "เ-าะ", length: "short", transcription: "or", matching: "เกาะ (gor)" },
-            { char: "อ / -อ", length: "long", transcription: "orr", matching: "กอ (gorr)" },
-            { char: "เ-ิะ", length: "short", transcription: "oe", matching: "เกิธ (goe)" },
-            { char: "เ-อ", length: "long", transcription: "oee", matching: "เจอ (joee)" },
-            { char: "เี-ยะ", length: "short", transcription: "ia", matching: "เกียะ (gia)" },
-            { char: "เี-ย", length: "long", transcription: "iia", matching: "เกีย (giia)" },
-            { char: "เื-อะ", length: "short", transcription: "uea", matching: "เกือะ (guea)" },
-            { char: "เื-อ", length: "long", transcription: "uuea", matching: "เสือ (suuea)" },
-            { char: "ั-วะ", length: "short", transcription: "ua", matching: "กัวะ (gua)" },
-            { char: "ั-ว / -ว", length: "long", transcription: "uua", matching: "ตัว (tuua)" },
+            { char: "เะ", length: "short", transcription: "e", matching: "เกะ (ge)" },
+            { char: "เ", length: "long", transcription: "ee", matching: "เก (gee)" },
+            { char: "แะ", length: "short", transcription: "ae", matching: "แกะ (gae)" },
+            { char: "แ", length: "long", transcription: "aee", matching: "แก (gaee)" },
+            { char: "โะ", length: "short", transcription: "o", matching: "โกะ (go)" },
+            { char: "โ", length: "long", transcription: "oo", matching: "โก (goo)" },
+            { char: "เาะ", length: "short", transcription: "or", matching: "เกาะ (gor)" },
+            { char: "อ", length: "long", transcription: "orr", matching: "กอ (gorr)" },
+            { char: "เิะ", length: "short", transcription: "oe", matching: "เกิธ (goe)" },
+            { char: "เอ", length: "long", transcription: "oee", matching: "เจอ (joee)" },
+            { char: "เอียะ", length: "short", transcription: "ia", matching: "เกียะ (gia)" },
+            { char: "เอีย", length: "long", transcription: "iia", matching: "เกีย (giia)" },
+            { char: "เอือะ", length: "short", transcription: "uea", matching: "เกือะ (guea)" },
+            { char: "เอือ", length: "long", transcription: "uuea", matching: "เสือ (suuea)" },
+            { char: "อัวะ", length: "short", transcription: "ua", matching: "กัวะ (gua)" },
+            { char: "อัว", length: "long", transcription: "uua", matching: "ตัว (tuua)" },
             { char: "ำ", length: "short", transcription: "am", matching: "รำ (ram)" },
-            { char: "ไ-", length: "short", transcription: "ai", matching: "ไม (mai)" },
-            { char: "ใ-", length: "short", transcription: "ai", matching: "ใจ (jai)" },
-            { char: "เ-า", length: "short", transcription: "ao", matching: "เภา (pao)" },
+            { char: "ไ", length: "short", transcription: "ai", matching: "ไม (mai)" },
+            { char: "ใ", length: "short", transcription: "ai", matching: "ใจ (jai)" },
+            { char: "เา", length: "short", transcription: "ao", matching: "เภา (pao)" },
             { char: "ฤ", length: "short", transcription: "ri / rue", matching: "ฤทธิ์ (rit)" },
             { char: "ฤา", length: "long", transcription: "ruee", matching: "ฤา (ruee)" },
             { char: "ฦ", length: "short", transcription: "lue", matching: "ฦ (lue)" },
@@ -691,6 +735,51 @@
     class B_High,D_High,D_High2 h_c;
     class B_Rise,C_Rise r_c;`;
 
+        // HIGH LEVEL NATIVE ADAPTIVE TEXT-TO-SPEECH MANAGEMENT CORE Engine
+        function speakThaiText(text, alternativeFallbackText = '') {
+            if (!('speechSynthesis' in window)) return;
+            window.speechSynthesis.cancel(); // Terminate background audio queues instantly
+
+            // Analyze system architectures to identify Apple platforms vs secondary systems
+            const isApplePlatform = /iPhone|iPad|iPod|Macintosh/i.test(navigator.userAgent);
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = 'th-TH';
+            utterance.rate = isApplePlatform ? 0.85 : 0.95; // Fluid speed correction loops
+            utterance.pitch = 1.0;
+
+            // Gather structural system voice arrays
+            let voices = window.speechSynthesis.getVoices();
+            let chosenVoice = null;
+
+            if (isApplePlatform) {
+                // Pinpoint premium native Apple Thai rendering options
+                chosenVoice = voices.find(v => v.lang.includes('th-TH') && (v.name.includes('Narisa') || v.name.includes('Siri')));
+            } else {
+                // Pinpoint dedicated corporate cloud engine channels (Google Web/Microsoft Desktop)
+                chosenVoice = voices.find(v => v.lang.includes('th-TH') && (v.name.includes('Google') || v.name.includes('Natural')));
+            }
+
+            // Universal runtime tracking fallback loop structures
+            if (!chosenVoice) chosenVoice = voices.find(v => v.lang.includes('th-TH'));
+            if (chosenVoice) utterance.voice = chosenVoice;
+
+            // Error mitigation loop falling back on translation text strings if primary targets lack characters
+            utterance.onerror = () => {
+                if (alternativeFallbackText) {
+                    const fallbackUtterance = new SpeechSynthesisUtterance(alternativeFallbackText);
+                    fallbackUtterance.lang = 'en-US';
+                    window.speechSynthesis.speak(fallbackUtterance);
+                }
+            };
+
+            window.speechSynthesis.speak(utterance);
+        }
+
+        function speakInputText() {
+            const currentInputValue = document.getElementById("analyzer-input").value.trim();
+            if (currentInputValue) speakThaiText(currentInputValue);
+        }
+
         function setParam(key, value, elem) {
             elem.parentNode.querySelectorAll('.choice-btn').forEach(b => b.classList.remove('selected'));
             elem.classList.add('selected');
@@ -740,6 +829,10 @@
                 document.getElementById('ctx-details').innerText = match.details;
                 outScreen.classList.add('show');
                 outScreen.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+                // Configure instant localized structural actions onto action trigger interfaces
+                document.getElementById('speak-tone-btn').onclick = () => speakThaiText(match.tone.split(' ')[0]);
+                document.getElementById('speak-word-btn').onclick = () => speakThaiText(match.word);
             }
         }
 
@@ -751,7 +844,25 @@
             if (panZoomInstance) { panZoomInstance.destroy(); panZoomInstance = null; }
             
             container.removeAttribute("data-processed");
-            container.textContent = direction + baseGraph;
+            
+            // Core theme evaluation matrices routing inverted parameters straight into runtime styles
+            const isDarkModeActive = document.documentElement.getAttribute("data-theme") === "dark";
+            const evaluatedLineColor = isDarkModeActive ? '#64748b' : '#94a3b8';
+            const evaluatedTextColor = isDarkModeActive ? '#f8fafc' : '#0f172a';
+            const evaluatedNodeBg = isDarkModeActive ? '#1e293b' : '#f1f5f9';
+            const evaluatedNodeBorder = isDarkModeActive ? '#334155' : '#64748b';
+
+            let dynamicStyleOverrides = `
+                %%{init: { 'theme': 'base', 'themeVariables': { 
+                    'primaryColor': '${evaluatedNodeBg}', 
+                    'lineColor': '${evaluatedLineColor}', 
+                    'textColor': '${evaluatedTextColor}', 
+                    'mainBkg': '${evaluatedNodeBg}',
+                    'nodeBorder': '${evaluatedNodeBorder}'
+                }} }%%
+            `;
+
+            container.textContent = dynamicStyleOverrides + "\n" + direction + baseGraph;
             
             mermaid.run({ nodes: [container] }).then(() => {
                 const svgElement = container.querySelector('svg');
@@ -795,11 +906,14 @@
 
         function buildReferenceGrids() {
             const conTarget = document.getElementById("consonant-inject-target");
-            conTarget.innerHTML = consonantsData.map(c => `
+            conTarget.innerHTML = consonantsData.map((c, index) => `
                 <div class="char-tile tile-${c.class}">
                     <div class="tile-head">
-                        <span class="tile-glyph">${c.char}</span>
-                        <span class="tile-name">${c.name}</span>
+                        <div class="tile-glyph-container">
+                            <span class="tile-glyph">${c.char}</span>
+                            <span class="tile-name">${c.name}</span>
+                        </div>
+                        <button class="audio-trigger-icon" onclick="speakThaiText('${c.char}')" title="Listen Pronunciation">🔊</button>
                     </div>
                     <div class="tile-meta">
                         <b>Class:</b> ${c.class.toUpperCase()}<br/>
@@ -813,8 +927,11 @@
             vowTarget.innerHTML = vowelsData.map(v => `
                 <div class="char-tile" style="border-left: 4px solid ${v.length === 'long' ? 'var(--tone-low)' : 'var(--tone-fall)'};">
                     <div class="tile-head">
-                        <span class="tile-glyph" style="font-size:1.5rem;">${v.char}</span>
-                        <span class="tile-name">[ ${v.transcription} ]</span>
+                        <div class="tile-glyph-container">
+                            <span class="tile-glyph" style="font-size:1.4rem;">${v.char}</span>
+                            <span class="tile-name">[ ${v.transcription} ]</span>
+                        </div>
+                        <button class="audio-trigger-icon" onclick="speakThaiText('${v.char}')" title="Listen Vowel">🔊</button>
                     </div>
                     <div class="tile-meta">
                         <b>Duration Type:</b> <span style="text-transform:uppercase; font-weight:700; color:${v.length === 'long' ? 'var(--tone-low)' : 'var(--tone-fall)'}">${v.length}</span><br/>
@@ -902,7 +1019,10 @@
                     <div class="trace-body">Termination Envelope: <b>${syllableType.toUpperCase()} Syllable</b> Boundary (Vowel Duration Mode: <b>${vowelLength.toUpperCase()}</b>). Final check variant: ${finalConsonant ? finalConsonant.char : "Open Segment Core"}.</div>
                 </div>
                 <div class="trace-node success" style="margin-bottom:0;">
-                    <div class="trace-title" style="color:var(--primary);">Resolved Acoustic Calculation Output</div>
+                    <div class="trace-title" style="color:var(--primary); display:flex; align-items:center; gap:8px;">
+                        <span>Resolved Acoustic Calculation Output</span>
+                        <button class="audio-trigger-icon" onclick="speakThaiText('${calculationResult.tone.split(' ')[0]}')" title="Speak Tone Outcome">🔊</button>
+                    </div>
                     <div class="trace-body" style="font-size:1.1rem; font-weight:800; margin-top:4px;">${calculationResult.tone}</div>
                     <div style="font-size:0.8rem; margin-top:4px; opacity:0.85;">${calculationResult.desc}</div>
                 </div>
@@ -919,6 +1039,8 @@
 
         window.addEventListener('DOMContentLoaded', () => {
             buildReferenceGrids();
+            // Fire up native Speech Web Synthesis checks early to reduce interface lag
+            if ('speechSynthesis' in window) window.speechSynthesis.getVoices();
         });
 
         if ('serviceWorker' in navigator) {
