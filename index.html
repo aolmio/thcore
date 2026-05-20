@@ -28,6 +28,7 @@
             --muted: #64748b;
             --border: #e2e8f0;
             --primary: #2563eb;
+            --primary-light: #dbeafe;
             --tab-bg: #f1f5f9;
             
             /* Structural Color Identity Tracks for Thai Tones */
@@ -41,6 +42,14 @@
             --tone-high-bg: #f3e8ff;
             --tone-rise: #b45309;
             --tone-rise-bg: #fef3c7;
+
+            /* Consonant Class Identification Tracks */
+            --cls-mid: #0284c7;
+            --cls-mid-bg: #e0f2fe;
+            --cls-high: #ea580c;
+            --cls-high-bg: #ffedd5;
+            --cls-low: #db2777;
+            --cls-low-bg: #fce7f3;
         }
 
         [data-theme="dark"] {
@@ -50,6 +59,7 @@
             --muted: #94a3b8;
             --border: #334155;
             --primary: #3b82f6;
+            --primary-light: #1e3a8a;
             --tab-bg: #334155;
             
             --tone-mid-bg: #334155;
@@ -57,6 +67,13 @@
             --tone-fall-bg: #7f1d1d;
             --tone-high-bg: #4c1d95;
             --tone-rise-bg: #78350f;
+
+            --cls-mid: #38bdf8;
+            --cls-mid-bg: #0c4a6e;
+            --cls-high: #fb923c;
+            --cls-high-bg: #7c2d12;
+            --cls-low: #f472b6;
+            --cls-low-bg: #701a75;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -65,13 +82,16 @@
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             background-color: var(--bg);
             color: var(--text);
-            padding: calc(16px + env(safe-area-inset-top)) calc(16px + env(safe-area-inset-right)) calc(16px + env(safe-area-inset-bottom)) calc(16px + env(safe-area-inset-left));
+            padding-top: calc(16px + env(safe-area-inset-top));
+            padding-bottom: calc(16px + env(safe-area-inset-bottom));
+            padding-left: calc(16px + env(safe-area-inset-left));
+            padding-right: calc(16px + env(safe-area-inset-right));
             min-height: 100vh;
         }
 
         .container {
             width: 100%;
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 0 auto;
             background: var(--card);
             border: 1px solid var(--border);
@@ -102,28 +122,26 @@
 
         .tabs {
             display: flex;
+            flex-wrap: wrap;
             gap: 4px;
             background: var(--tab-bg);
             padding: 4px;
             border-radius: 10px;
             margin-bottom: 16px;
-            overflow-x: auto;
-            scrollbar-width: none;
         }
-        .tabs::-webkit-scrollbar { display: none; }
 
         .tab-btn {
             flex: 1;
-            min-width: 100px;
+            min-width: 110px;
             padding: 10px 4px;
             border: none;
             background: transparent;
             color: var(--muted);
             font-weight: 700;
-            font-size: 0.82rem;
+            font-size: 0.85rem;
             border-radius: 8px;
             cursor: pointer;
-            white-space: nowrap;
+            text-align: center;
         }
 
         .tab-btn.active {
@@ -139,15 +157,14 @@
         .graph-area {
             position: relative;
             width: 100%;
-            height: 65vh;
+            height: 70vh;
             background: #ffffff;
             border-radius: 12px;
             border: 1px solid var(--border);
             overflow: hidden;
         }
 
-        #mermaid-target { width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; }
-        #mermaid-target svg { max-width: 100% !important; max-height: 100% !important; }
+        #mermaid-target { width: 100%; height: 100%; min-height: 500px; }
 
         .interactive-grid { display: flex; flex-direction: column; gap: 12px; }
         .step-box { background: var(--tab-bg); padding: 12px; border-radius: 12px; border: 1px solid var(--border); }
@@ -222,38 +239,118 @@
             margin-left: auto;
         }
 
-        /* Lexicon Lists & Structured Tables Styles */
-        .ref-section { margin-bottom: 24px; }
-        .ref-section h3 { font-size: 1.1rem; margin-bottom: 10px; font-weight: 700; display: flex; align-items: center; gap: 6px; }
-        
-        .grid-data {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 12px;
-            margin-top: 8px;
+        /* Sub-tab reference layouts */
+        .ref-sub-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+            margin-bottom: 16px;
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 6px;
         }
-        .data-card {
+        .sub-tab-btn {
+            background: transparent;
+            border: none;
+            padding: 6px 12px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--muted);
+            cursor: pointer;
+            border-radius: 6px;
+        }
+        .sub-tab-btn.active {
+            background: var(--primary-light);
+            color: var(--primary);
+        }
+        .sub-panel { display: none; }
+        .sub-panel.active { display: block; }
+
+        .matrix-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .char-tile {
             background: var(--card);
             border: 1px solid var(--border);
             border-radius: 10px;
             padding: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            position: relative;
         }
-        .char-cluster {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: var(--primary);
-            letter-spacing: 2px;
-            margin-bottom: 4px;
-            word-break: break-all;
+        .char-tile::before {
+            content: '';
+            position: absolute;
+            left: 0; top: 0; bottom: 0;
+            width: 5px;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
         }
-        .char-desc { font-size: 0.85rem; color: var(--text); line-height: 1.4; }
-        .char-muted { font-size: 0.78rem; color: var(--muted); margin-top: 4px; }
+        .tile-mid::before { background: var(--cls-mid); }
+        .tile-high::before { background: var(--cls-high); }
+        .tile-low::before { background: var(--cls-low); }
 
-        .ref-table-wrapper { width: 100%; overflow-x: auto; border: 1px solid var(--border); border-radius: 10px; margin-top: 8px; }
-        .ref-table { width: 100%; border-collapse: collapse; text-align: left; font-size: 0.85rem; }
-        .ref-table th { background: var(--tab-bg); color: var(--text); padding: 10px; font-weight: 700; }
-        .ref-table td { padding: 10px; border-top: 1px solid var(--border); color: var(--text); background: var(--card); }
-        .thai-highlight { font-size: 1.2rem; font-weight: 700; color: var(--text); }
+        .tile-head { display: flex; align-items: baseline; gap: 8px; }
+        .tile-glyph { font-size: 1.8rem; font-weight: 800; }
+        .tile-name { font-size: 0.85rem; font-weight: 600; color: var(--text); }
+        .tile-meta { font-size: 0.75rem; color: var(--muted); line-height: 1.3; }
+
+        .info-strip {
+            background: var(--tab-bg);
+            border-left: 4px solid var(--primary);
+            padding: 12px;
+            border-radius: 0 8px 8px 0;
+            font-size: 0.85rem;
+            margin-bottom: 16px;
+            line-height: 1.4;
+        }
+
+        .engine-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+        }
+        @media(min-width: 768px) {
+            .engine-container { grid-template-columns: 1fr 1fr; }
+        }
+        
+        .input-area textarea {
+            width: 100%;
+            height: 120px;
+            padding: 12px;
+            border-radius: 10px;
+            border: 2px solid var(--border);
+            background: var(--card);
+            color: var(--text);
+            font-family: inherit;
+            font-size: 1.1rem;
+            resize: none;
+        }
+        .input-area textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        .trace-node {
+            border-left: 3px solid var(--border);
+            padding-left: 12px;
+            margin-bottom: 12px;
+            position: relative;
+        }
+        .trace-node::before {
+            content: '';
+            position: absolute;
+            left: -6px; top: 4px;
+            width: 9px; height: 9px;
+            border-radius: 50%;
+            background: var(--muted);
+        }
+        .trace-node.success::before { background: var(--tone-low); }
+        .trace-title { font-weight: 700; font-size: 0.85rem; text-transform: uppercase; color: var(--muted); margin-bottom: 2px;}
+        .trace-body { font-size: 0.9rem; line-height: 1.4; }
     </style>
 </head>
 <body>
@@ -270,8 +367,8 @@
         <div class="tabs">
             <button class="tab-btn active" onclick="switchView('interactive')" id="t-interactive">Rule Calculator</button>
             <button class="tab-btn" onclick="switchView('flowchart')" id="t-flowchart">Color Flow Map</button>
-            <button class="tab-btn" onclick="switchView('consonants')" id="t-consonants">Consonant Classes</button>
-            <button class="tab-btn" onclick="switchView('syllables')" id="t-syllables">Syllables & Vowels</button>
+            <button class="tab-btn" onclick="switchView('dictionary')" id="t-dictionary">Phonetic Matrix Lookup</button>
+            <button class="tab-btn" onclick="switchView('analyzer')" id="t-analyzer">Parsing Engine</button>
             <button class="tab-btn" onclick="switchView('mnemonics')" id="t-mnemonics">Mnemonic Shortcuts</button>
         </div>
 
@@ -330,253 +427,85 @@
         </div>
 
         <div id="p-flowchart" class="view-panel">
+            <div class="info-strip">
+                <b>Interactive Map Viewport:</b> Use your mouse wheel or double-tap/pinch on mobile devices to dynamically pan and zoom across acoustic calculation boundaries.
+            </div>
             <div class="graph-area">
                 <div id="mermaid-target"></div>
             </div>
         </div>
 
-        <div id="p-consonants" class="view-panel">
-            <div class="ref-section">
-                <h3><span style="color:var(--tone-mid);">■</span> Mid Class Consonants (อักษรกลาง)</h3>
-                <p class="char-desc" style="margin-bottom:8px;">9 letters. Natively produced with a neutral, non-aspirated sound profile. Total layout stability.</p>
-                <div class="grid-data">
-                    <div class="data-card">
-                        <div class="char-cluster">ก จ ด ต บ ป อ ฎ ฏ</div>
-                        <div class="char-desc"><b>G, J, D, T, B, P, O</b> phonetics. All standard tone markers directly correlate to their intended literal tone results.</div>
-                    </div>
-                </div>
-                
-                <div class="ref-table-wrapper">
-                    <table class="ref-table">
-                        <thead>
-                            <tr>
-                                <th>Letter</th>
-                                <th>Name / Transcription</th>
-                                <th>Example Case</th>
-                                <th>Pronunciation</th>
-                                <th>Meaning</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="thai-highlight">ก</td>
-                                <td>Gor Kai (k/g)</td>
-                                <td class="thai-highlight">กา</td>
-                                <td>kaa</td>
-                                <td>Crow</td>
-                            </tr>
-                            <tr>
-                                <td class="thai-highlight">จ</td>
-                                <td>Jor Jan (j)</td>
-                                <td class="thai-highlight">จาน</td>
-                                <td>jaan</td>
-                                <td>Plate</td>
-                            </tr>
-                            <tr>
-                                <td class="thai-highlight">บ</td>
-                                <td>Bor Bai-mai (b)</td>
-                                <td class="thai-highlight">บิน</td>
-                                <td>bin</td>
-                                <td>To fly</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+        <div id="p-dictionary" class="view-panel">
+            <div class="ref-sub-tabs">
+                <button class="sub-tab-btn active" onclick="switchSubView('consonants', this)">Consonants (All 44)</button>
+                <button class="sub-tab-btn" onclick="switchSubView('vowels', this)">Vowels (All 32)</button>
+                <button class="sub-tab-btn" onclick="switchSubView('syllables', this)">Live & Dead Syllables</button>
             </div>
 
-            <div class="ref-section">
-                <h3><span style="color:var(--tone-rise);">■</span> High Class Consonants (อักษรสูง)</h3>
-                <p class="char-desc" style="margin-bottom:8px;">11 letters. Produced naturally with an inherent upward atmospheric breathiness or rising acoustic friction.</p>
-                <div class="grid-data">
-                    <div class="data-card">
-                        <div class="char-cluster">ข ฉ ถ ผ ฝ ส ห ค ศ ษ ฃ</div>
-                        <div class="char-desc"><b>Kh, Ch, Th, Ph, F, S, H</b> aspirates. Natively tracking an upward curve if left unmarked.</div>
-                    </div>
+            <div id="sub-consonants" class="sub-panel active">
+                <div class="info-strip">
+                    Consonants are structured into <b>Mid (9)</b>, <b>High (11)</b>, and <b>Low (24)</b> classes. This fundamental classification acts as the acoustic starting point for all tone calculation operations.
                 </div>
-
-                <div class="ref-table-wrapper">
-                    <table class="ref-table">
-                        <thead>
-                            <tr>
-                                <th>Letter</th>
-                                <th>Name / Transcription</th>
-                                <th>Example Case</th>
-                                <th>Pronunciation</th>
-                                <th>Meaning</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="thai-highlight">ข</td>
-                                <td>Khor Khai (kh)</td>
-                                <td class="thai-highlight">ขา</td>
-                                <td>khaa (Rising)</td>
-                                <td>Leg</td>
-                            </tr>
-                            <tr>
-                                <td class="thai-highlight">ห</td>
-                                <td>Hor Heep (h)</td>
-                                <td class="thai-highlight">หาง</td>
-                                <td>haang (Rising)</td>
-                                <td>Tail</td>
-                            </tr>
-                            <tr>
-                                <td class="thai-highlight">ส</td>
-                                <td>Sor Suea (s)</td>
-                                <td class="thai-highlight">เสือ</td>
-                                <td>suea (Rising)</td>
-                                <td>Tiger</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+                <div class="matrix-grid" id="consonant-inject-target"></div>
             </div>
 
-            <div class="ref-section">
-                <h3><span style="color:var(--tone-fall);">■</span> Low Class Consonants (อักษรต่ำ)</h3>
-                <p class="char-desc" style="margin-bottom:8px;">24 letters (Largest block). Sub-divided into pairs and singletons. Causes a shifting upward transformation step for tonal markers.</p>
-                <div class="grid-data">
-                    <div class="data-card">
-                        <div class="char-cluster">ค ช ซ ท พ ฟ ฮ ง น ม ย ร ล ว ...</div>
-                        <div class="char-desc"><b>Kh, Ch, S, Th, Ph, F, H, Ng, N, M, Y, R, L, W</b>. Triggers the rebel frequency offset rule logic.</div>
-                    </div>
+            <div id="sub-vowels" class="sub-panel">
+                <div class="info-strip">
+                    Thai vowels are defined by their acoustic duration profile (<b>Short</b> vs. <b>Long</b>). This duration directly changes tone tracking behavior when paired with dead syllable configurations.
                 </div>
+                <div class="matrix-grid" id="vowel-inject-target"></div>
+            </div>
 
-                <div class="ref-table-wrapper">
-                    <table class="ref-table">
-                        <thead>
-                            <tr>
-                                <th>Letter</th>
-                                <th>Name / Transcription</th>
-                                <th>Example Case</th>
-                                <th>Pronunciation</th>
-                                <th>Meaning</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="thai-highlight">ม</td>
-                                <td>Mor Maa (m)</td>
-                                <td class="thai-highlight">มา</td>
-                                <td>maa</td>
-                                <td>To come</td>
-                            </tr>
-                            <tr>
-                                <td class="thai-highlight">ร</td>
-                                <td>Ror Ruea (r)</td>
-                                <td class="thai-highlight">รัก</td>
-                                <td>rak (High)</td>
-                                <td>To love</td>
-                            </tr>
-                            <tr>
-                                <td class="thai-highlight">พ</td>
-                                <td>Phor Phan (ph)</td>
-                                <td class="thai-highlight">พี่</td>
-                                <td>phee (Falling)</td>
-                                <td>Older sibling</td>
-                            </tr>
-                        </tbody>
-                    </table>
+            <div id="sub-syllables" class="sub-panel">
+                <div class="info-strip">
+                    Syllables define how speech segments terminate, altering acoustic release patterns and tracking constraints.
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr; gap:16px;">
+                    <div class="m-card" style="border-left: 4px solid var(--tone-low);">
+                        <div class="m-header">🟢 Live Syllables (คำเป็น)</div>
+                        <div class="m-desc" style="color: var(--text);">
+                            Syllables that end with an uninhibited vocal pathway, allowing the sound to naturally sustain or drift.
+                            <br/><br/>
+                            <b>How to Identify:</b>
+                            <ul style="margin-left: 20px; margin-top: 6px; line-height: 1.5;">
+                               <li>Ends with a <b>Long Vowel</b> with no final consonant stop (e.g., มา - maa).</li>
+                               <li>Ends with a continuous sonorant ringing nasal track: <b>-n (น, ณ, ญ, ร, ล, ฬ), -m (ม), -ng (ง)</b>.</li>
+                               <li>Ends with semi-vowel vocalic diphthongs: <b>-w (ว), -y (ย)</b>.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="m-card" style="border-left: 4px solid var(--tone-fall);">
+                        <div class="m-header">🔴 Dead Syllables (คำตาย)</div>
+                        <div class="m-desc" style="color: var(--text);">
+                            Syllables that arrest the air column abruptly, ending with a sharp change in internal mouth pressure.
+                            <br/><br/>
+                            <b>How to Identify:</b>
+                            <ul style="margin-left: 20px; margin-top: 6px; line-height: 1.5;">
+                               <li>Ends with a <b>Short Vowel</b> and lacks any following consonant stop (e.g., จะ - ja).</li>
+                               <li>Ends with an unreleased abrupt plosive stop consonant: <b>-k (ก, ข, ค, ฆ), -p (บ, ป, พ, ฟ, ภ), -t (ด, ต, ถ, ท, ธ, ศ, ษ, ส...)</b>.</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div id="p-syllables" class="view-panel">
-            <div class="ref-section">
-                <h3>⏳ Syllable Boundary Types (คำเป็น-คำตาย)</h3>
-                <p class="char-desc" style="margin-bottom:8px;">Syllable structural categorization defines how audio sound waves terminate or exit the mouth track profile.</p>
-                
-                <div class="ref-table-wrapper">
-                    <table class="ref-table">
-                        <thead>
-                            <tr>
-                                <th>Type</th>
-                                <th>Definition Matrix</th>
-                                <th>Example Word</th>
-                                <th>Pronunciation</th>
-                                <th>Meaning</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><b>Live (คำเป็น)</b></td>
-                                <td>Ends in long vowel or ringing nasals (-m, -n, -ng)</td>
-                                <td class="thai-highlight">กิน</td>
-                                <td>gin</td>
-                                <td>To eat</td>
-                            </tr>
-                            <tr>
-                                <td><b>Live (คำเป็น)</b></td>
-                                <td>Sustained outward airflow track expansion</td>
-                                <td class="thai-highlight">ดม</td>
-                                <td>dom</td>
-                                <td>To smell</td>
-                            </tr>
-                            <tr>
-                                <td><b>Dead (คำตาย)</b></td>
-                                <td>Ends in short vowel or abrupt stops (-p, -t, -k)</td>
-                                <td class="thai-highlight">กบ</td>
-                                <td>gop</td>
-                                <td>Frog</td>
-                            </tr>
-                            <tr>
-                                <td><b>Dead (คำตาย)</b></td>
-                                <td>Immediate pressure clamp, choking airflow path</td>
-                                <td class="thai-highlight">เป็ด</td>
-                                <td>ped</td>
-                                <td>Duck</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+        <div id="p-analyzer" class="view-panel">
+            <div class="info-strip">
+                <b>Parsing Engine Workspace:</b> Enter a Thai word below. The engine will decompose the text into component characters, evaluate environmental configurations, and render acoustic derivation metrics.
             </div>
-
-            <div class="ref-section">
-                <h3>⏱️ Vowel Acoustic Duration (สระสั้น-ยาว)</h3>
-                <p class="char-desc" style="margin-bottom:8px;">Acoustic temporal span determines the frequency path velocity calculation for unmarked Low Class dead structures.</p>
+            
+            <div class="engine-container">
+                <div class="input-area">
+                    <div style="font-weight: 700; font-size:0.85rem; text-transform: uppercase; color:var(--muted); margin-bottom: 6px;">Input Array Target</div>
+                    <textarea id="analyzer-input" placeholder="Type or paste Thai characters here... (e.g., กบ, รัก, พูด, ไก่, ห้า)" oninput="runAcousticAnalysis()"></textarea>
+                </div>
                 
-                <div class="ref-table-wrapper">
-                    <table class="ref-table">
-                        <thead>
-                            <tr>
-                                <th>Duration Track</th>
-                                <th>Behavior Parameters</th>
-                                <th>Example Structural System</th>
-                                <th>Pronunciation</th>
-                                <th>Meaning</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><b>Short (สระสั้น)</b></td>
-                                <td>Explosive pulse. Air path terminates instantly.</td>
-                                <td class="thai-highlight">สระ อะ</td>
-                                <td>a</td>
-                                <td>Short 'a' profile</td>
-                            </tr>
-                            <tr>
-                                <td><b>Short (สระสั้น)</b></td>
-                                <td>Causes low class dead roots to spike high.</td>
-                                <td class="thai-highlight">รด</td>
-                                <td>rod</td>
-                                <td>To pour / water</td>
-                            </tr>
-                            <tr>
-                                <td><b>Long (สระยาว)</b></td>
-                                <td>Extended baseline. Tracks stable layout lines.</td>
-                                <td class="thai-highlight">สระ อา</td>
-                                <td>aa</td>
-                                <td>Long 'aa' profile</td>
-                            </tr>
-                            <tr>
-                                <td><b>Long (สระยาว)</b></td>
-                                <td>Gives low class roots room to drop down.</td>
-                                <td class="thai-highlight">ราด</td>
-                                <td>raad</td>
-                                <td>To pour over</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div>
+                    <div style="font-weight: 700; font-size:0.85rem; text-transform: uppercase; color:var(--muted); margin-bottom: 6px;">Real-Time Execution Evaluation Trace</div>
+                    <div id="analyzer-output" style="background: var(--tab-bg); border: 1px solid var(--border); border-radius:10px; padding:14px; min-height:120px;">
+                        <p style="color: var(--muted); font-size: 0.9rem;">Awaiting target context character parsing initialization parameters...</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -629,6 +558,92 @@
             "low-ek": { type: "falling", tone: "Falling Tone ˆ", desc: "Rebel Jump Shift: Low class letters with Mai Ek step upward into Falling tracks.", word: "พี่", details: "phee • 'older sibling'" },
             "low-tho": { type: "high", tone: "High Tone ˊ", desc: "Rebel Jump Shift: Low class letters with Mai Tho leap straight into High frequency tracks.", word: "ม้า", details: "maa • 'horse'" }
         };
+
+        // Complete 44 Consonant Array Database with accurate class properties
+        const consonantsData = [
+            { char: "ก", name: "Kor Kai", class: "mid", sound: "k / k", meaning: "Chicken" },
+            { char: "จ", name: "Jor Jan", class: "mid", sound: "j / t", meaning: "Plate" },
+            { char: "ด", name: "Dor Dek", class: "mid", sound: "d / t", meaning: "Child" },
+            { char: "ต", name: "Tor Tao", class: "mid", sound: "t / t", meaning: "Turtle" },
+            { char: "บ", name: "Bor Baimai", class: "mid", sound: "b / p", meaning: "Leaf" },
+            { char: "ป", name: "Por Pla", class: "mid", sound: "p / p", meaning: "Fish" },
+            { char: "อ", name: "Or Ang", class: "mid", sound: "vowel / -", meaning: "Basin" },
+            { char: "ฎ", name: "Dor Chada", class: "mid", sound: "d / t", meaning: "Headdress" },
+            { char: "ฏ", name: "Tor Patak", class: "mid", sound: "t / t", meaning: "Goad" },
+            
+            { char: "ข", name: "Khor Khai", class: "high", sound: "kh / k", meaning: "Egg" },
+            { char: "ฃ", name: "Khor Khuat", class: "high", sound: "kh / k", meaning: "Bottle (Obsolete)" },
+            { char: "ฉ", name: "Chor Ching", class: "high", sound: "ch / -", meaning: "Cymbals" },
+            { char: "ถ", name: "Thor Thung", class: "high", sound: "th / t", meaning: "Sack" },
+            { char: "ฐ", name: "Thor Than", class: "high", sound: "th / t", meaning: "Pedestal" },
+            { char: "ผ", name: "Phor Pheung", class: "high", sound: "ph / -", meaning: "Bee" },
+            { char: "ฝ", name: "For Fa", class: "high", sound: "f / -", meaning: "Lid" },
+            { char: "ศ", name: "Sor Sala", class: "high", sound: "s / t", meaning: "Pavilion" },
+            { char: "ษ", name: "Sor Ruesi", class: "high", sound: "s / t", meaning: "Hermit" },
+            { char: "ส", name: "Sor Suea", class: "high", sound: "s / t", meaning: "Tiger" },
+            { char: "ห", name: "Hor Hip", class: "high", sound: "h / -", meaning: "Chest" },
+            
+            { char: "ค", name: "Khor Khwai", class: "low", sound: "kh / k", meaning: "Buffalo" },
+            { char: "ฅ", name: "Khor Khon", class: "low", sound: "kh / k", meaning: "Person (Obsolete)" },
+            { char: "ฆ", name: "Khor Rakang", class: "low", sound: "kh / k", meaning: "Bell" },
+            { char: "ง", name: "Ngor Ngu", class: "low", sound: "ng / ng", meaning: "Snake" },
+            { char: "ช", name: "Chor Chang", class: "low", sound: "ch / t", meaning: "Elephant" },
+            { char: "ซ", name: "Sor So", class: "low", sound: "s / t", meaning: "Chain" },
+            { char: "ฌ", name: "Chor Chee", class: "low", sound: "ch / -", meaning: "Tree" },
+            { char: "ญ", name: "Yor Ying", class: "low", sound: "y / n", meaning: "Woman" },
+            { char: "ฑ", name: "Thor Montho", class: "low", sound: "th / t", meaning: "Montho" },
+            { char: "ฒ", name: "Thor Phuthao", class: "low", sound: "th / t", meaning: "Elderly Person" },
+            { char: "ณ", name: "Nor Nen", class: "low", sound: "n / n", meaning: "Novice Monk" },
+            { char: "ท", name: "Thor Thahan", class: "low", sound: "th / t", meaning: "Soldier" },
+            { char: "ธ", name: "Thor Thong", class: "low", sound: "th / t", meaning: "Flag" },
+            { char: "น", name: "Nor Nu", class: "low", sound: "n / n", meaning: "Mouse" },
+            { char: "พ", name: "Phor Phan", class: "low", sound: "ph / p", meaning: "Tray" },
+            { char: "ฟ", name: "For Fan", class: "low", sound: "f / p", meaning: "Teeth" },
+            { char: "ภ", name: "Phor Samphao", class: "low", sound: "ph / p", meaning: "Sailboat" },
+            { char: "ม", name: "Mor Ma", class: "low", sound: "m / m", meaning: "Horse" },
+            { char: "ย", name: "Yor Yak", class: "low", sound: "y / y", meaning: "Giant" },
+            { char: "ร", name: "Ror Ruea", class: "low", sound: "r / n", meaning: "Boat" },
+            { char: "ล", name: "Lor Ling", class: "low", sound: "l / n", meaning: "Monkey" },
+            { char: "ว", name: "Wor Waen", class: "low", sound: "w / w", meaning: "Ring" },
+            { char: "ฬ", name: "Lor Chula", class: "low", sound: "l / n", meaning: "Kite" },
+            { char: "ฮ", name: "Hor Nokhuak", class: "low", sound: "h / -", meaning: "Owl" }
+        ];
+
+        // All 32 Complete Vowel Configurations Layout
+        const vowelsData = [
+            { char: "-ะ", length: "short", transcription: "a", matching: "กะ (ga)" },
+            { char: "-า", length: "long", transcription: "aa", matching: "กา (gaa)" },
+            { char: "ิ", length: "short", transcription: "i", matching: "กิ (gi)" },
+            { char: "ี", length: "long", transcription: "ii", matching: "กี (gii)" },
+            { char: "ึ", length: "short", transcription: "ue", matching: "กึ (gue)" },
+            { char: "ื", length: "long", transcription: "uee", matching: "กือ (guee)" },
+            { char: "ุ", length: "short", transcription: "u", matching: "กุ (gu)" },
+            { char: "ู", length: "long", transcription: "uu", matching: "กู (guu)" },
+            { char: "เ-ะ", length: "short", transcription: "e", matching: "เกะ (ge)" },
+            { char: "เ-", length: "long", transcription: "ee", matching: "เก (gee)" },
+            { char: "แ-ะ", length: "short", transcription: "ae", matching: "แกะ (gae)" },
+            { char: "แ-", length: "long", transcription: "aee", matching: "แก (gaee)" },
+            { char: "โ-ะ", length: "short", transcription: "o", matching: "โกะ (go)" },
+            { char: "โ-", length: "long", transcription: "oo", matching: "โก (goo)" },
+            { char: "เ-าะ", length: "short", transcription: "or", matching: "เกาะ (gor)" },
+            { char: "อ / -อ", length: "long", transcription: "orr", matching: "กอ (gorr)" },
+            { char: "เ-ิะ", length: "short", transcription: "oe", matching: "เกิธ (goe)" },
+            { char: "เ-อ", length: "long", transcription: "oee", matching: "เจอ (joee)" },
+            { char: "เี-ยะ", length: "short", transcription: "ia", matching: "เกียะ (gia)" },
+            { char: "เี-ย", length: "long", transcription: "iia", matching: "เกีย (giia)" },
+            { char: "เื-อะ", length: "short", transcription: "uea", matching: "เกือะ (guea)" },
+            { char: "เื-อ", length: "long", transcription: "uuea", matching: "เสือ (suuea)" },
+            { char: "ั-วะ", length: "short", transcription: "ua", matching: "กัวะ (gua)" },
+            { char: "ั-ว / -ว", length: "long", transcription: "uua", matching: "ตัว (tuua)" },
+            { char: "ำ", length: "short", transcription: "am", matching: "รำ (ram)" },
+            { char: "ไ-", length: "short", transcription: "ai", matching: "ไม (mai)" },
+            { char: "ใ-", length: "short", transcription: "ai", matching: "ใจ (jai)" },
+            { char: "เ-า", length: "short", transcription: "ao", matching: "เภา (pao)" },
+            { char: "ฤ", length: "short", transcription: "ri / rue", matching: "ฤทธิ์ (rit)" },
+            { char: "ฤา", length: "long", transcription: "ruee", matching: "ฤา (ruee)" },
+            { char: "ฦ", length: "short", transcription: "lue", matching: "ฦ (lue)" },
+            { char: "ฦา", length: "long", transcription: "luee", matching: "ฦา (luee)" }
+        ];
 
         let state = { class: '', mark: '', type: '', vowel: '' };
         let panZoomInstance = null;
@@ -745,9 +760,6 @@
                 panZoomInstance = svgPanZoom(svgElement, {
                     zoomEnabled: true, controlIconsEnabled: false, fit: true, center: true, minZoom: 0.1, maxZoom: 5
                 });
-                
-                // Adjust zoom factor based on screen boundary constraints
-                setTimeout(() => { if(panZoomInstance) { panZoomInstance.resize(); panZoomInstance.fit(); panZoomInstance.center(); } }, 100);
             });
         }
 
@@ -772,12 +784,141 @@
             if(document.getElementById("p-flowchart").classList.contains("active")) generateGraph();
         }
 
+        function switchSubView(subKey, btn) {
+            btn.parentNode.querySelectorAll('.sub-tab-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            
+            const parent = btn.parentNode.parentNode;
+            parent.querySelectorAll('.sub-panel').forEach(p => p.classList.remove('active'));
+            parent.querySelector('#sub-' + subKey).classList.add('active');
+        }
+
+        function buildReferenceGrids() {
+            const conTarget = document.getElementById("consonant-inject-target");
+            conTarget.innerHTML = consonantsData.map(c => `
+                <div class="char-tile tile-${c.class}">
+                    <div class="tile-head">
+                        <span class="tile-glyph">${c.char}</span>
+                        <span class="tile-name">${c.name}</span>
+                    </div>
+                    <div class="tile-meta">
+                        <b>Class:</b> ${c.class.toUpperCase()}<br/>
+                        <b>Sound (Init/Term):</b> [ ${c.sound} ]<br/>
+                        <b>Meaning:</b> ${c.meaning}
+                    </div>
+                </div>
+            `).join('');
+
+            const vowTarget = document.getElementById("vowel-inject-target");
+            vowTarget.innerHTML = vowelsData.map(v => `
+                <div class="char-tile" style="border-left: 4px solid ${v.length === 'long' ? 'var(--tone-low)' : 'var(--tone-fall)'};">
+                    <div class="tile-head">
+                        <span class="tile-glyph" style="font-size:1.5rem;">${v.char}</span>
+                        <span class="tile-name">[ ${v.transcription} ]</span>
+                    </div>
+                    <div class="tile-meta">
+                        <b>Duration Type:</b> <span style="text-transform:uppercase; font-weight:700; color:${v.length === 'long' ? 'var(--tone-low)' : 'var(--tone-fall)'}">${v.length}</span><br/>
+                        <b>Structural Example:</b> ${v.matching}
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        /* INTELLIGENT REAL-TIME PHONETIC PARSING ENGINE EXPERT MECHANICS */
+        function runAcousticAnalysis() {
+            const raw = document.getElementById("analyzer-input").value.trim();
+            const out = document.getElementById("analyzer-output");
+            if (!raw) {
+                out.innerHTML = `<p style="color: var(--muted); font-size: 0.9rem;">Awaiting target context character parsing initialization parameters...</p>`;
+                return;
+            }
+
+            let initialConsonant = null;
+            let initialClass = null;
+            let toneMark = "none";
+            let toneMarkThai = "None (ไม่มี)";
+            let vowelLength = "long"; 
+            let finalConsonant = null;
+            let syllableType = "live";
+
+            // Loop parsing engine analysis logic across text token arrays
+            for (let char of raw) {
+                const conMatch = consonantsData.find(c => c.char === char);
+                if (conMatch && !initialConsonant) {
+                    initialConsonant = conMatch;
+                    initialClass = conMatch.class;
+                    continue;
+                }
+                if (conMatch && initialConsonant) {
+                    finalConsonant = conMatch;
+                }
+                if (char === '่') { toneMark = "ek"; toneMarkThai = "Mai Ek (่)"; }
+                if (char === '้') { toneMark = "tho"; toneMarkThai = "Mai Tho (้)"; }
+                if (char === '๊') { toneMark = "tri"; toneMarkThai = "Mai Tri (๊)"; }
+                if (char === '๋') { toneMark = "chattawa"; toneMarkThai = "Mai Chattawa (๋)"; }
+            }
+
+            // Continuous runtime analysis checks for explicitly declared duration traits
+            if (raw.includes('ะ') || raw.includes('ิ') || raw.includes('ึ') || raw.includes('ุ') || raw.includes('็')) {
+                vowelLength = "short";
+            }
+
+            if (finalConsonant) {
+                const stopConsonants = ['ก','ข','ค','ฆ','บ','ป','พ','ฟ','ภ','ด','ต','ถ','ท','ธ','ศ','ษ','ส','จ','ช','ซ','ฎ','ฏ','ฐ','ฑ','ฒ'];
+                if (stopConsonants.includes(finalConsonant.char)) {
+                    syllableType = "dead";
+                }
+            } else {
+                if (vowelLength === "short") syllableType = "dead";
+            }
+
+            if (!initialConsonant) {
+                out.innerHTML = `<p style="color: var(--tone-fall); font-size: 0.9rem; font-weight:700;">Parsing Error: No identifiable initial Thai alphabet consonant tokens located inside the targeted stream matrix string.</p>`;
+                return;
+            }
+
+            let lookupKey = `${initialClass}-${toneMark}`;
+            if (toneMark === "none") {
+                if (initialClass === "low" && syllableType === "dead") {
+                    lookupKey += `-dead-${vowelLength}`;
+                } else {
+                    lookupKey += `-${syllableType}`;
+                }
+            }
+
+            const calculationResult = database[lookupKey] || { tone: "Undefined Cluster Variant", desc: "Complex cluster variant configurations beyond baseline parsing matrices.", type: "mid" };
+
+            out.innerHTML = `
+                <div class="trace-node">
+                    <div class="trace-title">Parsed Identity Elements</div>
+                    <div class="trace-body">Initial Anchor Base: <b>${initialConsonant.char} (${initialConsonant.name})</b> mapped to structural color track class <span style="font-weight:700; text-transform:uppercase;">[${initialClass}]</span>.</div>
+                </div>
+                <div class="trace-node">
+                    <div class="trace-title">Tone Modulator Signature</div>
+                    <div class="trace-body">Registered Graphic Token: <b>${toneMarkThai}</b></div>
+                </div>
+                <div class="trace-node">
+                    <div class="trace-title">Acoustic Trailing Environment</div>
+                    <div class="trace-body">Termination Envelope: <b>${syllableType.toUpperCase()} Syllable</b> Boundary (Vowel Duration Mode: <b>${vowelLength.toUpperCase()}</b>). Final check variant: ${finalConsonant ? finalConsonant.char : "Open Segment Core"}.</div>
+                </div>
+                <div class="trace-node success" style="margin-bottom:0;">
+                    <div class="trace-title" style="color:var(--primary);">Resolved Acoustic Calculation Output</div>
+                    <div class="trace-body" style="font-size:1.1rem; font-weight:800; margin-top:4px;">${calculationResult.tone}</div>
+                    <div style="font-size:0.8rem; margin-top:4px; opacity:0.85;">${calculationResult.desc}</div>
+                </div>
+            `;
+        }
+
         let resizeTimeout;
         window.addEventListener('resize', () => {
             clearTimeout(resizeTimeout);
             resizeTimeout = setTimeout(() => {
                 if(document.getElementById("p-flowchart").classList.contains("active")) generateGraph();
             }, 200);
+        });
+
+        window.addEventListener('DOMContentLoaded', () => {
+            buildReferenceGrids();
         });
 
         if ('serviceWorker' in navigator) {
