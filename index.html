@@ -384,6 +384,83 @@
         .trace-node.success::before { background: var(--tone-low); }
         .trace-title { font-weight: 700; font-size: 0.75rem; text-transform: uppercase; color: var(--muted); margin-bottom: 2px;}
         .trace-body { font-size: 0.85rem; line-height: 1.4; }
+
+        /* Game System Specific CSS Rules */
+        .game-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            align-items: center;
+            justify-content: center;
+            padding: 20px 10px;
+            text-align: center;
+        }
+        .game-word-display {
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: var(--text);
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 4px;
+        }
+        .game-meta-card {
+            background: var(--tab-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 12px 20px;
+            max-width: 500px;
+            width: 100%;
+            font-size: 0.95rem;
+            color: var(--muted);
+            line-height: 1.4;
+        }
+        .game-options-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 10px;
+            width: 100%;
+            max-width: 600px;
+            margin-top: 10px;
+        }
+        .game-btn {
+            background: var(--card);
+            border: 2px solid var(--border);
+            color: var(--text);
+            padding: 14px 10px;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.15s ease;
+        }
+        .game-btn:hover:not(:disabled) { border-color: var(--primary); background: var(--primary-light); }
+        .game-btn.correct { background-color: var(--tone-low-bg) !important; border-color: var(--tone-low) !important; color: #047857 !important; }
+        .game-btn.wrong { background-color: var(--tone-fall-bg) !important; border-color: var(--tone-fall) !important; color: #b91c1c !important; }
+        
+        .game-feedback {
+            font-size: 1.1rem;
+            font-weight: 800;
+            margin-top: 10px;
+            min-height: 24px;
+        }
+        .game-score-banner {
+            font-size: 0.85rem;
+            font-weight: 800;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .connection-tag {
+            font-size: 0.7rem;
+            padding: 2px 8px;
+            border-radius: 20px;
+            font-weight: 700;
+            display: inline-block;
+            margin-top: 4px;
+        }
+        .conn-online { background: var(--tone-low-bg); color: var(--tone-low); }
+        .conn-offline { background: var(--tone-rise-bg); color: var(--tone-rise); }
     </style>
 </head>
 <body>
@@ -403,6 +480,7 @@
             <button class="tab-btn" onclick="switchView('dictionary')" id="t-dictionary">Phonetic Matrix Lookup</button>
             <button class="tab-btn" onclick="switchView('analyzer')" id="t-analyzer">Parsing Engine</button>
             <button class="tab-btn" onclick="switchView('mnemonics')" id="t-mnemonics">Mnemonic Shortcuts</button>
+            <button class="tab-btn" onclick="switchView('game')" id="t-game">Tone Practice Game</button>
         </div>
 
         <div id="p-interactive" class="view-panel active">
@@ -579,6 +657,39 @@
                 </div>
             </div>
         </div>
+
+        <div id="p-game" class="view-panel">
+            <div class="info-strip" style="margin-bottom: 4px;">
+                <b>Interactive Tone Matrix Training Ground:</b> Test your acoustic calculation skills. Audio <b>will not autoplay</b> to let you rely exclusively on mechanical decoding loops. Tap 🔊 to hear the audio on command.
+            </div>
+            
+            <div class="game-wrapper">
+                <div class="game-score-banner">Score Matrix: <span id="game-score-val">0</span> / <span id="game-total-val">0</span></div>
+                <div id="game-conn-status"></div>
+
+                <div class="game-word-display">
+                    <span id="g-word-target">---</span>
+                    <button class="audio-trigger-icon" style="width:38px; height:38px; font-size:1.1rem;" onclick="speakGameWord()" title="Listen Word Accent">🔊</button>
+                </div>
+
+                <div class="game-meta-card" id="g-word-meta">
+                    Initializing practice configurations...
+                </div>
+
+                <div class="game-options-grid">
+                    <button class="game-btn" onclick="submitGameGuess('mid')">Mid Tone</button>
+                    <button class="game-btn" onclick="submitGameGuess('low')">Low Tone</button>
+                    <button class="game-btn" onclick="submitGameGuess('falling')">Falling Tone</button>
+                    <button class="game-btn" onclick="submitGameGuess('high')">High Tone</button>
+                    <button class="game-btn" onclick="submitGameGuess('rising')">Rising Tone</button>
+                </div>
+
+                <div class="game-feedback" id="g-feedback-box"></div>
+                
+                <button class="choice-btn" id="g-next-btn" style="padding:12px 30px; display:none; margin-top:10px; background:var(--primary); color:white; border-color:var(--primary);" onclick="generateNewGameRound()">Next Word ➔</button>
+            </div>
+        </div>
+
     </div>
 
     <script>
@@ -616,7 +727,7 @@
             { char: "ฏ", name: "Tor Patak", class: "mid", sound: "t / t", meaning: "Goad" },
             
             { char: "ข", name: "Khor Khai", class: "high", sound: "kh / k", meaning: "Egg" },
-            { char: "ฃ", name: "Khor Khuat", class: "high", sound: "kh / k", meaning: "Bottle (Obsolete)" },
+            { char: "", name: "Khor Khuat", class: "high", sound: "kh / k", meaning: "Bottle (Obsolete)" },
             { char: "ฉ", name: "Chor Ching", class: "high", sound: "ch / -", meaning: "Cymbals" },
             { char: "ถ", name: "Thor Thung", class: "high", sound: "th / t", meaning: "Sack" },
             { char: "ฐ", name: "Thor Than", class: "high", sound: "th / t", meaning: "Pedestal" },
@@ -689,8 +800,33 @@
             { char: "ฦา", length: "long", transcription: "luee", matching: "ฦา (luee)" }
         ];
 
+        // Core Offline Backup Dataset to allow fluid operation without live internet drops
+        const offlineVocabularyBackup = [
+            { thai: "คน", tone: "mid", meaning: "Person / Human", details: "khon • Low class initial + Live ending" },
+            { thai: "กิน", tone: "mid", meaning: "To eat", details: "gin • Mid class initial + Live ending" },
+            { thai: "เด็ก", tone: "low", meaning: "Child", details: "dek • Mid class initial + Dead ending" },
+            { thai: "พูด", tone: "falling", meaning: "To speak", details: "poot • Low class initial + Long vowel dead ending" },
+            { thai: "รัก", tone: "high", meaning: "To love", details: "rak • Low class initial + Short vowel dead ending" },
+            { thai: "มา", tone: "mid", meaning: "To come", details: "maa • Low class initial + Live ending" },
+            { thai: "หมา", tone: "rising", meaning: "Dog", details: "maa • High class initial (ห leading ม) + Live ending" },
+            { thai: "บ้าน", tone: "falling", meaning: "House / Home", details: "baan • Mid class initial + Mai Tho" },
+            { thai: "ไก่", tone: "low", meaning: "Chicken", details: "gai • Mid class initial + Mai Ek" },
+            { thai: "ม้า", tone: "high", meaning: "Horse", details: "maa • Low class initial + Mai Tho" },
+            { thai: "พี่", tone: "falling", meaning: "Older sibling", details: "phee • Low class initial + Mai Ek" },
+            { thai: "สี่", tone: "low", meaning: "Four", details: "see • High class initial + Mai Ek" },
+            { thai: "ห้า", tone: "falling", meaning: "Five", details: "haa • High class initial + Mai Tho" },
+            { thai: "โต๊ะ", tone: "high", meaning: "Table", details: "toh • Mid class initial + Mai Tri" },
+            { thai: "ตั๋ว", tone: "rising", meaning: "Ticket", details: "tua • Mid class initial + Mai Chattawa" }
+        ];
+
         let state = { class: '', mark: '', type: '', vowel: '' };
         let panZoomInstance = null;
+
+        // Game Configuration Trackers
+        let gameScore = 0;
+        let gameTotal = 0;
+        let currentGameWord = null;
+        let gameAnswered = false;
 
         // Custom stylized script layout matching tone specific colors inside the Mermaid parser
         const baseGraph = `
@@ -882,6 +1018,7 @@
             document.getElementById("p-" + tabKey).classList.add("active");
 
             if (tabKey === "flowchart") setTimeout(generateGraph, 50);
+            if (tabKey === "game" && !currentGameWord) generateNewGameRound();
         }
 
         function toggleDarkMode() {
@@ -942,6 +1079,57 @@
         }
 
         /* INTELLIGENT REAL-TIME PHONETIC PARSING ENGINE EXPERT MECHANICS */
+        function calculateStringToneMetrics(targetString) {
+            let initialConsonant = null;
+            let initialClass = null;
+            let toneMark = "none";
+            let vowelLength = "long"; 
+            let finalConsonant = null;
+            let syllableType = "live";
+
+            for (let char of targetString) {
+                const conMatch = consonantsData.find(c => c.char === char);
+                if (conMatch && !initialConsonant) {
+                    initialConsonant = conMatch;
+                    initialClass = conMatch.class;
+                    continue;
+                }
+                if (conMatch && initialConsonant) {
+                    finalConsonant = conMatch;
+                }
+                if (char === '่') { toneMark = "ek"; }
+                if (char === '้') { toneMark = "tho"; }
+                if (char === '๊') { toneMark = "tri"; }
+                if (char === '๋') { toneMark = "chattawa"; }
+            }
+
+            if (targetString.includes('ะ') || targetString.includes('ิ') || targetString.includes('ึ') || targetString.includes('ุ') || targetString.includes('็')) {
+                vowelLength = "short";
+            }
+
+            if (finalConsonant) {
+                const stopConsonants = ['ก','ข','ค','ฆ','บ','ป','พ','ฟ','ภ','ด','ต','ถ','ท','ธ','ศ','ษ','ส','จ','ช','ซ','ฎ','ฏ','ฐ','ฑ','ฒ'];
+                if (stopConsonants.includes(finalConsonant.char)) {
+                    syllableType = "dead";
+                }
+            } else {
+                if (vowelLength === "short") syllableType = "dead";
+            }
+
+            if (!initialConsonant) return "mid";
+
+            let lookupKey = `${initialClass}-${toneMark}`;
+            if (toneMark === "none") {
+                if (initialClass === "low" && syllableType === "dead") {
+                    lookupKey += `-dead-${vowelLength}`;
+                } else {
+                    lookupKey += `-${syllableType}`;
+                }
+            }
+            const match = database[lookupKey];
+            return match ? match.type : "mid";
+        }
+
         function runAcousticAnalysis() {
             const raw = document.getElementById("analyzer-input").value.trim();
             const out = document.getElementById("analyzer-output");
@@ -1029,6 +1217,126 @@
             `;
         }
 
+        /* LIVE ONLINE DATA RETRIEVAL GAME SUBSYSTEM IMPLEMENTATION */
+        async function fetchRandomInternetThaiWord() {
+            try {
+                // Fetch dynamic vocabulary arrays using random routing variables via free dictionary/word list brokers
+                const response = await fetch('https://raw.githubusercontent.com/cm602/thai-vocabulary/master/vocabulary.json');
+                if (!response.ok) throw new Error('Network payload anomaly');
+                
+                const vocabularyData = await response.json();
+                
+                // Safely assert we have valid iterable array structures inside the incoming payload
+                const entries = Array.isArray(vocabularyData) ? vocabularyData : vocabularyData.words || [];
+                if (!entries || entries.length === 0) throw new Error('Null dictionary index length');
+
+                // Pick a secure token and normalize variables down cleanly
+                const selectedToken = entries[Math.floor(Math.random() * entries.length)];
+                
+                let wordValue = (selectedToken.thai || selectedToken.word || "").trim();
+                let meaningValue = (selectedToken.english || selectedToken.meaning || selectedToken.translation || "").trim();
+                
+                if (!wordValue) throw new Error('Incomplete data signature parameters');
+
+                // Strip auxiliary tracking markup annotations out of word elements
+                wordValue = wordValue.split(/[(),;]/)[0].trim();
+
+                return {
+                    thai: wordValue,
+                    tone: calculateStringToneMetrics(wordValue),
+                    meaning: meaningValue || "Contextual definition available upon request.",
+                    details: selectedToken.transliteration || selectedToken.romanization || "Phonetic breakdown ready."
+                };
+            } catch (err) {
+                console.warn("Internet vocabulary routing bypassed; shifting execution down to internal matrices.", err);
+                return null;
+            }
+        }
+
+        async function generateNewGameRound() {
+            gameAnswered = false;
+            document.getElementById("g-feedback-box").innerText = "";
+            document.getElementById("g-feedback-box").style.color = "var(--text)";
+            document.getElementById("g-next-btn").style.display = "none";
+            
+            // Clean active feedback highlighting overlays off interface buttons
+            document.querySelectorAll(".game-options-grid .game-btn").forEach(btn => {
+                btn.classList.remove("correct", "wrong");
+                btn.disabled = false;
+            });
+
+            const connectionTagTarget = document.getElementById("game-conn-status");
+            document.getElementById("g-word-target").innerText = "Loading...";
+            document.getElementById("g-word-meta").innerHTML = `<i>Querying live dictionary nodes for custom data streams...</i>`;
+
+            let extractedWord = null;
+            if (navigator.onLine) {
+                connectionTagTarget.innerHTML = `<span class="connection-tag conn-online">🌐 Synchronized Live Online</span>`;
+                extractedWord = await fetchRandomInternetThaiWord();
+            } else {
+                connectionTagTarget.innerHTML = `<span class="connection-tag conn-offline">🔌 Local Matrix Backup Active</span>`;
+            }
+
+            // Fallback path execution layer checking local stores if servers or lines go drop
+            if (!extractedWord) {
+                const localStore = offlineVocabularyBackup;
+                extractedWord = localStore[Math.floor(Math.random() * localStore.length)];
+            }
+
+            currentGameWord = extractedWord;
+
+            // Render details cleanly without auto-playing any audio streams
+            document.getElementById("g-word-target").innerText = currentGameWord.thai;
+            document.getElementById("g-word-meta").innerHTML = `
+                <b>Meaning Profile:</b> ${currentGameWord.meaning}<br/>
+                <b>Phonetic Envelope Hint:</b> <code>${currentGameWord.details}</code>
+            `;
+        }
+
+        function submitGameGuess(chosenToneType) {
+            if (gameAnswered || !currentGameWord) return;
+            gameAnswered = true;
+            gameTotal++;
+
+            const targetCorrectTone = currentGameWord.tone;
+            const feedbackBox = document.getElementById("g-feedback-box");
+            
+            document.querySelectorAll(".game-options-grid .game-btn").forEach(btn => {
+                btn.disabled = true;
+                const btnTextString = btn.innerText.toLowerCase();
+                if (btnTextString.includes(targetCorrectTone)) {
+                    btn.classList.add("correct");
+                }
+            });
+
+            if (chosenToneType === targetCorrectTone) {
+                gameScore++;
+                feedbackBox.innerText = "🎯 Matrix Calculation Validated: Excellent Assessment!";
+                feedbackBox.style.color = "var(--tone-low)";
+            } else {
+                feedbackBox.innerText = `❌ Inaccurate Vector Mapping. Correct Tone was: ${targetCorrectTone.toUpperCase()}`;
+                feedbackBox.style.color = "var(--tone-fall)";
+                
+                // Overlay explicit structural tracking configurations directly onto miscalculated element parameters
+                document.querySelectorAll(".game-options-grid .game-btn").forEach(btn => {
+                    if (btn.innerText.toLowerCase().includes(chosenToneType)) {
+                        btn.classList.add("wrong");
+                    }
+                });
+            }
+
+            // Refresh runtime stats panels inside interface viewboards
+            document.getElementById("game-score-val").innerText = gameScore;
+            document.getElementById("game-total-val").innerText = gameTotal;
+            document.getElementById("g-next-btn").style.display = "inline-block";
+        }
+
+        function speakGameWord() {
+            if (currentGameWord && currentGameWord.thai) {
+                speakThaiText(currentGameWord.thai);
+            }
+        }
+
         let resizeTimeout;
         window.addEventListener('resize', () => {
             clearTimeout(resizeTimeout);
@@ -1039,7 +1347,6 @@
 
         window.addEventListener('DOMContentLoaded', () => {
             buildReferenceGrids();
-            // Fire up native Speech Web Synthesis checks early to reduce interface lag
             if ('speechSynthesis' in window) window.speechSynthesis.getVoices();
         });
 
