@@ -3,22 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Thai Tone Master Matrix</title>
+    <title>Thai Tone Master Matrix Pro</title>
     
     <link rel="manifest" href="data:application/manifest+json,{%22name%22:%22Thai%20Tone%20Matrix%20Pro%22,%22short_name%22:%22ThaiTonePro%22,%22start_url%22:%22.%22,%22display%22:%22standalone%22,%22background_color%22:%22%230f172a%22,%22theme_color%22:%22%232563eb%22,%22orientation%22:%22any%22,%22icons%22:[{%22src%22:%22https://cdn-icons-png.flaticon.com/512/5315/5315372.png%22,%22sizes%22:%22512x512%22,%22type%22:%22image/png%22}]}?">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     
-    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
-    
-    <script>
-        mermaid.initialize({ 
-            startOnLoad: false,
-            theme: 'base',
-            themeVariables: { primaryColor: '#f1f5f9', lineColor: '#94a3b8', textColor: '#0f172a' }
-        });
-    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;500;700;900&family=Sarabun:wght@300;500;700;800&display=swap" rel="stylesheet">
 
     <style>
         :root {
@@ -50,8 +43,9 @@
             --cls-high-bg: #ffedd5;
             --cls-low: #db2777;
             --cls-low-bg: #fce7f3;
-            
-            --graph-bg: #ffffff;
+
+            /* Font Family Assignment Variables Defaults to Traditional Looped */
+            --thai-font: 'Sarabun', -apple-system, sans-serif;
         }
 
         [data-theme="dark"] {
@@ -76,8 +70,10 @@
             --cls-high-bg: #7c2d12;
             --cls-low: #f472b6;
             --cls-low-bg: #701a75;
-            
-            --graph-bg: #1e293b;
+        }
+
+        [data-font-style="modern"] {
+            --thai-font: 'Kanit', -apple-system, sans-serif;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -90,6 +86,11 @@
             min-height: 100vh;
             display: flex;
             flex-direction: column;
+        }
+
+        /* Enforce custom font parameters dynamically onto native Thai content text scopes */
+        .tx-thai, .tile-glyph, #g-word-target, #analyzer-input, .m-desc b, .matrix-title, #g-consonant-target {
+            font-family: var(--thai-font) !important;
         }
 
         .container {
@@ -111,10 +112,17 @@
             justify-content: space-between;
             align-items: center;
             margin-bottom: 12px;
+            flex-wrap: wrap;
+            gap: 10px;
         }
 
         h1 { font-size: 1.25rem; font-weight: 800; letter-spacing: -0.02em; }
         
+        .header-controls {
+            display: flex;
+            gap: 8px;
+        }
+
         .mode-btn {
             background: var(--tab-bg);
             border: none;
@@ -159,20 +167,6 @@
         .view-panel { display: none; flex: 1; }
         .view-panel.active { display: flex; flex-direction: column; }
 
-        /* Zoom Area Mechanics Optimization */
-        .graph-area {
-            position: relative;
-            width: 100%;
-            flex: 1;
-            min-height: 60vh;
-            background: var(--graph-bg);
-            border-radius: 12px;
-            border: 1px solid var(--border);
-            overflow: hidden;
-        }
-
-        #mermaid-target { width: 100%; height: 100%; min-height: 500px; }
-
         .interactive-grid { display: flex; flex-direction: column; gap: 10px; }
         .step-box { background: var(--tab-bg); padding: 12px; border-radius: 12px; border: 1px solid var(--border); }
         .step-title { font-size: 0.75rem; font-weight: 700; color: var(--muted); text-transform: uppercase; margin-bottom: 6px; }
@@ -193,7 +187,6 @@
         .choice-btn.selected { background: var(--primary); color: white; border-color: var(--primary); }
         .choice-btn:disabled { opacity: 0.25; cursor: not-allowed; }
 
-        /* Audio Action Trigger Icon Element Styles */
         .audio-trigger-icon {
             display: inline-flex;
             align-items: center;
@@ -210,7 +203,6 @@
         }
         .audio-trigger-icon:active { transform: scale(0.9); }
 
-        /* Output Configuration Display Boxes */
         .result-box {
             padding: 14px;
             border-radius: 14px;
@@ -221,7 +213,6 @@
         }
         .result-box.show { display: block; }
 
-        /* Dynamic Output Skin Rules */
         .result-box[data-tone-type="mid"] { background-color: var(--tone-mid-bg); border-color: var(--tone-mid); color: var(--text); }
         .result-box[data-tone-type="low"] { background-color: var(--tone-low-bg); border-color: var(--tone-low); color: var(--text); }
         .result-box[data-tone-type="falling"] { background-color: var(--tone-fall-bg); border-color: var(--tone-fall); color: var(--text); }
@@ -241,7 +232,6 @@
         .tx-thai { font-size: 2rem; font-weight: 800; color: var(--text); display: flex; align-items: center; gap: 10px; }
         .tx-details { font-size: 0.9rem; color: var(--muted); margin-top: 2px; }
 
-        /* Mnemonics Blueprint Layout styles */
         .m-card {
             background: var(--card);
             border: 1px solid var(--border);
@@ -252,7 +242,6 @@
         .m-header { display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 0.95rem; margin-bottom: 4px; }
         .m-desc { font-size: 0.85rem; line-height: 1.4; color: var(--muted); }
         
-        /* Helper Reference Tags Mapping Styles */
         .tag {
             display: inline-block;
             padding: 2px 6px;
@@ -263,7 +252,6 @@
             margin-left: auto;
         }
 
-        /* Sub-tab reference layouts */
         .ref-sub-tabs {
             display: flex;
             flex-wrap: wrap;
@@ -289,12 +277,23 @@
         .sub-panel { display: none; }
         .sub-panel.active { display: block; }
 
-        /* Highly Efficient Matrix Responsive Layout Space Allocation */
+        .matrix-title {
+            font-size: 0.95rem;
+            font-weight: 800;
+            margin: 14px 0 6px 0;
+            padding-bottom: 4px;
+            border-bottom: 1px dashed var(--border);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
         .matrix-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
             gap: 8px;
             margin-top: 6px;
+            margin-bottom: 16px;
         }
         @media(min-width: 1024px) {
             .matrix-grid { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
@@ -321,10 +320,12 @@
         .tile-mid::before { background: var(--cls-mid); }
         .tile-high::before { background: var(--cls-high); }
         .tile-low::before { background: var(--cls-low); }
+        .tile-short::before { background: var(--tone-fall); }
+        .tile-long::before { background: var(--tone-low); }
 
         .tile-head { display: flex; align-items: center; justify-content: space-between; width: 100%; }
         .tile-glyph-container { display: flex; align-items: baseline; gap: 6px; }
-        .tile-glyph { font-size: 1.6rem; font-weight: 800; }
+        .tile-glyph { font-size: 1.8rem; font-weight: 800; }
         .tile-name { font-size: 0.8rem; font-weight: 600; color: var(--text); }
         .tile-meta { font-size: 0.75rem; color: var(--muted); line-height: 1.3; }
 
@@ -360,7 +361,7 @@
             background: var(--card);
             color: var(--text);
             font-family: inherit;
-            font-size: 1.25rem;
+            font-size: 1.4rem;
             resize: none;
             flex: 1;
         }
@@ -385,15 +386,27 @@
         .trace-title { font-weight: 700; font-size: 0.75rem; text-transform: uppercase; color: var(--muted); margin-bottom: 2px;}
         .trace-body { font-size: 0.85rem; line-height: 1.4; }
 
-        /* Game System Specific CSS Rules */
+        .game-split-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+            width: 100%;
+        }
+        @media(min-width: 900px) {
+            .game-split-container { grid-template-columns: 1fr 1fr; }
+        }
+
         .game-wrapper {
             display: flex;
             flex-direction: column;
-            gap: 16px;
+            gap: 12px;
             align-items: center;
             justify-content: center;
             padding: 20px 10px;
             text-align: center;
+            border: 1px dashed var(--border);
+            border-radius: 14px;
+            background: rgba(255,255,255,0.01);
         }
         .game-word-display {
             font-size: 3.5rem;
@@ -417,19 +430,19 @@
         }
         .game-options-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-            gap: 10px;
+            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+            gap: 8px;
             width: 100%;
             max-width: 600px;
-            margin-top: 10px;
+            margin-top: 4px;
         }
         .game-btn {
             background: var(--card);
             border: 2px solid var(--border);
             color: var(--text);
-            padding: 14px 10px;
+            padding: 12px 8px;
             border-radius: 12px;
-            font-size: 1rem;
+            font-size: 0.95rem;
             font-weight: 700;
             cursor: pointer;
             transition: all 0.15s ease;
@@ -439,9 +452,9 @@
         .game-btn.wrong { background-color: var(--tone-fall-bg) !important; border-color: var(--tone-fall) !important; color: #b91c1c !important; }
         
         .game-feedback {
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             font-weight: 800;
-            margin-top: 10px;
+            margin-top: 4px;
             min-height: 24px;
         }
         .game-score-banner {
@@ -450,6 +463,15 @@
             color: var(--primary);
             text-transform: uppercase;
             letter-spacing: 0.05em;
+        }
+        .game-mode-title {
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: var(--text);
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
         }
         .connection-tag {
             font-size: 0.7rem;
@@ -471,12 +493,14 @@
                 <p style="font-size: 0.65rem; font-weight: 800; color: var(--primary); text-transform: uppercase;">Acoustic Mapping Workbench</p>
                 <h1>Thai Tone Matrix</h1>
             </div>
-            <button class="mode-btn" onclick="toggleDarkMode()" id="modeToggle">🌙 Dark Mode</button>
+            <div class="header-controls">
+                <button class="mode-btn" onclick="toggleFontStyle()" id="fontToggle">🔤 Font: Traditional</button>
+                <button class="mode-btn" onclick="toggleDarkMode()" id="modeToggle">🌙 Dark Mode</button>
+            </div>
         </header>
 
         <div class="tabs">
             <button class="tab-btn active" onclick="switchView('interactive')" id="t-interactive">Rule Calculator</button>
-            <button class="tab-btn" onclick="switchView('flowchart')" id="t-flowchart">Color Flow Map</button>
             <button class="tab-btn" onclick="switchView('dictionary')" id="t-dictionary">Phonetic Matrix Lookup</button>
             <button class="tab-btn" onclick="switchView('analyzer')" id="t-analyzer">Parsing Engine</button>
             <button class="tab-btn" onclick="switchView('mnemonics')" id="t-mnemonics">Mnemonic Shortcuts</button>
@@ -543,34 +567,38 @@
             </div>
         </div>
 
-        <div id="p-flowchart" class="view-panel">
-            <div class="info-strip" style="margin-bottom:6px;">
-                <b>Interactive Map Viewport:</b> Use your mouse wheel or double-tap/pinch on mobile devices to dynamically pan and zoom. Theme auto-inverts configurations dynamically.
-            </div>
-            <div class="graph-area">
-                <div id="mermaid-target"></div>
-            </div>
-        </div>
-
         <div id="p-dictionary" class="view-panel">
             <div class="ref-sub-tabs">
-                <button class="sub-tab-btn active" onclick="switchSubView('consonants', this)">Consonants (All 44)</button>
-                <button class="sub-tab-btn" onclick="switchSubView('vowels', this)">Vowels (All 32)</button>
+                <button class="sub-tab-btn active" onclick="switchSubView('consonants', this)">Consonants (Separated Classes)</button>
+                <button class="sub-tab-btn" onclick="switchSubView('vowels', this)">Vowels (Separated Durations)</button>
                 <button class="sub-tab-btn" onclick="switchSubView('syllables', this)">Live & Dead Syllables</button>
             </div>
 
             <div id="sub-consonants" class="sub-panel active">
                 <div class="info-strip">
-                    Consonants are structured into <b>Mid (9)</b>, <b>High (11)</b>, and <b>Low (24)</b> classes. Tap 🔊 to hear the character audio pronunciation.
+                    Consonants are structured into <b>Mid (9)</b>, <b>High (11)</b>, and <b>Low (24)</b> classes. This segregation is critical for proper rule calculations.
                 </div>
-                <div class="matrix-grid" id="consonant-inject-target"></div>
+                
+                <div class="matrix-title" style="color: var(--cls-mid);"><span style="display:inline-block; width:12px; height:12px; background:var(--cls-mid); border-radius:3px;"></span> Mid Class Consonants (อักษรกลาง)</div>
+                <div class="matrix-grid" id="consonant-mid-target"></div>
+
+                <div class="matrix-title" style="color: var(--cls-high);"><span style="display:inline-block; width:12px; height:12px; background:var(--cls-high); border-radius:3px;"></span> High Class Consonants (อักษรสูง)</div>
+                <div class="matrix-grid" id="consonant-high-target"></div>
+
+                <div class="matrix-title" style="color: var(--cls-low);"><span style="display:inline-block; width:12px; height:12px; background:var(--cls-low); border-radius:3px;"></span> Low Class Consonants (อักษรต่ำ)</div>
+                <div class="matrix-grid" id="consonant-low-target"></div>
             </div>
 
             <div id="sub-vowels" class="sub-panel">
                 <div class="info-strip">
-                    Thai vowels are defined by their acoustic duration profile (<b>Short</b> vs. <b>Long</b>). Tap 🔊 to hear the vowel structural accent.
+                    Thai vowels are defined by their acoustic duration profile (<b>Short</b> vs. <b>Long</b>), which determines phonetic trailing behavior.
                 </div>
-                <div class="matrix-grid" id="vowel-inject-target"></div>
+                
+                <div class="matrix-title" style="color: var(--tone-fall);"><span style="display:inline-block; width:12px; height:12px; background:var(--tone-fall); border-radius:3px;"></span> Short Vowels (สระเสียงสั้น)</div>
+                <div class="matrix-grid" id="vowel-short-target"></div>
+
+                <div class="matrix-title" style="color: var(--tone-low);"><span style="display:inline-block; width:12px; height:12px; background:var(--tone-low); border-radius:3px;"></span> Long Vowels (สระเสียงยาว)</div>
+                <div class="matrix-grid" id="vowel-long-target"></div>
             </div>
 
             <div id="sub-syllables" class="sub-panel">
@@ -633,7 +661,6 @@
         </div>
 
         <div id="p-mnemonics" class="view-panel">
-            
             <div class="m-card" style="border-left: 4px solid var(--tone-mid);">
                 <div class="m-header">🪞 The Mid Class Mirror <span class="tag" style="background:var(--tone-mid-bg); color:var(--tone-mid);">Mid Anchor</span></div>
                 <div class="m-desc">Mid class consonants are incredibly stable anchors. Whatever tone mark icon is drawn over a Mid-class consonant, <b>that exact requested tone sound matches up perfectly</b> (Ek makes Low, Tho makes Falling, Tri makes High, Chattawa makes Rising).</div>
@@ -659,34 +686,60 @@
         </div>
 
         <div id="p-game" class="view-panel">
-            <div class="info-strip" style="margin-bottom: 4px;">
-                <b>Interactive Tone Matrix Training Ground:</b> Test your acoustic calculation skills. Audio <b>will not autoplay</b> to let you rely exclusively on mechanical decoding loops. Tap 🔊 to hear the audio on command.
+            <div class="info-strip" style="margin-bottom: 12px;">
+                <b>Interactive Dynamic Matrix Training Ground:</b> Practice decoding both structural syllable word tones and foundational consonant character classes. Tap 🔊 to trigger audio on command.
             </div>
             
-            <div class="game-wrapper">
-                <div class="game-score-banner">Score Matrix: <span id="game-score-val">0</span> / <span id="game-total-val">0</span></div>
-                <div id="game-conn-status"></div>
+            <div class="game-split-container">
+                <div class="game-wrapper">
+                    <div class="game-mode-title">💬 Word Tone Matrix Practice</div>
+                    <div class="game-score-banner">Score: <span id="game-score-val">0</span> / <span id="game-total-val">0</span></div>
+                    <div id="game-conn-status"></div>
 
-                <div class="game-word-display">
-                    <span id="g-word-target">---</span>
-                    <button class="audio-trigger-icon" style="width:38px; height:38px; font-size:1.1rem;" onclick="speakGameWord()" title="Listen Word Accent">🔊</button>
+                    <div class="game-word-display">
+                        <span id="g-word-target">---</span>
+                        <button class="audio-trigger-icon" style="width:38px; height:38px; font-size:1.1rem;" onclick="speakGameWord()" title="Listen Word Accent">🔊</button>
+                    </div>
+
+                    <div class="game-meta-card" id="g-word-meta">
+                        Initializing tone configuration parameters...
+                    </div>
+
+                    <div class="game-options-grid">
+                        <button class="game-btn" onclick="submitGameGuess('mid')">Mid Tone</button>
+                        <button class="game-btn" onclick="submitGameGuess('low')">Low Tone</button>
+                        <button class="game-btn" onclick="submitGameGuess('falling')">Falling Tone</button>
+                        <button class="game-btn" onclick="submitGameGuess('high')">High Tone</button>
+                        <button class="game-btn" onclick="submitGameGuess('rising')">Rising Tone</button>
+                    </div>
+
+                    <div class="game-feedback" id="g-feedback-box"></div>
+                    <button class="choice-btn" id="g-next-btn" style="padding:10px 24px; display:none; margin-top:6px; background:var(--primary); color:white; border-color:var(--primary);" onclick="generateNewGameRound()">Next Word ➔</button>
                 </div>
 
-                <div class="game-meta-card" id="g-word-meta">
-                    Initializing practice configurations...
-                </div>
+                <div class="game-wrapper">
+                    <div class="game-mode-title">🛡️ Consonant Class Identification</div>
+                    <div class="game-score-banner">Score: <span id="g-consonant-score">0</span> / <span id="g-consonant-total">0</span></div>
+                    <div style="font-size:0.7rem; font-weight:700; color:var(--muted); text-transform:uppercase; margin-top:4px;">Core Alphabet Sub-matrix Track</div>
 
-                <div class="game-options-grid">
-                    <button class="game-btn" onclick="submitGameGuess('mid')">Mid Tone</button>
-                    <button class="game-btn" onclick="submitGameGuess('low')">Low Tone</button>
-                    <button class="game-btn" onclick="submitGameGuess('falling')">Falling Tone</button>
-                    <button class="game-btn" onclick="submitGameGuess('high')">High Tone</button>
-                    <button class="game-btn" onclick="submitGameGuess('rising')">Rising Tone</button>
-                </div>
+                    <div class="game-word-display">
+                        <span id="g-consonant-target">---</span>
+                        <button class="audio-trigger-icon" style="width:38px; height:38px; font-size:1.1rem;" onclick="speakGameConsonant()" title="Listen Consonant Audio">🔊</button>
+                    </div>
 
-                <div class="game-feedback" id="g-feedback-box"></div>
-                
-                <button class="choice-btn" id="g-next-btn" style="padding:12px 30px; display:none; margin-top:10px; background:var(--primary); color:white; border-color:var(--primary);" onclick="generateNewGameRound()">Next Word ➔</button>
+                    <div class="game-meta-card" id="g-consonant-meta">
+                        Initializing structural alphabet vectors...
+                    </div>
+
+                    <div class="game-options-grid">
+                        <button class="game-btn" style="border-color: var(--cls-mid);" onclick="submitConsonantGuess('mid')">Mid Class (กลาง)</button>
+                        <button class="game-btn" style="border-color: var(--cls-high);" onclick="submitConsonantGuess('high')">High Class (สูง)</button>
+                        <button class="game-btn" style="border-color: var(--cls-low);" onclick="submitConsonantGuess('low')">Low Class (ต่ำ)</button>
+                    </div>
+
+                    <div class="game-feedback" id="g-consonant-feedback"></div>
+                    <button class="choice-btn" id="g-consonant-next-btn" style="padding:10px 24px; display:none; margin-top:6px; background:var(--primary); color:white; border-color:var(--primary);" onclick="generateNewConsonantRound()">Next Character ➔</button>
+                </div>
             </div>
         </div>
 
@@ -727,7 +780,7 @@
             { char: "ฏ", name: "Tor Patak", class: "mid", sound: "t / t", meaning: "Goad" },
             
             { char: "ข", name: "Khor Khai", class: "high", sound: "kh / k", meaning: "Egg" },
-            { char: "", name: "Khor Khuat", class: "high", sound: "kh / k", meaning: "Bottle (Obsolete)" },
+            { char: "ฃ", name: "Khor Khuat", class: "high", sound: "kh / k", meaning: "Bottle (Obsolete)" },
             { char: "ฉ", name: "Chor Ching", class: "high", sound: "ch / -", meaning: "Cymbals" },
             { char: "ถ", name: "Thor Thung", class: "high", sound: "th / t", meaning: "Sack" },
             { char: "ฐ", name: "Thor Than", class: "high", sound: "th / t", meaning: "Pedestal" },
@@ -800,7 +853,7 @@
             { char: "ฦา", length: "long", transcription: "luee", matching: "ฦา (luee)" }
         ];
 
-        // Core Offline Backup Dataset to allow fluid operation without live internet drops
+        // Offline Vocabulary Backup Store
         const offlineVocabularyBackup = [
             { thai: "คน", tone: "mid", meaning: "Person / Human", details: "khon • Low class initial + Live ending" },
             { thai: "กิน", tone: "mid", meaning: "To eat", details: "gin • Mid class initial + Live ending" },
@@ -820,86 +873,36 @@
         ];
 
         let state = { class: '', mark: '', type: '', vowel: '' };
-        let panZoomInstance = null;
 
-        // Game Configuration Trackers
+        // Tone Game Configuration Trackers
         let gameScore = 0;
         let gameTotal = 0;
         let currentGameWord = null;
         let gameAnswered = false;
 
-        // Custom stylized script layout matching tone specific colors inside the Mermaid parser
-        const baseGraph = `
-    A((Start Thai Syllable)) --> B(Mid Consonants)
-    A --> C(High Consonants)
-    A --> D(Low Consonants)
+        // Consonant Game Configuration Trackers
+        let conGameScore = 0;
+        let conGameTotal = 0;
+        let currentConsonantItem = null;
+        let conGameAnswered = false;
 
-    B --> B1{Tone Mark?}
-    B1 -->|None| B2{Syllable Type}
-    B2 -->|Live| B_Mid[Mid Tone —]
-    B2 -->|Dead| B_Low[Low Tone ˋ]
-    B1 -->|Mai Ek ่| B_Low2[Low Tone ˋ]
-    B1 -->|Mai Tho ้| B_Fall[Falling Tone ˆ]
-    B1 -->|Mai Tri ๊| B_High[High Tone ˊ]
-    B1 -->|Mai Chattawa ๋| B_Rise[Rising Tone ˇ]
-
-    C --> C1{Tone Mark?}
-    C1 -->|None| C2{Syllable Type}
-    C2 -->|Live| C_Rise[Rising Tone ˇ]
-    C2 -->|Dead| C_Low[Low Tone ˋ]
-    C1 -->|Mai Ek ่| C_Low2[Low Tone ˋ]
-    C1 -->|Mai Tho ้| C_Fall[Falling Tone ˆ]
-    
-    D --> D1{Tone Mark?}
-    D1 -->|None| D2{Syllable Type}
-    D2 -->|Live| D_Mid[Mid Tone —]
-    D2 -->|Dead| D3{Vowel Length}
-    D3 -->|Short| D_High[High Tone ˊ]
-    D3 -->|Long| D_Fall[Falling Tone ˆ]
-    D1 -->|Mai Ek ่| D_Fall2[Falling Tone ˆ]
-    D1 -->|Mai Tho ้| D_High2[High Tone ˊ]
-
-    classDef m_c fill:#f1f5f9,stroke:#64748b,stroke-width:2px,color:#0f172a;
-    classDef l_c fill:#d1fae5,stroke:#047857,stroke-width:2px,color:#064e3b;
-    classDef f_c fill:#fee2e2,stroke:#b91c1c,stroke-width:2px,color:#7f1d1d;
-    classDef h_c fill:#f3e8ff,stroke:#6d28d9,stroke-width:2px,color:#4c1d95;
-    classDef r_c fill:#fef3c7,stroke:#b45309,stroke-width:2px,color:#78350f;
-
-    class B_Mid,D_Mid m_c;
-    class B_Low,B_Low2,C_Low,C_Low2 l_c;
-    class B_Fall,C_Fall,D_Fall,D_Fall2 f_c;
-    class B_High,D_High,D_High2 h_c;
-    class B_Rise,C_Rise r_c;`;
-
-        // HIGH LEVEL NATIVE ADAPTIVE TEXT-TO-SPEECH MANAGEMENT CORE Engine
+        // Unified Speech Synthesis Handler Engine
         function speakThaiText(text, alternativeFallbackText = '') {
             if (!('speechSynthesis' in window)) return;
-            window.speechSynthesis.cancel(); // Terminate background audio queues instantly
+            window.speechSynthesis.cancel(); 
 
-            // Analyze system architectures to identify Apple platforms vs secondary systems
             const isApplePlatform = /iPhone|iPad|iPod|Macintosh/i.test(navigator.userAgent);
             const utterance = new SpeechSynthesisUtterance(text);
             utterance.lang = 'th-TH';
-            utterance.rate = isApplePlatform ? 0.85 : 0.95; // Fluid speed correction loops
+            utterance.rate = isApplePlatform ? 0.85 : 0.95; 
             utterance.pitch = 1.0;
 
-            // Gather structural system voice arrays
             let voices = window.speechSynthesis.getVoices();
-            let chosenVoice = null;
+            let chosenVoice = voices.find(v => v.lang.includes('th-TH') && (v.name.includes('Narisa') || v.name.includes('Siri') || v.name.includes('Google') || v.name.includes('Natural')));
 
-            if (isApplePlatform) {
-                // Pinpoint premium native Apple Thai rendering options
-                chosenVoice = voices.find(v => v.lang.includes('th-TH') && (v.name.includes('Narisa') || v.name.includes('Siri')));
-            } else {
-                // Pinpoint dedicated corporate cloud engine channels (Google Web/Microsoft Desktop)
-                chosenVoice = voices.find(v => v.lang.includes('th-TH') && (v.name.includes('Google') || v.name.includes('Natural')));
-            }
-
-            // Universal runtime tracking fallback loop structures
             if (!chosenVoice) chosenVoice = voices.find(v => v.lang.includes('th-TH'));
             if (chosenVoice) utterance.voice = chosenVoice;
 
-            // Error mitigation loop falling back on translation text strings if primary targets lack characters
             utterance.onerror = () => {
                 if (alternativeFallbackText) {
                     const fallbackUtterance = new SpeechSynthesisUtterance(alternativeFallbackText);
@@ -907,7 +910,6 @@
                     window.speechSynthesis.speak(fallbackUtterance);
                 }
             };
-
             window.speechSynthesis.speak(utterance);
         }
 
@@ -966,48 +968,9 @@
                 outScreen.classList.add('show');
                 outScreen.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 
-                // Configure instant localized structural actions onto action trigger interfaces
                 document.getElementById('speak-tone-btn').onclick = () => speakThaiText(match.tone.split(' ')[0]);
                 document.getElementById('speak-word-btn').onclick = () => speakThaiText(match.word);
             }
-        }
-
-        function generateGraph() {
-            const isMobile = window.innerWidth <= 768;
-            const direction = isMobile ? "graph TD" : "graph LR";
-            const container = document.getElementById("mermaid-target");
-            
-            if (panZoomInstance) { panZoomInstance.destroy(); panZoomInstance = null; }
-            
-            container.removeAttribute("data-processed");
-            
-            // Core theme evaluation matrices routing inverted parameters straight into runtime styles
-            const isDarkModeActive = document.documentElement.getAttribute("data-theme") === "dark";
-            const evaluatedLineColor = isDarkModeActive ? '#64748b' : '#94a3b8';
-            const evaluatedTextColor = isDarkModeActive ? '#f8fafc' : '#0f172a';
-            const evaluatedNodeBg = isDarkModeActive ? '#1e293b' : '#f1f5f9';
-            const evaluatedNodeBorder = isDarkModeActive ? '#334155' : '#64748b';
-
-            let dynamicStyleOverrides = `
-                %%{init: { 'theme': 'base', 'themeVariables': { 
-                    'primaryColor': '${evaluatedNodeBg}', 
-                    'lineColor': '${evaluatedLineColor}', 
-                    'textColor': '${evaluatedTextColor}', 
-                    'mainBkg': '${evaluatedNodeBg}',
-                    'nodeBorder': '${evaluatedNodeBorder}'
-                }} }%%
-            `;
-
-            container.textContent = dynamicStyleOverrides + "\n" + direction + baseGraph;
-            
-            mermaid.run({ nodes: [container] }).then(() => {
-                const svgElement = container.querySelector('svg');
-                svgElement.style.width = '100%'; svgElement.style.height = '100%';
-                
-                panZoomInstance = svgPanZoom(svgElement, {
-                    zoomEnabled: true, controlIconsEnabled: false, fit: true, center: true, minZoom: 0.1, maxZoom: 5
-                });
-            });
         }
 
         function switchView(tabKey) {
@@ -1017,8 +980,10 @@
             document.getElementById("t-" + tabKey).classList.add("active");
             document.getElementById("p-" + tabKey).classList.add("active");
 
-            if (tabKey === "flowchart") setTimeout(generateGraph, 50);
-            if (tabKey === "game" && !currentGameWord) generateNewGameRound();
+            if (tabKey === "game") {
+                if (!currentGameWord) generateNewGameRound();
+                if (!currentConsonantItem) generateNewConsonantRound();
+            }
         }
 
         function toggleDarkMode() {
@@ -1029,7 +994,19 @@
             } else {
                 doc.setAttribute("data-theme", "dark"); btn.innerText = "☀️ Light Mode";
             }
-            if(document.getElementById("p-flowchart").classList.contains("active")) generateGraph();
+        }
+
+        // Toggle configuration engine for Traditional Looped vs Modern Headless Font types
+        function toggleFontStyle() {
+            const doc = document.documentElement;
+            const btn = document.getElementById("fontToggle");
+            if (doc.getAttribute("data-font-style") === "modern") {
+                doc.removeAttribute("data-font-style");
+                btn.innerText = "🔤 Font: Traditional";
+            } else {
+                doc.setAttribute("data-font-style", "modern");
+                btn.innerText = "🔤 Font: Modern (Headless)";
+            }
         }
 
         function switchSubView(subKey, btn) {
@@ -1041,9 +1018,17 @@
             parent.querySelector('#sub-' + subKey).classList.add('active');
         }
 
+        // Map data layers into segmented structural layout matrices
         function buildReferenceGrids() {
-            const conTarget = document.getElementById("consonant-inject-target");
-            conTarget.innerHTML = consonantsData.map((c, index) => `
+            const midTarget = document.getElementById("consonant-mid-target");
+            const highTarget = document.getElementById("consonant-high-target");
+            const lowTarget = document.getElementById("consonant-low-target");
+
+            const shortVowTarget = document.getElementById("vowel-short-target");
+            const longVowTarget = document.getElementById("vowel-long-target");
+
+            // Filter and Inject Consonants
+            const makeConsonantHTML = (c) => `
                 <div class="char-tile tile-${c.class}">
                     <div class="tile-head">
                         <div class="tile-glyph-container">
@@ -1053,32 +1038,35 @@
                         <button class="audio-trigger-icon" onclick="speakThaiText('${c.char}')" title="Listen Pronunciation">🔊</button>
                     </div>
                     <div class="tile-meta">
-                        <b>Class:</b> ${c.class.toUpperCase()}<br/>
                         <b>Sound (Init/Term):</b> [ ${c.sound} ]<br/>
                         <b>Meaning:</b> ${c.meaning}
                     </div>
-                </div>
-            `).join('');
+                </div>`;
 
-            const vowTarget = document.getElementById("vowel-inject-target");
-            vowTarget.innerHTML = vowelsData.map(v => `
-                <div class="char-tile" style="border-left: 4px solid ${v.length === 'long' ? 'var(--tone-low)' : 'var(--tone-fall)'};">
+            midTarget.innerHTML = consonantsData.filter(c => c.class === 'mid').map(makeConsonantHTML).join('');
+            highTarget.innerHTML = consonantsData.filter(c => c.class === 'high').map(makeConsonantHTML).join('');
+            lowTarget.innerHTML = consonantsData.filter(c => c.class === 'low').map(makeConsonantHTML).join('');
+
+            // Filter and Inject Vowels
+            const makeVowelHTML = (v) => `
+                <div class="char-tile tile-${v.length}">
                     <div class="tile-head">
                         <div class="tile-glyph-container">
-                            <span class="tile-glyph" style="font-size:1.4rem;">${v.char}</span>
+                            <span class="tile-glyph" style="font-size:1.5rem;">${v.char}</span>
                             <span class="tile-name">[ ${v.transcription} ]</span>
                         </div>
                         <button class="audio-trigger-icon" onclick="speakThaiText('${v.char}')" title="Listen Vowel">🔊</button>
                     </div>
                     <div class="tile-meta">
-                        <b>Duration Type:</b> <span style="text-transform:uppercase; font-weight:700; color:${v.length === 'long' ? 'var(--tone-low)' : 'var(--tone-fall)'}">${v.length}</span><br/>
                         <b>Structural Example:</b> ${v.matching}
                     </div>
-                </div>
-            `).join('');
+                </div>`;
+
+            shortVowTarget.innerHTML = vowelsData.filter(v => v.length === 'short').map(makeVowelHTML).join('');
+            longVowTarget.innerHTML = vowelsData.filter(v => v.length === 'long').map(makeVowelHTML).join('');
         }
 
-        /* INTELLIGENT REAL-TIME PHONETIC PARSING ENGINE EXPERT MECHANICS */
+        /* PHONETIC PARSING TUNNEL MECHANICS */
         function calculateStringToneMetrics(targetString) {
             let initialConsonant = null;
             let initialClass = null;
@@ -1146,7 +1134,6 @@
             let finalConsonant = null;
             let syllableType = "live";
 
-            // Loop parsing engine analysis logic across text token arrays
             for (let char of raw) {
                 const conMatch = consonantsData.find(c => c.char === char);
                 if (conMatch && !initialConsonant) {
@@ -1163,7 +1150,6 @@
                 if (char === '๋') { toneMark = "chattawa"; toneMarkThai = "Mai Chattawa (๋)"; }
             }
 
-            // Continuous runtime analysis checks for explicitly declared duration traits
             if (raw.includes('ะ') || raw.includes('ิ') || raw.includes('ึ') || raw.includes('ุ') || raw.includes('็')) {
                 vowelLength = "short";
             }
@@ -1213,32 +1199,23 @@
                     </div>
                     <div class="trace-body" style="font-size:1.1rem; font-weight:800; margin-top:4px;">${calculationResult.tone}</div>
                     <div style="font-size:0.8rem; margin-top:4px; opacity:0.85;">${calculationResult.desc}</div>
-                </div>
-            `;
+                </div>`;
         }
 
-        /* LIVE ONLINE DATA RETRIEVAL GAME SUBSYSTEM IMPLEMENTATION */
+        /* LIVE REPOSITORY DICTIONARY GAME LOGIC TRACKS */
         async function fetchRandomInternetThaiWord() {
             try {
-                // Fetch dynamic vocabulary arrays using random routing variables via free dictionary/word list brokers
                 const response = await fetch('https://raw.githubusercontent.com/aolmio/thcore/main/tone.json');
                 if (!response.ok) throw new Error('Network payload anomaly');
-                
                 const vocabularyData = await response.json();
-                
-                // Safely assert we have valid iterable array structures inside the incoming payload
                 const entries = Array.isArray(vocabularyData) ? vocabularyData : vocabularyData.words || [];
                 if (!entries || entries.length === 0) throw new Error('Null dictionary index length');
 
-                // Pick a secure token and normalize variables down cleanly
                 const selectedToken = entries[Math.floor(Math.random() * entries.length)];
-                
                 let wordValue = (selectedToken.thai || selectedToken.word || "").trim();
                 let meaningValue = (selectedToken.english || selectedToken.meaning || selectedToken.translation || "").trim();
                 
                 if (!wordValue) throw new Error('Incomplete data signature parameters');
-
-                // Strip auxiliary tracking markup annotations out of word elements
                 wordValue = wordValue.split(/[(),;]/)[0].trim();
 
                 return {
@@ -1259,8 +1236,7 @@
             document.getElementById("g-feedback-box").style.color = "var(--text)";
             document.getElementById("g-next-btn").style.display = "none";
             
-            // Clean active feedback highlighting overlays off interface buttons
-            document.querySelectorAll(".game-options-grid .game-btn").forEach(btn => {
+            document.querySelectorAll("#p-game .game-split-container > div:nth-child(1) .game-options-grid .game-btn").forEach(btn => {
                 btn.classList.remove("correct", "wrong");
                 btn.disabled = false;
             });
@@ -1277,20 +1253,16 @@
                 connectionTagTarget.innerHTML = `<span class="connection-tag conn-offline">🔌 Local Matrix Backup Active</span>`;
             }
 
-            // Fallback path execution layer checking local stores if servers or lines go drop
             if (!extractedWord) {
                 const localStore = offlineVocabularyBackup;
                 extractedWord = localStore[Math.floor(Math.random() * localStore.length)];
             }
 
             currentGameWord = extractedWord;
-
-            // Render details cleanly without auto-playing any audio streams
             document.getElementById("g-word-target").innerText = currentGameWord.thai;
             document.getElementById("g-word-meta").innerHTML = `
                 <b>Meaning Profile:</b> ${currentGameWord.meaning}<br/>
-                <b>Phonetic Envelope Hint:</b> <code>${currentGameWord.details}</code>
-            `;
+                <b>Phonetic Envelope Hint:</b> <code>${currentGameWord.details}</code>`;
         }
 
         function submitGameGuess(chosenToneType) {
@@ -1301,12 +1273,9 @@
             const targetCorrectTone = currentGameWord.tone;
             const feedbackBox = document.getElementById("g-feedback-box");
             
-            document.querySelectorAll(".game-options-grid .game-btn").forEach(btn => {
+            document.querySelectorAll("#p-game .game-split-container > div:nth-child(1) .game-options-grid .game-btn").forEach(btn => {
                 btn.disabled = true;
-                const btnTextString = btn.innerText.toLowerCase();
-                if (btnTextString.includes(targetCorrectTone)) {
-                    btn.classList.add("correct");
-                }
+                if (btn.innerText.toLowerCase().includes(targetCorrectTone)) btn.classList.add("correct");
             });
 
             if (chosenToneType === targetCorrectTone) {
@@ -1314,36 +1283,82 @@
                 feedbackBox.innerText = "🎯 Matrix Calculation Validated: Excellent Assessment!";
                 feedbackBox.style.color = "var(--tone-low)";
             } else {
-                feedbackBox.innerText = `❌ Inaccurate Vector Mapping. Correct Tone was: ${targetCorrectTone.toUpperCase()}`;
+                feedbackBox.innerText = `❌ Inaccurate Vector Mapping. Correct Tone: ${targetCorrectTone.toUpperCase()}`;
                 feedbackBox.style.color = "var(--tone-fall)";
                 
-                // Overlay explicit structural tracking configurations directly onto miscalculated element parameters
-                document.querySelectorAll(".game-options-grid .game-btn").forEach(btn => {
-                    if (btn.innerText.toLowerCase().includes(chosenToneType)) {
-                        btn.classList.add("wrong");
-                    }
+                document.querySelectorAll("#p-game .game-split-container > div:nth-child(1) .game-options-grid .game-btn").forEach(btn => {
+                    if (btn.innerText.toLowerCase().includes(chosenToneType)) btn.classList.add("wrong");
                 });
             }
 
-            // Refresh runtime stats panels inside interface viewboards
             document.getElementById("game-score-val").innerText = gameScore;
             document.getElementById("game-total-val").innerText = gameTotal;
             document.getElementById("g-next-btn").style.display = "inline-block";
         }
 
         function speakGameWord() {
-            if (currentGameWord && currentGameWord.thai) {
-                speakThaiText(currentGameWord.thai);
-            }
+            if (currentGameWord && currentGameWord.thai) speakThaiText(currentGameWord.thai);
         }
 
-        let resizeTimeout;
-        window.addEventListener('resize', () => {
-            clearTimeout(resizeTimeout);
-            resizeTimeout = setTimeout(() => {
-                if(document.getElementById("p-flowchart").classList.contains("active")) generateGraph();
-            }, 200);
-        });
+        /* NEW CONSONANT CLASS PRACTICE GAME MODULE MECHANICS */
+        function generateNewConsonantRound() {
+            conGameAnswered = false;
+            document.getElementById("g-consonant-feedback").innerText = "";
+            document.getElementById("g-consonant-feedback").style.color = "var(--text)";
+            document.getElementById("g-consonant-next-btn").style.display = "none";
+
+            document.querySelectorAll("#p-game .game-split-container > div:nth-child(2) .game-options-grid .game-btn").forEach(btn => {
+                btn.classList.remove("correct", "wrong");
+                btn.disabled = false;
+            });
+
+            // Gather a random valid alphabet element item out of database vectors
+            const cleanArray = consonantsData.filter(c => c.char !== ""); // Ignore obsolete placeholders without printable tokens
+            const randomConsonant = cleanArray[Math.floor(Math.random() * cleanArray.length)];
+            
+            currentConsonantItem = randomConsonant;
+
+            document.getElementById("g-consonant-target").innerText = currentConsonantItem.char;
+            document.getElementById("g-consonant-meta").innerHTML = `
+                <b>Acoustic Name Core:</b> ${currentConsonantItem.name}<br/>
+                <b>Phonetic Release:</b> [ ${currentConsonantItem.sound} ] Base Meaning: <i>${currentConsonantItem.meaning}</i>
+            `;
+        }
+
+        function submitConsonantGuess(chosenClassType) {
+            if (conGameAnswered || !currentConsonantItem) return;
+            conGameAnswered = true;
+            conGameTotal++;
+
+            const targetCorrectClass = currentConsonantItem.class;
+            const feedbackBox = document.getElementById("g-consonant-feedback");
+
+            document.querySelectorAll("#p-game .game-split-container > div:nth-child(2) .game-options-grid .game-btn").forEach(btn => {
+                btn.disabled = true;
+                if (btn.innerText.toLowerCase().includes(targetCorrectClass)) btn.classList.add("correct");
+            });
+
+            if (chosenClassType === targetCorrectClass) {
+                conGameScore++;
+                feedbackBox.innerText = `🎯 Correct! [${currentConsonantItem.char}] is a ${targetCorrectClass.toUpperCase()} Class Consonant.`;
+                feedbackBox.style.color = "var(--tone-low)";
+            } else {
+                feedbackBox.innerText = `❌ Incorrect Classification. [${currentConsonantItem.char}] belongs to ${targetCorrectClass.toUpperCase()} Class.`;
+                feedbackBox.style.color = "var(--tone-fall)";
+
+                document.querySelectorAll("#p-game .game-split-container > div:nth-child(2) .game-options-grid .game-btn").forEach(btn => {
+                    if (btn.innerText.toLowerCase().includes(chosenClassType)) btn.classList.add("wrong");
+                });
+            }
+
+            document.getElementById("g-consonant-score").innerText = conGameScore;
+            document.getElementById("g-consonant-total").innerText = conGameTotal;
+            document.getElementById("g-consonant-next-btn").style.display = "inline-block";
+        }
+
+        function speakGameConsonant() {
+            if (currentConsonantItem && currentConsonantItem.char) speakThaiText(currentConsonantItem.char);
+        }
 
         window.addEventListener('DOMContentLoaded', () => {
             buildReferenceGrids();
