@@ -6,12 +6,6 @@
         "transliteration": "nawn • Low class initial + Live ending"
     },
     {
-        "thai": "เดิน",
-        "tone": "mid",
-        "meaning": "Walk",
-        "transliteration": "doen • Low class initial + Live ending"
-    },
-    {
         "thai": "วิ่ง",
         "tone": "falling",
         "meaning": "Run",
@@ -52,12 +46,6 @@
         "tone": "low",
         "meaning": "Read",
         "transliteration": "aan • Middle class initial + Mai ek + Live ending"
-    },
-    {
-        "thai": "เขียน",
-        "tone": "rising",
-        "meaning": "Write",
-        "transliteration": "khian • High class initial + Live ending"
     },
     {
         "thai": "ไป",
@@ -150,12 +138,6 @@
         "transliteration": "khaai • High class initial + Live ending"
     },
     {
-        "thai": "ราคา",
-        "tone": "mid, mid",
-        "meaning": "Price",
-        "transliteration": "raa-khaa • [Low class + Long vowel] + [Low class + Long vowel]"
-    },
-    {
         "thai": "แพง",
         "tone": "mid",
         "meaning": "Expensive",
@@ -178,18 +160,6 @@
         "tone": "rising",
         "meaning": "Cold (Weather)",
         "transliteration": "naao • High class Initial (ห นำ) + Live ending"
-    },
-    {
-        "thai": "เย็น",
-        "tone": "mid",
-        "meaning": "Cool / Evening",
-        "transliteration": "yen • Low class initial + Live ending"
-    },
-    {
-        "thai": "เพื่อน",
-        "tone": "falling",
-        "meaning": "Friend",
-        "transliteration": "pheuan • Low class initial + Mai ek + Live ending"
     },
     {
         "thai": "ครู",
@@ -222,18 +192,6 @@
         "transliteration": "dee-chai • [Middle class + Long vowel] + [Middle class + Short vowel]"
     },
     {
-        "thai": "เสียใจ",
-        "tone": "rising, mid",
-        "meaning": "Sad / Sorry",
-        "transliteration": "sia-chai • [High class + Long vowel] + [Middle class + Short vowel]"
-    },
-    {
-        "thai": "เข้าใจ",
-        "tone": "falling, mid",
-        "meaning": "Understand",
-        "transliteration": "khao-chai • [High class + Mai tho + Short vowel] + [Middle class + Short vowel]"
-    },
-    {
         "thai": "คิด",
         "tone": "high",
         "meaning": "Think",
@@ -252,12 +210,6 @@
         "transliteration": "yaak • Middle class Initial (อ นำ) + Dead ending"
     },
     {
-        "thai": "เอา",
-        "tone": "mid",
-        "meaning": "Take / Want (something)",
-        "transliteration": "ao • Middle class initial + Short vowel"
-    },
-    {
         "thai": "ไหน",
         "tone": "rising",
         "meaning": "Where / Which",
@@ -274,30 +226,6 @@
         "tone": "mid",
         "meaning": "Who",
         "transliteration": "khrai • Low class initial (Cluster) + Short vowel"
-    },
-    {
-        "thai": "เมื่อไหร่",
-        "tone": "meua: falling, rai: low",
-        "meaning": "When",
-        "transliteration": "meua-rai • [Low class + Mai ek + Long vowel] + [Low class + Mai ek + Short vowel]"
-    },
-    {
-        "thai": "วันนี้",
-        "tone": "mid, high",
-        "meaning": "Today",
-        "transliteration": "wan-nee • [Low class + Live ending] + [Low class + Mai tho + Long vowel]"
-    },
-    {
-        "thai": "พรุ่งนี้",
-        "tone": "phrung: falling, nee: high",
-        "meaning": "Tomorrow",
-        "transliteration": "phrung-nee • [Low class Cluster + Mai ek + Live ending] + [Low class + Mai tho + Long vowel]"
-    },
-    {
-        "thai": "เรียน",
-        "tone": "mid",
-        "meaning": "Study / Learn",
-        "transliteration": "rian • Low class initial + Live ending"
     },
     {
         "thai": "สอน",
@@ -342,40 +270,16 @@
         "transliteration": "chuay • Low class initial + Mai ek + Live ending"
     },
     {
-        "thai": "เปิด",
-        "tone": "low",
-        "meaning": "Open / Turn on",
-        "transliteration": "phoet • Middle class initial + Dead ending"
-    },
-    {
         "thai": "ปิด",
         "tone": "low",
         "meaning": "Close / Turn off",
         "transliteration": "pit • Middle class initial + Dead ending"
     },
     {
-        "thai": "ใช้",
-        "tone": "high",
-        "meaning": "Use / Spend",
-        "transliteration": "chai • Low class initial + Mai tho + Short vowel"
-    },
-    {
         "thai": "ทำไม",
         "tone": "mid, mid",
         "meaning": "Why",
         "transliteration": "tham-mai • [Low class + Short vowel] + [Low class + Short vowel]"
-    },
-    {
-        "thai": "อย่างไร",
-        "tone": "yaang: low, rai: mid",
-        "meaning": "How",
-        "transliteration": "yaang-rai • [Middle class (อ นำ) + Mai ek + Live ending] + [Low class + Short vowel]"
-    },
-    {
-        "thai": "เงิน",
-        "tone": "mid",
-        "meaning": "Money / Silver",
-        "transliteration": "ngoen • Low class initial + Live ending"
     },
     {
         "thai": "ห้อง",
@@ -390,70 +294,16 @@
         "transliteration": "teun-nawn • [Middle class + Mai ek + Live ending] + [Low class + Live ending]"
     },
     {
-        "thai": "อาบน้ำ",
-        "tone": "aap: low, nam: high",
-        "meaning": "Take a shower",
-        "transliteration": "aap-nam • [Middle class + Dead ending] + [Low class + Mai tho + Short vowel]"
-    },
-    {
-        "thai": "แปรงฟัน",
-        "tone": "praeng: mid, fan: mid",
-        "meaning": "Brush teeth",
-        "transliteration": "praeng-fan • [Middle class Cluster + Live ending] + [Low class + Live ending]"
-    },
-    {
         "thai": "ผ้า",
         "tone": "falling",
         "meaning": "Cloth / Fabric",
         "transliteration": "phaa • High class initial + Mai tho + Long vowel"
     },
     {
-        "thai": "เสื้อผ้า",
-        "tone": "seua: falling, phaa: falling",
-        "meaning": "Clothes",
-        "transliteration": "seua-phaa • [High class + Mai tho + Long vowel] + [High class + Mai tho + Long vowel]"
-    },
-    {
-        "thai": "รองเท้า",
-        "tone": "raawng: mid, thao: high",
-        "meaning": "Shoes",
-        "transliteration": "raawng-thao • [Low class + Live ending] + [Low class + Mai tho + Short vowel]"
-    },
-    {
-        "thai": "กระเป๋า",
-        "tone": "kra: mid, pao: rising",
-        "meaning": "Bag / Wallet",
-        "transliteration": "kra-pao • [Low class Cluster + Short vowel] + [Middle class + Mai chattawa + Short vowel]"
-    },
-    {
-        "thai": "โทรศัพท์",
-        "tone": "thoo: mid, ra: mid, sap: high",
-        "meaning": "Telephone / Phone",
-        "transliteration": "thoo-ra-sap • [Low class + Long] + [Low class + Short] + [Low class + Dead ending]"
-    },
-    {
         "thai": "ตลาด",
         "tone": "ta-laat • ta: low, laat: low",
         "meaning": "Market",
         "transliteration": "ta-laat • High class leading tone • [Middle class + Short] + [High class implied + Dead ending]"
-    },
-    {
-        "thai": "ร้านค้า",
-        "tone": "raan: high, khaa: high",
-        "meaning": "Shop / Store",
-        "transliteration": "raan-khaa • [Low class + Mai tho + Live ending] + [Low class + Mai tho + Long vowel]"
-    },
-    {
-        "thai": "อาหาร",
-        "tone": "aa: mid, haan: rising",
-        "meaning": "Food / Meal",
-        "transliteration": "aa-haan • [Middle class + Long vowel] + [High class + Live ending]"
-    },
-    {
-        "thai": "ผลไม้",
-        "tone": "phon: cries/mid, la: mid, mai: high",
-        "meaning": "Fruit",
-        "transliteration": "phon-la-mai • [High class + Live] + [Low class + Short] + [Low class + Mai tho + Short]"
     },
     {
         "thai": "ผัก",
@@ -480,12 +330,6 @@
         "transliteration": "hiw • High class initial + Live ending"
     },
     {
-        "thai": "เหนื่อย",
-        "tone": "low",
-        "meaning": "Tired",
-        "transliteration": "neuay • High class Initial (ห นำ) + Mai ek + Live ending"
-    },
-    {
         "thai": "ง่วง",
         "tone": "falling",
         "meaning": "Sleepy",
@@ -504,12 +348,6 @@
         "transliteration": "sa-baai • [High class + Short vowel] + [Middle class + Live ending]"
     },
     {
-        "thai": "เจ็บ",
-        "tone": "low",
-        "meaning": "Hurt / Pain",
-        "transliteration": "chep • Middle class initial + Dead ending"
-    },
-    {
         "thai": "ป่วย",
         "tone": "low",
         "meaning": "Sick / Ill",
@@ -522,82 +360,16 @@
         "transliteration": "yaa • Low class initial + Long vowel"
     },
     {
-        "thai": "เวลา",
-        "tone": "way: mid, laa: mid",
-        "meaning": "Time",
-        "transliteration": "way-laa • [Low class + Long vowel] + [Low class + Long vowel]"
-    },
-    {
-        "thai": "ชั่วโมง",
-        "tone": "chua: falling, moong: mid",
-        "meaning": "Hour",
-        "transliteration": "chua-moong • [Low class + Mai ek + Long vowel] + [Low class + Live ending]"
-    },
-    {
-        "thai": "นาที",
-        "tone": "naa: mid, thee: mid",
-        "meaning": "Minute",
-        "transliteration": "naa-thee • [Low class + Long vowel] + [Low class + Long vowel]"
-    },
-    {
-        "thai": "เมื่อวาน",
-        "tone": "meua: falling, waan: mid",
-        "meaning": "Yesterday",
-        "transliteration": "meua-waan • [Low class + Mai ek + Long vowel] + [Low class + Live ending]"
-    },
-    {
         "thai": "ปี",
         "tone": "mid",
         "meaning": "Year",
         "transliteration": "pee • Middle class initial + Long vowel"
     },
     {
-        "thai": "เดือน",
-        "tone": "mid",
-        "meaning": "Month",
-        "transliteration": "duean • Middle class initial + Live ending"
-    },
-    {
-        "thai": "สัปดาห์",
-        "tone": "sap: low, daa: mid",
-        "meaning": "Week",
-        "transliteration": "sap-daa • [High class + Dead ending] + [Middle class + Long vowel]"
-    },
-    {
-        "thai": "เมือง",
-        "tone": "mid",
-        "meaning": "City / Town",
-        "transliteration": "mueang • Low class initial + Live ending"
-    },
-    {
         "thai": "ประเทศ",
         "tone": "pra: mid, theet: high",
         "meaning": "Country / Nation",
         "transliteration": "pra-theet • [Low class Cluster + Short] + [Low class + Dead ending]"
-    },
-    {
-        "thai": "โรงเรียน",
-        "tone": "roong: mid, rian: mid",
-        "meaning": "School",
-        "transliteration": "roong-rian • [Low class + Live ending] + [Low class + Live ending]"
-    },
-    {
-        "thai": "โรงพยาบาล",
-        "tone": "roong: mid, pha-yaa-baan: mid",
-        "meaning": "Hospital",
-        "transliteration": "roong-pha-yaa-baan • [Low class + Live] + [Low class + Short] + [Low class + Long] + [Low class + Live]"
-    },
-    {
-        "thai": "บริษัท",
-        "tone": "baaw-ri-shat • baaw: mid, ri: mid, shat: high",
-        "meaning": "Company",
-        "transliteration": "baaw-ri-shat • [Middle class + Long] + [Low class + Short] + [Low class + Dead ending]"
-    },
-    {
-        "thai": "คิดถึง",
-        "tone": "khit: high, theung: rising",
-        "meaning": "Miss (someone/something)",
-        "transliteration": "khit-theung • [Low class + Dead ending] + [High class + Long vowel]"
     },
     {
         "thai": "ลืม",
@@ -612,28 +384,10 @@
         "transliteration": "cham • Middle class initial + Short vowel"
     },
     {
-        "thai": "เริ่ม",
-        "tone": "low",
-        "meaning": "Start / Begin",
-        "transliteration": "roem • Low class initial + Mai ek + Live ending"
-    },
-    {
-        "thai": "เสร็จ",
-        "tone": "low",
-        "meaning": "Finish / Done",
-        "transliteration": "set • High class initial (Cluster) + Dead ending"
-    },
-    {
         "thai": "หยุด",
         "tone": "low",
         "meaning": "Stop / Holiday",
         "transliteration": "yut • High class Initial (ห นำ) + Dead ending"
-    },
-    {
-        "thai": "ตกลง",
-        "tone": "tok: low, long: mid",
-        "meaning": "Agree / OK",
-        "transliteration": "tok-long • [Middle class + Dead ending] + [Low class + Live ending]"
     },
     {
         "thai": "ปฏิเสธ",
@@ -654,52 +408,10 @@
         "transliteration": "khaawp-khun • [High class + Dead ending] + [Low class + Live ending]"
     },
     {
-        "thai": "ยินดี",
-        "tone": "yin: mid, dee: mid",
-        "meaning": "Welcome / Pleased",
-        "transliteration": "yin-dee • [Low class + Live ending] + [Middle class + Long vowel]"
-    },
-    {
-        "thai": "ต้อนรับ",
-        "tone": "taawn: falling, rap: high",
-        "meaning": "Welcome (e.g. to a place)",
-        "transliteration": "taawn-rap • [Low class + Mai tho + Live ending] + [Low class + Dead ending]"
-    },
-    {
-        "thai": "ระวัง",
-        "tone": "ra: mid, wang: mid",
-        "meaning": "Be careful",
-        "transliteration": "ra-wang • [Low class + Short vowel] + [Low class + Live ending]"
-    },
-    {
-        "thai": "สัญญา",
-        "tone": "san: rising, yaa: mid",
-        "meaning": "Promise",
-        "transliteration": "san-yaa • [High class + Live ending] + [Low class + Long vowel]"
-    },
-    {
         "thai": "โกหก",
         "tone": "koo: mid, hok: low",
         "meaning": "Lie / Tell a lie",
         "transliteration": "koo-hok • [Middle class + Long vowel] + [High class leading tone + Dead ending]"
-    },
-    {
-        "thai": "หัวเราะ",
-        "tone": "hua: rising, raw: high",
-        "meaning": "Laugh",
-        "transliteration": "hua-raw • [High class + Long vowel] + [Low class + Short vowel]"
-    },
-    {
-        "thai": "ร้องไห้",
-        "tone": "raawng: high, hai: falling",
-        "meaning": "Cry",
-        "transliteration": "raawng-hai • [Low class + Mai tho + Live ending] + [High class + Mai tho + Short vowel]"
-    },
-    {
-        "thai": "ทะเลาะ",
-        "tone": "tha: mid, law: high",
-        "meaning": "Argue / Quarrel",
-        "transliteration": "tha-law • [Low class + Short vowel] + [Low class + Short vowel]"
     },
     {
         "thai": "โกรธ",
@@ -714,18 +426,6 @@
         "transliteration": "klua • Middle class initial (Cluster) + Long vowel"
     },
     {
-        "thai": "เกลียด",
-        "tone": "kliat: low",
-        "meaning": "Hate",
-        "transliteration": "kliat • Middle class initial (Cluster) + Dead ending"
-    },
-    {
-        "thai": "เหงา",
-        "tone": "ngao: rising",
-        "meaning": "Lonely",
-        "transliteration": "ngao • High class Initial (ห นำ) + Short vowel"
-    },
-    {
         "thai": "ตกใจ",
         "tone": "tok: low, chai: mid",
         "meaning": "Shocked / Startled",
@@ -736,24 +436,6 @@
         "tone": "mid",
         "meaning": "Shy",
         "transliteration": "aai • Middle class initial + Live ending"
-    },
-    {
-        "thai": "อิจฉา",
-        "tone": "it: low, chaa: rising",
-        "meaning": "Jealous / Envious",
-        "transliteration": "it-chaa • [Middle class + Dead ending] + [High class + Long vowel]"
-    },
-    {
-        "thai": "ตื่นเต้น",
-        "tone": "teun: low, ten: falling",
-        "meaning": "Excited",
-        "transliteration": "teun-ten • [Middle class + Mai ek + Live ending] + [Middle class + Mai tho + Live ending]"
-    },
-    {
-        "thai": "มั่นใจ",
-        "tone": "man: low, chai: mid",
-        "meaning": "Confident",
-        "transliteration": "man-chai • [Low class + Mai ek + Live ending] + [Middle class + Short vowel]"
     },
     {
         "thai": "สงสัย",
@@ -768,12 +450,6 @@
         "transliteration": "plaawt-phai • [Middle class Cluster + Dead ending] + [Low class Cluster + Short vowel]"
     },
     {
-        "thai": "อันตราย",
-        "tone": "an: mid, ta: mid, raai: mid",
-        "meaning": "Dangerous",
-        "transliteration": "an-ta-raai • [Middle class + Live] + [Middle class + Short] + [Low class + Live]"
-    },
-    {
         "thai": "ง่าย",
         "tone": "ngaai: falling",
         "meaning": "Easy",
@@ -786,46 +462,10 @@
         "transliteration": "yaak • Low class initial + Dead ending"
     },
     {
-        "thai": "เร็ว",
-        "tone": "rew: high",
-        "meaning": "Fast / Quick",
-        "transliteration": "rew • Low class initial + Dead ending"
-    },
-    {
         "thai": "ช้า",
         "tone": "chaa: high",
         "meaning": "Slow",
         "transliteration": "chaa • Low class initial + Mai tho + Long vowel"
-    },
-    {
-        "thai": "ใหม่",
-        "tone": "mai: low",
-        "meaning": "New",
-        "transliteration": "mai • High class Initial (ห นำ) + Mai ek + Short vowel"
-    },
-    {
-        "thai": "เก่า",
-        "tone": "kao: low",
-        "meaning": "Old (for objects)",
-        "transliteration": "kao • Middle class initial + Mai ek + Short vowel"
-    },
-    {
-        "thai": "แก่",
-        "tone": "kae: low",
-        "meaning": "Old (for people)",
-        "transliteration": "kae • Middle class initial + Mai ek + Long vowel"
-    },
-    {
-        "thai": "เด็ก",
-        "tone": "dek: low",
-        "meaning": "Child / Young",
-        "transliteration": "dek • Middle class initial + Dead ending"
-    },
-    {
-        "thai": "ผู้ใหญ่",
-        "tone": "phuu: falling, yai: low",
-        "meaning": "Adult",
-        "transliteration": "phuu-yai • [High class + Mai tho + Long] + [High class Initial (ห นำ) + Mai ek + Short]"
     },
     {
         "thai": "ชาย",
@@ -852,12 +492,6 @@
         "transliteration": "phaaw • Low class initial + Mai ek + Long vowel"
     },
     {
-        "thai": "แม่",
-        "tone": "mae: falling",
-        "meaning": "Mother",
-        "transliteration": "mae • Low class initial + Mai ek + Long vowel"
-    },
-    {
         "thai": "พี่",
         "tone": "phee: falling",
         "meaning": "Elder sibling",
@@ -876,22 +510,10 @@
         "transliteration": "faen • Low class initial + Live ending"
     },
     {
-        "thai": "แต่งงาน",
-        "tone": "taeng: low, ngaan: mid",
-        "meaning": "Marry",
-        "transliteration": "taeng-ngaan • [Middle class + Mai ek + Live ending] + [Low class + Live ending]"
-    },
-    {
         "thai": "โสด",
         "tone": "soot: low",
         "meaning": "Single (unmarried)",
         "transliteration": "soot • High class initial + Dead ending"
-    },
-    {
-        "thai": "อายุ",
-        "tone": "aa: mid, yu: high",
-        "meaning": "Age",
-        "transliteration": "aa-yu • [Middle class + Long vowel] + [Low class + Short vowel]"
     },
     {
         "thai": "รับ",
@@ -906,12 +528,6 @@
         "transliteration": "song • High class initial + Mai ek + Live ending"
     },
     {
-        "thai": "เก็บ",
-        "tone": "low",
-        "meaning": "Keep / Collect",
-        "transliteration": "kep • Middle class initial + Dead ending"
-    },
-    {
         "thai": "ทิ้ง",
         "tone": "high",
         "meaning": "Throw away",
@@ -924,24 +540,6 @@
         "transliteration": "saawm • Low class initial + Mai ek + Live ending"
     },
     {
-        "thai": "ทำความสะอาด",
-        "tone": "tham: mid, khwaam: mid, sa-aat: low",
-        "meaning": "Clean (verb)",
-        "transliteration": "tham-khwaam-sa-aat • [Low class + Short] + [Low class + Live] + [High class + Short] + [Middle class + Dead]"
-    },
-    {
-        "thai": "ซักผ้า",
-        "tone": "sak: high, phaa: falling",
-        "meaning": "Wash clothes",
-        "transliteration": "sak-phaa • [Low class + Dead ending] + [High class + Mai tho + Long vowel]"
-    },
-    {
-        "thai": "ล้างจาน",
-        "tone": "laang: high, chaan: mid",
-        "meaning": "Wash dishes",
-        "transliteration": "laang-chaan • [Low class + Mai tho + Live ending] + [Middle class + Live ending]"
-    },
-    {
         "thai": "ขับรถ",
         "tone": "khap: low, rot: high",
         "meaning": "Drive a car",
@@ -952,18 +550,6 @@
         "tone": "low",
         "meaning": "Ride (bike/motorcycle)",
         "transliteration": "khee • High class initial + Mai ek + Long vowel"
-    },
-    {
-        "thai": "จอดรถ",
-        "tone": "chaawt: low, rot: high",
-        "meaning": "Park a car",
-        "transliteration": "chaawt-rot • [Middle class + Dead ending] + [Low class + Dead ending]"
-    },
-    {
-        "thai": "เดินทาง",
-        "tone": "doen: mid, thaang: mid",
-        "meaning": "Travel / Journey",
-        "transliteration": "doen-thaang • [Low class + Live ending] + [Low class + Live ending]"
     },
     {
         "thai": "ถึง",
@@ -984,22 +570,10 @@
         "transliteration": "choe • Low class initial + Long vowel"
     },
     {
-        "thai": "แนะนำ",
-        "tone": "nae: mid, nam: high",
-        "meaning": "Introduce / Recommend",
-        "transliteration": "nae-nam • [Low class + Long vowel] + [Low class + Mai tho + Short vowel]"
-    },
-    {
         "thai": "คุย",
         "tone": "mid",
         "meaning": "Chat / Talk",
         "transliteration": "khuy • Low class initial + Live ending"
-    },
-    {
-        "thai": "เลือก",
-        "tone": "falling",
-        "meaning": "Choose / Select",
-        "transliteration": "leuak • Low class initial + Dead ending"
     },
     {
         "thai": "แลก",
@@ -1014,34 +588,10 @@
         "transliteration": "chaai • Middle class initial + Mai ek + Live ending"
     },
     {
-        "thai": "ลดราคา",
-        "tone": "lot: high, raa: mid, khaa: mid",
-        "meaning": "Discount / Reduce price",
-        "transliteration": "lot-raa-khaa • [Low class + Dead] + [Low class + Long] + [Low class + Long]"
-    },
-    {
-        "thai": "สั่งอาหาร",
-        "tone": "sang: low, aa: mid, haan: rising",
-        "meaning": "Order food",
-        "transliteration": "sang-aa-haan • [Middle class + Mai ek + Live] + [Middle class + Long] + [High class + Live]"
-    },
-    {
-        "thai": "เช็คบิล",
-        "tone": "chek: high, bin: mid",
-        "meaning": "Check the bill",
-        "transliteration": "chek-bin • [Low class + Dead ending] + [Middle class + Live ending]"
-    },
-    {
         "thai": "ดื่ม",
         "tone": "low",
         "meaning": "Drink",
         "transliteration": "duem • Middle class initial + Mai ek + Live ending"
-    },
-    {
-        "thai": "แก้ว",
-        "tone": "falling",
-        "meaning": "Glass / Cup",
-        "transliteration": "kaew • Middle class initial + Mai tho + Live ending"
     },
     {
         "thai": "ขวด",
@@ -1062,94 +612,16 @@
         "transliteration": "saawm • High class initial + Mai tho + Live ending"
     },
     {
-        "thai": "ตะเกียบ",
-        "tone": "ta: low, kiap: low",
-        "meaning": "Chopsticks",
-        "transliteration": "ta-kiap • [Middle class + Short vowel] + [Middle class Cluster + Dead ending]"
-    },
-    {
-        "thai": "ทิชชู่",
-        "tone": "thit: high, chuu: falling",
-        "meaning": "Tissue paper",
-        "transliteration": "thit-chuu • [Low class + Dead ending] + [Low class + Mai ek + Long vowel]"
-    },
-    {
-        "thai": "ห้องน้ำ",
-        "tone": "haawng: falling, nam: high",
-        "meaning": "Toilet / Bathroom",
-        "transliteration": "haawng-nam • [High class + Mai tho + Live] + [Low class + Mai tho + Short]"
-    },
-    {
         "thai": "สบู่",
         "tone": "sa: low, buu: low",
         "meaning": "Soap",
         "transliteration": "sa-buu • High class leading tone • [High class + Short] + [Middle class + Mai ek + Long]"
     },
     {
-        "thai": "แชมพู",
-        "tone": "chaem: mid, phuu: mid",
-        "meaning": "Shampoo",
-        "transliteration": "chaem-phuu • [Low class + Live ending] + [Low class + Long vowel]"
-    },
-    {
-        "thai": "ผ้าเช็ดตัว",
-        "tone": "phaa: falling, chet: high, tua: mid",
-        "meaning": "Towel",
-        "transliteration": "phaa-chet-tua • [High class + Mai tho + Long] + [High class + Dead] + [Middle class + Long]"
-    },
-    {
-        "thai": "เตียง",
-        "tone": "mid",
-        "meaning": "Bed",
-        "transliteration": "tiang • Middle class initial + Live ending"
-    },
-    {
-        "thai": "หมอน",
-        "tone": "rising",
-        "meaning": "Pillow",
-        "transliteration": "maawn • High class Initial (ห นำ) + Live ending"
-    },
-    {
-        "thai": "ผ้าห่ม",
-        "tone": "phaa: falling, hom: low",
-        "meaning": "Blanket",
-        "transliteration": "phaa-hom • [High class + Mai tho + Long vowel] + [High class Initial (ห นำ) + Mai ek + Live]"
-    },
-    {
         "thai": "พัดลม",
         "tone": "phat: high, lom: mid",
         "meaning": "Fan (electric)",
         "transliteration": "phat-lom • [Low class + Dead ending] + [Low class + Live ending]"
-    },
-    {
-        "thai": "เครื่องปรับอากาศ",
-        "tone": "khrueang: falling, prap: low, aa: mid, kaat: low",
-        "meaning": "Air conditioner",
-        "transliteration": "khrueang-prap-aa-kaat • [Low class Cluster + Mai ek + Live] + [Middle class Cluster + Dead] + [Middle class + Long] + [Middle class + Dead]"
-    },
-    {
-        "thai": "กุญแจ",
-        "tone": "kun: mid, chaae: mid",
-        "meaning": "Key",
-        "transliteration": "kun-chaae • [Middle class + Live ending] + [Low class + Long vowel]"
-    },
-    {
-        "thai": "ประตู",
-        "tone": "pra: mid, tuu: mid",
-        "meaning": "Door / Gate",
-        "transliteration": "pra-tuu • [Middle class Cluster + Short vowel] + [Middle class + Long vowel]"
-    },
-    {
-        "thai": "หน้าต่าง",
-        "tone": "naa: falling, taang: low",
-        "meaning": "Window",
-        "transliteration": "naa-taang • [High class Initial (ห นำ) + Mai tho + Long] + [Middle class + Mai ek + Live]"
-    },
-    {
-        "thai": "บ้านเลขที่",
-        "tone": "baan: falling, lek: low, thee: falling",
-        "meaning": "House number / Address",
-        "transliteration": "baan-lek-thee • [Middle class + Mai tho + Live] + [Middle class + Dead] + [Low class + Mai ek + Long]"
     },
     {
         "thai": "ถนน",
@@ -1162,12 +634,6 @@
         "tone": "mid",
         "meaning": "Alley / Lane",
         "transliteration": "saawy • Low class initial + Live ending"
-    },
-    {
-        "thai": "ใกล้",
-        "tone": "falling",
-        "meaning": "Near / Close",
-        "transliteration": "klaai • Middle class initial (Cluster) + Mai tho + Short vowel"
     },
     {
         "thai": "ไกล",
@@ -1254,12 +720,6 @@
         "transliteration": "bin • Middle class initial + Live ending"
     },
     {
-        "thai": "เดิน",
-        "tone": "mid",
-        "meaning": "To walk",
-        "transliteration": "doen • Low class initial + Live ending"
-    },
-    {
         "thai": "นอน",
         "tone": "mid",
         "meaning": "To sleep",
@@ -1270,12 +730,6 @@
         "tone": "mid",
         "meaning": "To listen",
         "transliteration": "fang • Low class initial + Live ending"
-    },
-    {
-        "thai": "เรียน",
-        "tone": "mid",
-        "meaning": "To study / learn",
-        "transliteration": "rian • Low class initial + Live ending"
     },
     {
         "thai": "ลม",
@@ -1380,34 +834,10 @@
         "transliteration": "phii • Low class initial + Mai Ek tone mark"
     },
     {
-        "thai": "แม่",
-        "tone": "falling",
-        "meaning": "Mother",
-        "transliteration": "mae • Low class initial + Mai Ek tone mark"
-    },
-    {
         "thai": "พ่อ",
         "tone": "falling",
         "meaning": "Father",
         "transliteration": "phaaw • Low class initial + Mai Ek tone mark"
-    },
-    {
-        "thai": "ไก่",
-        "tone": "low",
-        "meaning": "Chicken",
-        "transliteration": "kai • Middle class initial + Mai Ek tone mark"
-    },
-    {
-        "thai": "ไข่",
-        "tone": "low",
-        "meaning": "Egg",
-        "transliteration": "khai • High class initial + Mai Ek tone mark"
-    },
-    {
-        "thai": "สุนัข",
-        "tone": "high",
-        "meaning": "Dog (Formal)",
-        "transliteration": "su-nakh • Low class ending syllable + Dead ending"
     },
     {
         "thai": "แมว",
@@ -1446,12 +876,6 @@
         "transliteration": "khaaw • High class initial + Live ending"
     },
     {
-        "thai": "เขียว",
-        "tone": "rising",
-        "meaning": "Green",
-        "transliteration": "khiaw • High class initial + Live ending"
-    },
-    {
         "thai": "สาม",
         "tone": "rising",
         "meaning": "Three",
@@ -1486,18 +910,6 @@
         "tone": "mid",
         "meaning": "You",
         "transliteration": "khun • Low class initial + Live ending"
-    },
-    {
-        "thai": "เขา",
-        "tone": "rising",
-        "meaning": "He / She / They",
-        "transliteration": "khao • High class initial + Live ending"
-    },
-    {
-        "thai": "เรา",
-        "tone": "mid",
-        "meaning": "We / Us",
-        "transliteration": "rao • Low class initial + Live ending"
     },
     {
         "thai": "มัน",
@@ -1536,40 +948,16 @@
         "transliteration": "khrai • Low class initial (Cluster) + Live ending"
     },
     {
-        "thai": "เมือง",
-        "tone": "mid",
-        "meaning": "City / Country",
-        "transliteration": "mueang • Low class initial + Live ending"
-    },
-    {
         "thai": "รถ",
         "tone": "high",
         "meaning": "Car / Vehicle",
         "transliteration": "rot • Low class initial + Short vowel + Dead ending"
     },
     {
-        "thai": "เรือ",
-        "tone": "mid",
-        "meaning": "Boat / Ship",
-        "transliteration": "ruea • Low class initial + Live ending"
-    },
-    {
         "thai": "ผ้า",
         "tone": "falling",
         "meaning": "Cloth / Fabric",
         "transliteration": "phaa • High class initial + Mai Tho tone mark"
-    },
-    {
-        "thai": "เสื้อ",
-        "tone": "falling",
-        "meaning": "Shirt / Clothes",
-        "transliteration": "suea • High class initial + Mai Tho tone mark"
-    },
-    {
-        "thai": "เงิน",
-        "tone": "mid",
-        "meaning": "Money / Silver",
-        "transliteration": "ngoen • Low class initial + Live ending"
     },
     {
         "thai": "ทอง",
@@ -1590,36 +978,6 @@
         "transliteration": "tha-leh • Low class initial + Live ending"
     },
     {
-        "thai": "ภูเขา",
-        "tone": "mid",
-        "meaning": "Mountain",
-        "transliteration": "phu-khao • Low/High initial + Live ending"
-    },
-    {
-        "thai": "ต้นไม้",
-        "tone": "falling",
-        "meaning": "Tree",
-        "transliteration": "ton-mai • Middle/Low initial + Mai Tho tone mark"
-    },
-    {
-        "thai": "ดอกไม้",
-        "tone": "falling",
-        "meaning": "Flower",
-        "transliteration": "dawk-mai • Dead ending syllable + Mai Tho tone mark"
-    },
-    {
-        "thai": "หนังสือ",
-        "tone": "rising",
-        "meaning": "Book",
-        "transliteration": "nang-sue • High class initial + Live ending"
-    },
-    {
-        "thai": "โรงเรียน",
-        "tone": "mid",
-        "meaning": "School",
-        "transliteration": "roong-rian • Low class initial + Live ending"
-    },
-    {
         "thai": "ครู",
         "tone": "mid",
         "meaning": "Teacher",
@@ -1636,12 +994,6 @@
         "tone": "mid",
         "meaning": "Medicine",
         "transliteration": "yaa • Low class initial + Live ending"
-    },
-    {
-        "thai": "แก้ว",
-        "tone": "falling",
-        "meaning": "Glass / Tumbler",
-        "transliteration": "kaew • Middle class initial + Mai Tho tone mark"
     },
     {
         "thai": "จาน",
@@ -1674,24 +1026,6 @@
         "transliteration": "phak • High class initial + Short vowel + Dead ending"
     },
     {
-        "thai": "ผลไม้",
-        "tone": "high",
-        "meaning": "Fruit",
-        "transliteration": "phon-la-mai • Last syllable with Mai Tho tone mark"
-    },
-    {
-        "thai": "น้ำตาล",
-        "tone": "mid",
-        "meaning": "Sugar",
-        "transliteration": "nam-taan • High tone syllable + Middle class Live ending"
-    },
-    {
-        "thai": "เกลือ",
-        "tone": "mid",
-        "meaning": "Salt",
-        "transliteration": "kluea • Middle class initial (Cluster) + Live ending"
-    },
-    {
         "thai": "ร้อน",
         "tone": "high",
         "meaning": "Hot",
@@ -1702,36 +1036,6 @@
         "tone": "rising",
         "meaning": "Cold (Weather)",
         "transliteration": "naaw • High class ห lead + Live ending"
-    },
-    {
-        "thai": "เย็น",
-        "tone": "mid",
-        "meaning": "Cool / Evening",
-        "transliteration": "yen • Low class initial + Live ending"
-    },
-    {
-        "thai": "ใหม่",
-        "tone": "low",
-        "meaning": "New",
-        "transliteration": "mai • High class ห lead + Mai Ek tone mark"
-    },
-    {
-        "thai": "เก่า",
-        "tone": "low",
-        "meaning": "Old (Object)",
-        "transliteration": "kao • Middle class initial + Mai Ek tone mark"
-    },
-    {
-        "thai": "ใหญ่",
-        "tone": "low",
-        "meaning": "Big",
-        "transliteration": "yai • High class ห lead + Mai Ek tone mark"
-    },
-    {
-        "thai": "เล็ก",
-        "tone": "high",
-        "meaning": "Small",
-        "transliteration": "lek • Low class initial + Short vowel + Dead ending"
     },
     {
         "thai": "ยาว",
@@ -1758,28 +1062,10 @@
         "transliteration": "thuuk • High class initial + Long vowel + Dead ending"
     },
     {
-        "thai": "สะอาด",
-        "tone": "low",
-        "meaning": "Clean",
-        "transliteration": "sa-aat • High class initial + Middle class Dead ending"
-    },
-    {
-        "thai": "เปิด",
-        "tone": "low",
-        "meaning": "To open",
-        "transliteration": "poet • Middle class initial + Long vowel + Dead ending"
-    },
-    {
         "thai": "ปิด",
         "tone": "low",
         "meaning": "To close",
         "transliteration": "pit • Middle class initial + Short vowel + Dead ending"
-    },
-    {
-        "thai": "เล่น",
-        "tone": "falling",
-        "meaning": "To play",
-        "transliteration": "len • Low class initial + Mai Ek tone mark"
     },
     {
         "thai": "ผม",
@@ -1836,18 +1122,6 @@
         "transliteration": "hua • High class initial + Live ending"
     },
     {
-        "thai": "ทำงาน",
-        "tone": "mid",
-        "meaning": "To work",
-        "transliteration": "tham-ngaan • Low class initials + Live endings"
-    },
-    {
-        "thai": "เขียน",
-        "tone": "rising",
-        "meaning": "To write",
-        "transliteration": "khian • High class initial + Live ending"
-    },
-    {
         "thai": "อ่าน",
         "tone": "low",
         "meaning": "To read",
@@ -1896,18 +1170,6 @@
         "transliteration": "raw • Low class initial + Live ending"
     },
     {
-        "thai": "รู้จัก",
-        "tone": "high",
-        "meaning": "To know (someone/place)",
-        "transliteration": "ruu-chak • High tone syllable + Dead ending syllable"
-    },
-    {
-        "thai": "เข้าใจ",
-        "tone": "mid",
-        "meaning": "To understand",
-        "transliteration": "khao-chai • High class initial + Middle class initial"
-    },
-    {
         "thai": "ตลาด",
         "tone": "low",
         "meaning": "Market",
@@ -1926,70 +1188,10 @@
         "transliteration": "wat • Low class initial + Short vowel + Dead ending"
     },
     {
-        "thai": "เตียง",
-        "tone": "mid",
-        "meaning": "Bed",
-        "transliteration": "tiang • Middle class initial + Live ending"
-    },
-    {
-        "thai": "โต๊ะ",
-        "tone": "high",
-        "meaning": "Table",
-        "transliteration": "toh • Middle class initial + Mai Tri tone mark"
-    },
-    {
-        "thai": "เก้าอี้",
-        "tone": "falling",
-        "meaning": "Chair",
-        "transliteration": "kao-ii • Last syllable with Middle class + Mai Tho"
-    },
-    {
-        "thai": "กระดาษ",
-        "tone": "low",
-        "meaning": "Paper",
-        "transliteration": "kra-daat • Short vowel syllable + Dead ending syllable"
-    },
-    {
         "thai": "ดินสอ",
         "tone": "mid",
         "meaning": "Pencil",
         "transliteration": "din-saw • Middle class initial + High class initial"
-    },
-    {
-        "thai": "ปากกา",
-        "tone": "mid",
-        "meaning": "Pen",
-        "transliteration": "paak-kaa • Middle class initials + Live ending"
-    },
-    {
-        "thai": "กระเป๋า",
-        "tone": "rising",
-        "meaning": "Bag",
-        "transliteration": "kra-pao • Last syllable with Middle class + Mai Chatatwa"
-    },
-    {
-        "thai": "รองเท้า",
-        "tone": "high",
-        "meaning": "Shoes",
-        "transliteration": "raawng-thao • Low class initials + Mai Tho tone mark"
-    },
-    {
-        "thai": "แว่นตา",
-        "tone": "falling",
-        "meaning": "Glasses",
-        "transliteration": "waen-taa • Low class initial + Mai Ek tone mark"
-    },
-    {
-        "thai": "นาฬิกา",
-        "tone": "mid",
-        "meaning": "Clock / Watch",
-        "transliteration": "naa-li-kaa • Low/Low/Middle initials + Live ending"
-    },
-    {
-        "thai": "โทรศัพท์",
-        "tone": "high",
-        "meaning": "Telephone",
-        "transliteration": "thoo-ra-sap • Last syllable with Low class + Dead ending"
     },
     {
         "thai": "จดหมาย",
@@ -2052,46 +1254,16 @@
         "transliteration": "sii-daeng • High class initial + Middle class initial"
     },
     {
-        "thai": "สีดำ",
-        "tone": "mid",
-        "meaning": "Black color",
-        "transliteration": "sii-dam • High class initial + Low class initial"
-    },
-    {
-        "thai": "สีฟ้า",
-        "tone": "high",
-        "meaning": "Light blue color",
-        "transliteration": "sii-faa • High class initial + Low class Mai Tho"
-    },
-    {
         "thai": "หก",
         "tone": "low",
         "meaning": "Six",
         "transliteration": "hok • High class initial + Short vowel + Dead ending"
     },
     {
-        "thai": "เจ็ด",
-        "tone": "low",
-        "meaning": "Seven",
-        "transliteration": "chet • Middle class initial + Short vowel + Dead ending"
-    },
-    {
         "thai": "แปด",
         "tone": "low",
         "meaning": "Eight",
         "transliteration": "paet • Middle class initial + Long vowel + Dead ending"
-    },
-    {
-        "thai": "ศูนย์",
-        "tone": "rising",
-        "meaning": "Zero",
-        "transliteration": "suun • High class initial + Live ending"
-    },
-    {
-        "thai": "เก้า",
-        "tone": "falling",
-        "meaning": "Nine",
-        "transliteration": "kao • Middle class initial + Mai Tho tone mark"
     },
     {
         "thai": "สิบ",
@@ -2112,94 +1284,10 @@
         "transliteration": "phan • Low class initial + Live ending"
     },
     {
-        "thai": "เพื่อน",
-        "tone": "falling",
-        "meaning": "Friend",
-        "transliteration": "phuean • Low class initial + Mai Ek tone mark"
-    },
-    {
         "thai": "คนรัก",
         "tone": "high",
         "meaning": "Lover / Sweetheart",
         "transliteration": "khon-rak • Low class initials + Dead ending syllable"
-    },
-    {
-        "thai": "ศัตรู",
-        "tone": "mid",
-        "meaning": "Enemy",
-        "transliteration": "sat-truu • High class initial + Middle class cluster"
-    },
-    {
-        "thai": "เด็ก",
-        "tone": "low",
-        "meaning": "Child",
-        "transliteration": "dek • Middle class initial + Short vowel + Dead ending"
-    },
-    {
-        "thai": "ผู้ใหญ่",
-        "tone": "low",
-        "meaning": "Adult",
-        "transliteration": "phu-yai • Falling tone syllable + High class ห lead with Mai Ek"
-    },
-    {
-        "thai": "ผู้ชาย",
-        "tone": "mid",
-        "meaning": "Man",
-        "transliteration": "phu-chaai • Falling tone syllable + Low class Live ending"
-    },
-    {
-        "thai": "ผู้หญิง",
-        "tone": "rising",
-        "meaning": "Woman",
-        "transliteration": "phu-ying • Falling tone syllable + High class ห lead"
-    },
-    {
-        "thai": "หัวใจ",
-        "tone": "mid",
-        "meaning": "Heart (Organ/Metaphor)",
-        "transliteration": "hua-chai • High class initial + Middle class initial"
-    },
-    {
-        "thai": "ร่างกาย",
-        "tone": "falling",
-        "meaning": "Body",
-        "transliteration": "raang-kaai • Low class Mai Ek + Middle class Live ending"
-    },
-    {
-        "thai": "เลือด",
-        "tone": "falling",
-        "meaning": "Blood",
-        "transliteration": "lueat • Low class initial + Long vowel + Dead ending"
-    },
-    {
-        "thai": "กระดูก",
-        "tone": "low",
-        "meaning": "Bone",
-        "transliteration": "kra-duuk • Middle class cluster + Middle class Dead ending"
-    },
-    {
-        "thai": "กุญแจ",
-        "tone": "mid",
-        "meaning": "Key / Lock",
-        "transliteration": "kun-chae • Middle class initials + Live ending"
-    },
-    {
-        "thai": "ประตู",
-        "tone": "mid",
-        "meaning": "Door / Gate",
-        "transliteration": "pra-tuu • Middle class cluster + Middle class Live ending"
-    },
-    {
-        "thai": "หน้าต่าง",
-        "tone": "low",
-        "meaning": "Window",
-        "transliteration": "naa-taang • High class ห lead + Middle class Mai Ek"
-    },
-    {
-        "thai": "หลังคา",
-        "tone": "mid",
-        "meaning": "Roof",
-        "transliteration": "lang-khaa • High class ห lead + Low class Live ending"
     },
     {
         "thai": "ครัว",
@@ -2230,24 +1318,6 @@
         "tone": "falling",
         "meaning": "Pot (Cooking)",
         "transliteration": "maw • High class ห lead + Mai Tho tone mark"
-    },
-    {
-        "thai": "ตู้เย็น",
-        "tone": "mid",
-        "meaning": "Refrigerator",
-        "transliteration": "tuu-yen • Falling tone syllable + Low class Live ending"
-    },
-    {
-        "thai": "อาหาร",
-        "tone": "mid",
-        "meaning": "Food / Meal",
-        "transliteration": "aa-haan • Middle class initial + High class Live ending"
-    },
-    {
-        "thai": "เนื้อ",
-        "tone": "high",
-        "meaning": "Meat / Beef",
-        "transliteration": "nuea • Low class initial + Mai Tho tone mark"
     },
     {
         "thai": "ขนม",
@@ -2286,12 +1356,6 @@
         "transliteration": "chaa • Low class initial + Live ending"
     },
     {
-        "thai": "คิดถึง",
-        "tone": "rising",
-        "meaning": "To miss (someone)",
-        "transliteration": "khit-thueng • High tone syllable + High class Live ending"
-    },
-    {
         "thai": "ลืม",
         "tone": "mid",
         "meaning": "To forget",
@@ -2320,24 +1384,6 @@
         "tone": "high",
         "meaning": "To win",
         "transliteration": "cha-na • Low class initial + Short vowel + Dead ending"
-    },
-    {
-        "thai": "แพ้",
-        "tone": "high",
-        "meaning": "To lose (game/allergy)",
-        "transliteration": "phae • Low class initial + Mai Tho tone mark"
-    },
-    {
-        "thai": "หัวเราะ",
-        "tone": "high",
-        "meaning": "To laugh",
-        "transliteration": "hua-raw • Rising tone syllable + Short vowel Dead ending"
-    },
-    {
-        "thai": "ร้องไห้",
-        "tone": "falling",
-        "meaning": "To cry",
-        "transliteration": "rawng-hai • High tone syllable + High class Mai Tho"
     },
     {
         "thai": "โกรธ",
@@ -2370,12 +1416,6 @@
         "transliteration": "nguang • Low class initial + Mai Ek tone mark"
     },
     {
-        "thai": "เหนื่อย",
-        "tone": "low",
-        "meaning": "Tired",
-        "transliteration": "nueay • High class ห lead + Mai Ek tone mark"
-    },
-    {
         "thai": "หิว",
         "tone": "rising",
         "meaning": "Hungry",
@@ -2392,18 +1432,6 @@
         "tone": "mid",
         "meaning": "Star",
         "transliteration": "daaw • Middle class initial + Live ending"
-    },
-    {
-        "thai": "พระจันทร์",
-        "tone": "mid",
-        "meaning": "Moon",
-        "transliteration": "phra-chan • Low/Middle initial + Live ending"
-    },
-    {
-        "thai": "พระอาทิตย์",
-        "tone": "high",
-        "meaning": "Sun",
-        "transliteration": "phra-aa-thit • Last syllable with Low class + Dead ending"
     },
     {
         "thai": "ฝุ่น",
@@ -2428,12 +1456,6 @@
         "tone": "mid",
         "meaning": "Sand",
         "transliteration": "saai • ทร pronounced as ซ (Low class initial) + Live ending"
-    },
-    {
-        "thai": "แม่น้ำ",
-        "tone": "high",
-        "meaning": "River",
-        "transliteration": "mae-nam • Falling tone syllable + High tone syllable"
     },
     {
         "thai": "ฝั่ง",
@@ -2472,88 +1494,10 @@
         "transliteration": "saawy • Low class initial + Live ending"
     },
     {
-        "thai": "สะพาน",
-        "tone": "mid",
-        "meaning": "Bridge",
-        "transliteration": "sa-phaan • Short vowel syllable + Low class Live ending"
-    },
-    {
-        "thai": "สถานี",
-        "tone": "mid",
-        "meaning": "Station",
-        "transliteration": "sa-thaa-nii • High/High/Low initials + Live ending"
-    },
-    {
-        "thai": "สนามบิน",
-        "tone": "mid",
-        "meaning": "Airport",
-        "transliteration": "sa-naam-bin • High class lead effect + Middle class Live ending"
-    },
-    {
-        "thai": "โรงแรม",
-        "tone": "mid",
-        "meaning": "Hotel",
-        "transliteration": "roong-raem • Low class initials + Live endings"
-    },
-    {
-        "thai": "ธนาคาร",
-        "tone": "mid",
-        "meaning": "Bank",
-        "transliteration": "tha-naa-khaan • Low class initials + Live endings"
-    },
-    {
-        "thai": "บริษัท",
-        "tone": "high",
-        "meaning": "Company / Corporation",
-        "transliteration": "baaw-ri-phat • Last syllable with Low class + Dead ending"
-    },
-    {
-        "thai": "ร้านค้า",
-        "tone": "high",
-        "meaning": "Shop / Store",
-        "transliteration": "raan-khaa • Low class initials + Mai Tho tone marks"
-    },
-    {
-        "thai": "ราคา",
-        "tone": "mid",
-        "meaning": "Price / Cost",
-        "transliteration": "raa-khaa • Low class initials + Live endings"
-    },
-    {
-        "thai": "ภาษี",
-        "tone": "rising",
-        "meaning": "Tax",
-        "transliteration": "phaa-sii • Low class initial + High class Live ending"
-    },
-    {
-        "thai": "เสื้อผ้า",
-        "tone": "falling",
-        "meaning": "Clothing / Garments",
-        "transliteration": "suea-phaa • High class initials + Mai Tho tone marks"
-    },
-    {
-        "thai": "กางเกง",
-        "tone": "mid",
-        "meaning": "Trousers / Pants",
-        "transliteration": "kaang-keng • Middle class initials + Live endings"
-    },
-    {
         "thai": "กระโปรง",
         "tone": "mid",
         "meaning": "Skirt",
         "transliteration": "kra-proong • Middle class clusters + Live endings"
-    },
-    {
-        "thai": "หมวก",
-        "tone": "low",
-        "meaning": "Hat / Cap",
-        "transliteration": "muak • High class ห lead + Long vowel + Dead ending"
-    },
-    {
-        "thai": "ถุงเท้า",
-        "tone": "high",
-        "meaning": "Socks",
-        "transliteration": "thung-thao • Rising tone syllable + High tone syllable"
     },
     {
         "thai": "สบู่",
@@ -2574,18 +1518,6 @@
         "transliteration": "kra-chok • Middle class cluster + Middle class Dead ending"
     },
     {
-        "thai": "ช้อนส้อม",
-        "tone": "falling",
-        "meaning": "Spoon and Fork",
-        "transliteration": "chaawn-saawm • High tone syllable + Falling tone syllable"
-    },
-    {
-        "thai": "ถ้วยแก้ว",
-        "tone": "falling",
-        "meaning": "Glass cup",
-        "transliteration": "thuay-kaew • High/Middle initials + Mai Tho tone marks"
-    },
-    {
         "thai": "ขวด",
         "tone": "low",
         "meaning": "Bottle",
@@ -2596,12 +1528,6 @@
         "tone": "rising",
         "meaning": "Bucket / Barrel",
         "transliteration": "thang • High class initial + Live ending"
-    },
-    {
-        "thai": "เชือก",
-        "tone": "falling",
-        "meaning": "Rope / String",
-        "transliteration": "chueak • Low class initial + Long vowel + Dead ending"
     },
     {
         "thai": "กล่อง",
@@ -2616,154 +1542,16 @@
         "transliteration": "thung • High class initial + Live ending"
     },
     {
-        "thai": "ตะปู",
-        "tone": "mid",
-        "meaning": "Nail (Hardware)",
-        "transliteration": "ta-puu • Middle class initials + Live ending"
-    },
-    {
-        "thai": "เครื่องมือ",
-        "tone": "mid",
-        "meaning": "Tools / Equipment",
-        "transliteration": "khrueang-mue • Falling tone syllable + Low class Live ending"
-    },
-    {
-        "thai": "สีเหลือง",
-        "tone": "rising",
-        "meaning": "Yellow color",
-        "transliteration": "sii-lueang • High class initial + High class ห lead"
-    },
-    {
-        "thai": "สีเขียว",
-        "tone": "rising",
-        "meaning": "Green color",
-        "transliteration": "sii-khiaw • High class initials + Live endings"
-    },
-    {
-        "thai": "สีน้ำเงิน",
-        "tone": "mid",
-        "meaning": "Dark blue color",
-        "transliteration": "sii-nam-ngoen • Mix of High/Low initials + Live ending"
-    },
-    {
-        "thai": "สีส้ม",
-        "tone": "falling",
-        "meaning": "Orange color",
-        "transliteration": "sii-som • High class initial + High class Mai Tho"
-    },
-    {
-        "thai": "สีน้ำตาล",
-        "tone": "mid",
-        "meaning": "Brown color",
-        "transliteration": "sii-nam-taan • High/High/Middle initials + Live ending"
-    },
-    {
-        "thai": "ทิศเหนือ",
-        "tone": "rising",
-        "meaning": "North direction",
-        "transliteration": "thit-nuea • Dead ending syllable + High class ห lead"
-    },
-    {
-        "thai": "ทิศใต้",
-        "tone": "falling",
-        "meaning": "South direction",
-        "transliteration": "thit-tai • Dead ending syllable + High class Mai Tho"
-    },
-    {
-        "thai": "ทิศตะวันออก",
-        "tone": "low",
-        "meaning": "East direction",
-        "transliteration": "thit-ta-wan-awk • Ends with Middle class Dead ending"
-    },
-    {
-        "thai": "ทิศตะวันตก",
-        "tone": "low",
-        "meaning": "West direction",
-        "transliteration": "thit-ta-wan-tok • Ends with Middle class Dead ending"
-    },
-    {
-        "thai": "เวลา",
-        "tone": "mid",
-        "meaning": "Time",
-        "transliteration": "wee-laa • Low class initials + Live endings"
-    },
-    {
-        "thai": "นาที",
-        "tone": "mid",
-        "meaning": "Minute",
-        "transliteration": "naa-thii • Low class initials + Live endings"
-    },
-    {
-        "thai": "ชั่วโมง",
-        "tone": "mid",
-        "meaning": "Hour",
-        "transliteration": "chua-moong • Falling tone syllable + Low class Live ending"
-    },
-    {
-        "thai": "เช้า",
-        "tone": "high",
-        "meaning": "Morning",
-        "transliteration": "chao • Low class initial + Mai Tho tone mark"
-    },
-    {
-        "thai": "เที่ยง",
-        "tone": "falling",
-        "meaning": "Noon / Midday",
-        "transliteration": "thiang • Low class initial + Mai Ek tone mark"
-    },
-    {
-        "thai": "เย็น",
-        "tone": "mid",
-        "meaning": "Late afternoon / Evening",
-        "transliteration": "yen • Low class initial + Live ending"
-    },
-    {
-        "thai": "กลางคืน",
-        "tone": "mid",
-        "meaning": "Nighttime",
-        "transliteration": "klaang-khuen • Middle/Low initials + Live endings"
-    },
-    {
-        "thai": "สัปดาห์",
-        "tone": "low",
-        "meaning": "Week",
-        "transliteration": "sap-daa • High class initial + Dead ending syllable"
-    },
-    {
-        "thai": "เดือน",
-        "tone": "mid",
-        "meaning": "Month / Moon",
-        "transliteration": "duan • Middle class initial + Live ending"
-    },
-    {
         "thai": "ฤดู",
         "tone": "mid",
         "meaning": "Season",
         "transliteration": "rue-duu • Vocalic r + Middle class Live ending"
     },
     {
-        "thai": "ฤดูร้อน",
-        "tone": "high",
-        "meaning": "Hot season / Summer",
-        "transliteration": "rue-duu-rawn • Ends with Low class + Mai Tho"
-    },
-    {
         "thai": "ฤดูฝน",
         "tone": "rising",
         "meaning": "Rainy season / Monsoon",
         "transliteration": "rue-duu-fon • Ends with High class Live ending"
-    },
-    {
-        "thai": "ฤดูหนาว",
-        "tone": "rising",
-        "meaning": "Cold season / Winter",
-        "transliteration": "rue-duu-naaw • Ends with High class ห lead"
-    },
-    {
-        "thai": "อากาศ",
-        "tone": "low",
-        "meaning": "Weather / Air",
-        "transliteration": "aa-kaat • Middle class initial + Low class Dead ending"
     },
     {
         "thai": "ลมพัด",
@@ -2778,22 +1566,10 @@
         "transliteration": "meek • Low class initial + Long vowel + Dead ending"
     },
     {
-        "thai": "พายุ",
-        "tone": "high",
-        "meaning": "Storm",
-        "transliteration": "phaa-yu • Low class initials + Live/Dead endings"
-    },
-    {
         "thai": "ประเทศ",
         "tone": "high",
         "meaning": "Country / Nation",
         "transliteration": "pra-theet • Middle class cluster + Low class Dead ending"
-    },
-    {
-        "thai": "รัฐบาล",
-        "tone": "mid",
-        "meaning": "Government",
-        "transliteration": "rat-tha-baan • Low class Dead ending + Middle class Live ending"
     },
     {
         "thai": "กฎหมาย",
@@ -2826,72 +1602,6 @@
         "transliteration": "wit-sa-wa-khon • Complex Sanskrit loanword + Live ending"
     },
     {
-        "thai": "พนักงาน",
-        "tone": "mid",
-        "meaning": "Employee / Staff",
-        "transliteration": "pha-nak-ngaan • Low class initials + Live endings"
-    },
-    {
-        "thai": "ชาวนา",
-        "tone": "mid",
-        "meaning": "Rice farmer",
-        "transliteration": "chaao-naa • Low class initials + Live endings"
-    },
-    {
-        "thai": "พ่อค้า",
-        "tone": "high",
-        "meaning": "Merchant / Trader (Male)",
-        "transliteration": "phaaw-khaa • Low class initials + Mai Ek and Mai Tho"
-    },
-    {
-        "thai": "แม่ค้า",
-        "tone": "high",
-        "meaning": "Merchant / Trader (Female)",
-        "transliteration": "mae-khaa • Low class initials + Mai Ek and Mai Tho"
-    },
-    {
-        "thai": "ลูกค้า",
-        "tone": "high",
-        "meaning": "Customer / Client",
-        "transliteration": "luuk-khaa • Low class initials + Long vowel Dead ending + Mai Tho"
-    },
-    {
-        "thai": "หัวหน้า",
-        "tone": "falling",
-        "meaning": "Boss / Leader",
-        "transliteration": "hua-naa • Rising tone syllable + High class ห lead with Mai Tho"
-    },
-    {
-        "thai": "ประชุม",
-        "tone": "mid",
-        "meaning": "To meet / Attend a meeting",
-        "transliteration": "pra-chum • Middle class cluster + Low class Live ending"
-    },
-    {
-        "thai": "สัญญา",
-        "tone": "mid",
-        "meaning": "Contract / Promise",
-        "transliteration": "san-yaa • High class initial + Low class Live ending"
-    },
-    {
-        "thai": "ความลับ",
-        "tone": "high",
-        "meaning": "Secret",
-        "transliteration": "khwaam-lap • Prefix ความ + Low class Short vowel Dead ending"
-    },
-    {
-        "thai": "ปัญหา",
-        "tone": "rising",
-        "meaning": "Problem / Issue",
-        "transliteration": "pan-haa • Middle class Live ending + High class Live ending"
-    },
-    {
-        "thai": "คำถาม",
-        "tone": "rising",
-        "meaning": "Question",
-        "transliteration": "kham-thaam • Low class Live ending + High class Live ending"
-    },
-    {
         "thai": "คำตอบ",
         "tone": "low",
         "meaning": "Answer",
@@ -2904,28 +1614,10 @@
         "transliteration": "khaaw • High class initial + Mai Ek tone mark"
     },
     {
-        "thai": "วิทยุ",
-        "tone": "high",
-        "meaning": "Radio",
-        "transliteration": "wit-tha-yu • Low class initial + Short vowel Dead ending"
-    },
-    {
         "thai": "เพลง",
         "tone": "mid",
         "meaning": "Song / Music",
         "transliteration": "phleng • Low class initial (Cluster) + Live ending"
-    },
-    {
-        "thai": "รูปภาพ",
-        "tone": "high",
-        "meaning": "Picture / Photo",
-        "transliteration": "ruup-phaap • Low class initials + Long vowel Dead endings"
-    },
-    {
-        "thai": "ภาพยนตร์",
-        "tone": "mid",
-        "meaning": "Movie / Cinema",
-        "transliteration": "phaap-pha-yon • Low class initials + Silent final marker"
     },
     {
         "thai": "ละคร",
@@ -2946,66 +1638,6 @@
         "transliteration": "khaawng-khwan • High class Live ending + Low class Live ending"
     },
     {
-        "thai": "งานเลี้ยง",
-        "tone": "falling",
-        "meaning": "Party / Banquet",
-        "transliteration": "ngaan-liang • Low class Live ending + Low class Mai Tho"
-    },
-    {
-        "thai": "ความสุข",
-        "tone": "low",
-        "meaning": "Happiness",
-        "transliteration": "khwaam-suk • Prefix ความ + Low class Short vowel Dead ending"
-    },
-    {
-        "thai": "ความทุกข์",
-        "tone": "high",
-        "meaning": "Suffering / Sorrow",
-        "transliteration": "khwaam-thuk • Prefix ความ + Low class Short vowel Dead ending"
-    },
-    {
-        "thai": "โชคดี",
-        "tone": "mid",
-        "meaning": "Good luck",
-        "transliteration": "chook-dii • Low class Dead ending + Middle class Live ending"
-    },
-    {
-        "thai": "อันตราย",
-        "tone": "mid",
-        "meaning": "Danger / Dangerous",
-        "transliteration": "an-ta-raai • Middle/Middle/Low initials + Live endings"
-    },
-    {
-        "thai": "อุบัติเหตุ",
-        "tone": "low",
-        "meaning": "Accident",
-        "transliteration": "u-bat-ti-heet • Complex loanword ending in Dead syllable"
-    },
-    {
-        "thai": "โรงพยาบาล",
-        "tone": "mid",
-        "meaning": "Hospital",
-        "transliteration": "roong-pha-yaa-baan • Low class initials + Live endings"
-    },
-    {
-        "thai": "พยาบาล",
-        "tone": "mid",
-        "meaning": "Nurse",
-        "transliteration": "pha-yaa-baan • Low class initials + Live endings"
-    },
-    {
-        "thai": "คนไข้",
-        "tone": "falling",
-        "meaning": "Patient (Medical)",
-        "transliteration": "khon-khai • Low class Live ending + High class Mai Tho"
-    },
-    {
-        "thai": "ไข้หวัด",
-        "tone": "low",
-        "meaning": "Cold / Flu",
-        "transliteration": "khai-wat • High class Mai Tho + High class ห lead Dead ending"
-    },
-    {
         "thai": "ไอ",
         "tone": "mid",
         "meaning": "To cough",
@@ -3024,76 +1656,10 @@
         "transliteration": "phlae • High class initial (Cluster) + Live ending"
     },
     {
-        "thai": "ร่างกาย",
-        "tone": "falling",
-        "meaning": "Body / Physique",
-        "transliteration": "raang-kaai • Low class Mai Ek + Middle class Live ending"
-    },
-    {
-        "thai": "สมอง",
-        "tone": "rising",
-        "meaning": "Brain",
-        "transliteration": "sa-maawng • High class cluster lead + Live ending"
-    },
-    {
-        "thai": "หัวใจ",
-        "tone": "mid",
-        "meaning": "Heart",
-        "transliteration": "hua-chai • High class initial + Middle class initial"
-    },
-    {
-        "thai": "กระเพาะ",
-        "tone": "high",
-        "meaning": "Stomach",
-        "transliteration": "kra-phraw • Middle class cluster + Low class Short vowel"
-    },
-    {
-        "thai": "อาหารเช้า",
-        "tone": "high",
-        "meaning": "Breakfast",
-        "transliteration": "aa-haan-chao • Middle/High Live endings + Low class Mai Tho"
-    },
-    {
-        "thai": "อาหารกลางวัน",
-        "tone": "mid",
-        "meaning": "Lunch",
-        "transliteration": "aa-haan-klaang-wan • Middle/High/Middle/Low Live endings"
-    },
-    {
-        "thai": "อาหารเย็น",
-        "tone": "mid",
-        "meaning": "Dinner",
-        "transliteration": "aa-haan-yen • Middle/High/Low Live endings"
-    },
-    {
-        "thai": "รสชาติ",
-        "tone": "falling",
-        "meaning": "Taste / Flavor",
-        "transliteration": "rot-chaat • Low class Dead ending + Low class Dead ending"
-    },
-    {
         "thai": "หวาน",
         "tone": "rising",
         "meaning": "Sweet",
         "transliteration": "waan • High class ห lead + Live ending"
-    },
-    {
-        "thai": "เผ็ด",
-        "tone": "low",
-        "meaning": "Spicy / Hot",
-        "transliteration": "phet • High class initial + Short vowel + Dead ending"
-    },
-    {
-        "thai": "เค็ม",
-        "tone": "mid",
-        "meaning": "Salty",
-        "transliteration": "khem • High class initial + Live ending"
-    },
-    {
-        "thai": "เปรี้ยว",
-        "tone": "falling",
-        "meaning": "Sour",
-        "transliteration": "priaw • Middle class cluster + Mai Tho tone mark"
     },
     {
         "thai": "ขม",
@@ -3108,70 +1674,10 @@
         "transliteration": "a-raawy • Middle class lead effect + Mai Ek tone mark"
     },
     {
-        "thai": "น้ำเปล่า",
-        "tone": "low",
-        "meaning": "Plain water",
-        "transliteration": "nam-plaao • High tone syllable + Middle class cluster Mai Ek"
-    },
-    {
-        "thai": "น้ำแข็ง",
-        "tone": "rising",
-        "meaning": "Ice",
-        "transliteration": "nam-khaeng • High tone syllable + High class Live ending"
-    },
-    {
-        "thai": "ต้มยำ",
-        "tone": "mid",
-        "meaning": "Tom Yum (Soup)",
-        "transliteration": "tom-yam • Falling tone syllable + Low class Live ending"
-    },
-    {
-        "thai": "ส้มตำ",
-        "tone": "mid",
-        "meaning": "Som Tum (Papaya salad)",
-        "transliteration": "som-tam • Falling tone syllable + Low class Live ending"
-    },
-    {
-        "thai": "มหาวิทยาลัย",
-        "tone": "mid",
-        "meaning": "University",
-        "transliteration": "ma-haa-wit-tha-yaa-lai • Multi-syllable loanword"
-    },
-    {
-        "thai": "ห้องเรียน",
-        "tone": "mid",
-        "meaning": "Classroom",
-        "transliteration": "haawng-rian • High class Mai Tho + Low class Live ending"
-    },
-    {
-        "thai": "บทเรียน",
-        "tone": "mid",
-        "meaning": "Lesson",
-        "transliteration": "bot-rian • Low class Dead ending + Low class Live ending"
-    },
-    {
-        "thai": "การบ้าน",
-        "tone": "falling",
-        "meaning": "Homework",
-        "transliteration": "kaan-baan • Middle class Live ending + Middle class Mai Tho"
-    },
-    {
         "thai": "สอบ",
         "tone": "low",
         "meaning": "To take an exam / Test",
         "transliteration": "sawp • High class initial + Long vowel + Dead ending"
-    },
-    {
-        "thai": "ภาษา",
-        "tone": "rising",
-        "meaning": "Language",
-        "transliteration": "phaa-saa • Low class initial + High class Live ending"
-    },
-    {
-        "thai": "ภาษาไทย",
-        "tone": "mid",
-        "meaning": "Thai language",
-        "transliteration": "phaa-saa-thai • Mix of Low/High/Low class initials"
     },
     {
         "thai": "อังกฤษ",
@@ -3180,28 +1686,10 @@
         "transliteration": "ang-krit • Middle class initial + Low class Dead ending"
     },
     {
-        "thai": "พจนานุกรม",
-        "tone": "mid",
-        "meaning": "Dictionary",
-        "transliteration": "phot-cha-naa-nu-krom • Pali-Sanskrit compound word"
-    },
-    {
-        "thai": "ความรู้",
-        "tone": "high",
-        "meaning": "Knowledge",
-        "transliteration": "khwaam-ruu • Prefix ความ + Low class Mai Tho"
-    },
-    {
         "thai": "ฉลาด",
         "tone": "low",
         "meaning": "Clever / Smart",
         "transliteration": "cha-laat • High class cluster lead + Dead ending"
-    },
-    {
-        "thai": "โง่",
-        "tone": "post-low",
-        "meaning": "Stupid / Foolish",
-        "transliteration": "ngoo • Low class initial + Mai Ek tone mark"
     },
     {
         "thai": "ขยัน",
@@ -3210,40 +1698,10 @@
         "transliteration": "kha-yan • High class cluster lead + Live ending"
     },
     {
-        "thai": "ขี้เกียจ",
-        "tone": "low",
-        "meaning": "Lazy",
-        "transliteration": "khii-kiat • High class Mai Tho + Middle class Dead ending"
-    },
-    {
-        "thai": "ระวัง",
-        "tone": "mid",
-        "meaning": "To be careful / Beware",
-        "transliteration": "ra-wang • Low class initial + Live ending"
-    },
-    {
-        "thai": "ยินดี",
-        "tone": "mid",
-        "meaning": "Glad / Pleased",
-        "transliteration": "yin-dii • Low class initial + Middle class Live ending"
-    },
-    {
-        "thai": "เสียใจ",
-        "tone": "mid",
-        "meaning": "Sad / Sorry",
-        "transliteration": "sia-chai • High class initial + Middle class initial"
-    },
-    {
         "thai": "ตกใจ",
         "tone": "mid",
         "meaning": "Shocked / Frightened",
         "transliteration": "tok-chai • Middle class Dead ending + Middle class initial"
-    },
-    {
-        "thai": "ตื่นเต้น",
-        "tone": "falling",
-        "meaning": "Excited",
-        "transliteration": "tuen-ten • Middle class Mai Ek + Middle class Mai Tho"
     },
     {
         "thai": "แปลก",
@@ -3258,22 +1716,10 @@
         "transliteration": "ngaai • Low class initial + Mai Ek tone mark"
     },
     {
-        "thai": "ชัดเจน",
-        "tone": "mid",
-        "meaning": "Clear / Obvious",
-        "transliteration": "chat-cheen • Low class Dead ending + Low class Live ending"
-    },
-    {
         "thai": "ปลอดภัย",
         "tone": "mid",
         "meaning": "Safe / Secure",
         "transliteration": "plaawt-phai • Middle class Dead ending + Low class Live ending"
-    },
-    {
-        "thai": "สำคัญ",
-        "tone": "mid",
-        "meaning": "Important",
-        "transliteration": "sam-khan • High class Live ending + Low class Live ending"
     },
     {
         "thai": "พิเศษ",
@@ -3330,76 +1776,10 @@
         "transliteration": "aa • Middle class initial + Live ending"
     },
     {
-        "thai": "ลูกชาย",
-        "tone": "mid",
-        "meaning": "Son",
-        "transliteration": "luuk-chaai • Low class Dead ending + Low class Live ending"
-    },
-    {
-        "thai": "ลูกสาว",
-        "tone": "rising",
-        "meaning": "Daughter",
-        "transliteration": "luuk-saao • Low class Dead ending + High class Live ending"
-    },
-    {
-        "thai": "แต่งงาน",
-        "tone": "mid",
-        "meaning": "To get married",
-        "transliteration": "taeng-ngaan • Middle class Mai Ek + Low class Live ending"
-    },
-    {
-        "thai": "เพื่อนบ้าน",
-        "tone": "falling",
-        "meaning": "Neighbor",
-        "transliteration": "phuean-baan • Low class Mai Ek + Middle class Mai Tho"
-    },
-    {
-        "thai": "สัตว์",
-        "tone": "low",
-        "meaning": "Animal",
-        "transliteration": "sat • High class initial + Short vowel + Dead ending"
-    },
-    {
-        "thai": "สิงโต",
-        "tone": "mid",
-        "meaning": "Lion",
-        "transliteration": "sing-too • High class initial + Middle class initial"
-    },
-    {
-        "thai": "เสือ",
-        "tone": "rising",
-        "meaning": "Tiger",
-        "transliteration": "suea • High class initial + Live ending"
-    },
-    {
         "thai": "ลิง",
         "tone": "mid",
         "meaning": "Monkey",
         "transliteration": "ling • Low class initial + Live ending"
-    },
-    {
-        "thai": "กระต่าย",
-        "tone": "low",
-        "meaning": "Rabbit",
-        "transliteration": "kra-taai • Middle class cluster + Middle class Mai Ek"
-    },
-    {
-        "thai": "นกอินทรี",
-        "tone": "mid",
-        "meaning": "Eagle",
-        "transliteration": "nok-in-sii • ทร pronounced as ซ (Low class initial) + Live ending"
-    },
-    {
-        "thai": "เป็ด",
-        "tone": "low",
-        "meaning": "Duck",
-        "transliteration": "pet • Middle class initial + Short vowel + Dead ending"
-    },
-    {
-        "thai": "เต่า",
-        "tone": "low",
-        "meaning": "Turtle",
-        "transliteration": "tao • Middle class initial + Mai Ek tone mark"
     },
     {
         "thai": "กบ",
@@ -3444,12 +1824,6 @@
         "transliteration": "ton-khaaw • Middle class Mai Tho + Low class Live ending"
     },
     {
-        "thai": "ไหล่",
-        "tone": "low",
-        "meaning": "Shoulder",
-        "transliteration": "lai • High class ห lead + Mai Ek tone mark"
-    },
-    {
         "thai": "อก",
         "tone": "low",
         "meaning": "Chest / Breast",
@@ -3468,46 +1842,10 @@
         "transliteration": "ew • Middle class initial + Live ending"
     },
     {
-        "thai": "นิ้วมือ",
-        "tone": "mid",
-        "meaning": "Finger",
-        "transliteration": "niu-mue • High tone syllable + Low class Live ending"
-    },
-    {
-        "thai": "หัวเข่า",
-        "tone": "low",
-        "meaning": "Knee",
-        "transliteration": "hua-khao • Rising tone syllable + High class Mai Ek"
-    },
-    {
-        "thai": "เท้า",
-        "tone": "high",
-        "meaning": "Foot",
-        "transliteration": "thao • Low class initial + Mai Tho tone mark"
-    },
-    {
         "thai": "ผิว",
         "tone": "rising",
         "meaning": "Skin",
         "transliteration": "phiu • High class initial + Live ending"
-    },
-    {
-        "thai": "กระเป๋าสตางค์",
-        "tone": "rising",
-        "meaning": "Wallet / Purse",
-        "transliteration": "kra-pao-sa-taang • Multi-syllable with silent final"
-    },
-    {
-        "thai": "เข็มขัด",
-        "tone": "low",
-        "meaning": "Belt",
-        "transliteration": "khem-khat • High class initial + High class Dead ending"
-    },
-    {
-        "thai": "ตุ้มหู",
-        "tone": "rising",
-        "meaning": "Earring",
-        "transliteration": "tum-huu • Middle class Mai Tri + High class Live ending"
     },
     {
         "thai": "สร้อยคอ",
@@ -3528,52 +1866,10 @@
         "transliteration": "rom • Low class initial + Mai Ek tone mark"
     },
     {
-        "thai": "กุญแจมือ",
-        "tone": "mid",
-        "meaning": "Handcuffs",
-        "transliteration": "kun-chae-mue • Middle/Middle/Low class initials"
-    },
-    {
-        "thai": "สีน้ำตาล",
-        "tone": "mid",
-        "meaning": "Brown",
-        "transliteration": "sii-nam-taan • High/High/Middle initials + Live ending"
-    },
-    {
-        "thai": "สีเทา",
-        "tone": "mid",
-        "meaning": "Grey",
-        "transliteration": "sii-thao • High class initial + Low class Live ending"
-    },
-    {
-        "thai": "สีม่วง",
-        "tone": "falling",
-        "meaning": "Purple",
-        "transliteration": "sii-muang • High class initial + Low class Mai Ek"
-    },
-    {
-        "thai": "สีชมพู",
-        "tone": "mid",
-        "meaning": "Pink",
-        "transliteration": "sii-chom-phuu • High class initial + Low class initials"
-    },
-    {
         "thai": "สีทอง",
         "tone": "mid",
         "meaning": "Gold color",
         "transliteration": "sii-thaawng • High class initial + Low class Live ending"
-    },
-    {
-        "thai": "สีเงิน",
-        "tone": "mid",
-        "meaning": "Silver color",
-        "transliteration": "sii-ngoen • High class initial + Low class Live ending"
-    },
-    {
-        "thai": "สีทองแดง",
-        "tone": "mid",
-        "meaning": "Copper / Bronze color",
-        "transliteration": "sii-thaawng-daeng • High/Low/Middle initials"
     },
     {
         "thai": "รูปทรง",
@@ -3594,148 +1890,16 @@
         "transliteration": "saawm • High class initial + Mai Tho tone mark"
     },
     {
-        "thai": "ตะเกียบ",
-        "tone": "low",
-        "meaning": "Chopsticks",
-        "transliteration": "ta-kiap • Middle class initial + Long vowel + Dead ending"
-    },
-    {
-        "thai": "กระทะ",
-        "tone": "high",
-        "meaning": "Pan / Frying pan",
-        "transliteration": "kra-tha • Middle class cluster + Low class Short vowel"
-    },
-    {
-        "thai": "เตาอบ",
-        "tone": "low",
-        "meaning": "Oven",
-        "transliteration": "tao-op • Middle class initial + Middle class Short vowel Dead ending"
-    },
-    {
-        "thai": "ไมโครเวฟ",
-        "tone": "high",
-        "meaning": "Microwave",
-        "transliteration": "mai-khroo-weep • Loanword with Low class Dead ending"
-    },
-    {
-        "thai": "ตู้เสื้อผ้า",
-        "tone": "falling",
-        "meaning": "Wardrobe / Closet",
-        "transliteration": "tuu-suea-phaa • Middle/High/High initials + Mai Tho marks"
-    },
-    {
-        "thai": "โซฟา",
-        "tone": "mid",
-        "meaning": "Sofa / Couch",
-        "transliteration": "soo-faa • Low class initials + Live endings"
-    },
-    {
-        "thai": "โคมไฟ",
-        "tone": "mid",
-        "meaning": "Lamp",
-        "transliteration": "khoom-fai • Low class initials + Live endings"
-    },
-    {
         "thai": "พรม",
         "tone": "mid",
         "meaning": "Carpet / Rug",
         "transliteration": "phrom • Low class initial + Live ending"
     },
     {
-        "thai": "หมอน",
-        "tone": "rising",
-        "meaning": "Pillow",
-        "transliteration": "maawn • High class ห lead + Live ending"
-    },
-    {
-        "thai": "ผ้าห่ม",
-        "tone": "low",
-        "meaning": "Blanket",
-        "transliteration": "phaa-hom • High class Mai Tho + High class ห lead Mai Ek"
-    },
-    {
-        "thai": "ผ้าเช็ดตัว",
-        "tone": "mid",
-        "meaning": "Towel",
-        "transliteration": "phaa-chet-tua • High class Mai Tho + Middle class Dead ending + Live ending"
-    },
-    {
-        "thai": "ยาสีฟัน",
-        "tone": "mid",
-        "meaning": "Toothpaste",
-        "transliteration": "yaa-sii-fan • Low/High/Low class initials + Live endings"
-    },
-    {
-        "thai": "แปรงสีฟัน",
-        "tone": "mid",
-        "meaning": "Toothbrush",
-        "transliteration": "praeng-sii-fan • Middle class cluster + High/Low initials"
-    },
-    {
-        "thai": "ยาสระผม",
-        "tone": "rising",
-        "meaning": "Shampoo",
-        "transliteration": "yaa-sa-phom • Low class Live + High class cluster lead Live ending"
-    },
-    {
         "thai": "ผงซักฟอก",
         "tone": "low",
         "meaning": "Laundry detergent",
         "transliteration": "phong-sak-faawk • High Live + Low Dead + Low Dead endings"
-    },
-    {
-        "thai": "ถังขยะ",
-        "tone": "low",
-        "meaning": "Trash can / Dustbin",
-        "transliteration": "thang-kha-ya • High class Live + High class Short vowel"
-    },
-    {
-        "thai": "ไม้กวาด",
-        "tone": "low",
-        "meaning": "Broom",
-        "transliteration": "mai-kwaat • Low class Mai Tho + Middle class cluster Dead ending"
-    },
-    {
-        "thai": "เครื่องซักผ้า",
-        "tone": "falling",
-        "meaning": "Washing machine",
-        "transliteration": "khrueang-sak-phaa • Low/Low/High initials + Tone marks"
-    },
-    {
-        "thai": "ตู้กับข้าว",
-        "tone": "falling",
-        "meaning": "Food cupboard / Larder",
-        "transliteration": "tuu-kap-khaaw • Middle Mai Tho + Middle Dead + High Mai Tho"
-    },
-    {
-        "thai": "อ่างล้างจาน",
-        "tone": "mid",
-        "meaning": "Kitchen sink",
-        "transliteration": "aang-laang-chaan • Middle Mai Ek + Low Mai Tho + Middle Live"
-    },
-    {
-        "thai": "หลังบ้าน",
-        "tone": "falling",
-        "meaning": "Backyard / Behind the house",
-        "transliteration": "lang-baan • High class ห lead + Middle class Mai Tho"
-    },
-    {
-        "thai": "หน้าบ้าน",
-        "tone": "falling",
-        "meaning": "Front of the house",
-        "transliteration": "naa-baan • High class ห lead with Mai Tho + Middle class Mai Tho"
-    },
-    {
-        "thai": "หลังคา",
-        "tone": "mid",
-        "meaning": "Roof",
-        "transliteration": "lang-khaa • High class ห lead + Low class Live ending"
-    },
-    {
-        "thai": "เพดาน",
-        "tone": "mid",
-        "meaning": "Ceiling",
-        "transliteration": "phee-daan • Low class initial + Middle class Live ending"
     },
     {
         "thai": "กำแพง",
@@ -3750,148 +1914,16 @@
         "transliteration": "rua • Low class initial + Mai Tho tone mark"
     },
     {
-        "thai": "บันได",
-        "tone": "mid",
-        "meaning": "Stairs / Ladder",
-        "transliteration": "ban-dai • Middle class initials + Live endings"
-    },
-    {
-        "thai": "ลิฟต์",
-        "tone": "high",
-        "meaning": "Elevator / Lift",
-        "transliteration": "lip • Low class initial + Short vowel + Dead ending (with silent ต)"
-    },
-    {
-        "thai": "หมู่บ้าน",
-        "tone": "falling",
-        "meaning": "Village / Housing estate",
-        "transliteration": "muu-baan • High class ห lead Mai Ek + Middle class Mai Tho"
-    },
-    {
         "thai": "วัด",
         "tone": "high",
         "meaning": "Temple",
         "transliteration": "wat • Low class initial + Short vowel + Dead ending"
     },
     {
-        "thai": "โบสถ์",
-        "tone": "low",
-        "meaning": "Church / Chapel",
-        "transliteration": "boot • Middle class initial + Long vowel + Dead ending"
-    },
-    {
-        "thai": "มัสยิด",
-        "tone": "low",
-        "meaning": "Mosque",
-        "transliteration": "mat-sa-yit • Low class Dead + High class Live + Low class Dead"
-    },
-    {
-        "thai": "โรงภาพยนตร์",
-        "tone": "mid",
-        "meaning": "Movie theater / Cinema",
-        "transliteration": "roong-phaap-pha-yon • Sanskrit compound with silent final"
-    },
-    {
-        "thai": "สวนสาธารณะ",
-        "tone": "high",
-        "meaning": "Public park",
-        "transliteration": "suan-saa-thaa-ra-na • High/Middle/Low class initials mix"
-    },
-    {
-        "thai": "พิพิธภัณฑ์",
-        "tone": "high",
-        "meaning": "Museum",
-        "transliteration": "phi-phit-tha-phan • Pali-derived complex word ending in Live sound"
-    },
-    {
-        "thai": "ห้องสมุด",
-        "tone": "low",
-        "meaning": "Library",
-        "transliteration": "haawng-sa-mut • High class Mai Tho + High class cluster lead Dead ending"
-    },
-    {
-        "thai": "สถานทูต",
-        "tone": "low",
-        "meaning": "Embassy",
-        "transliteration": "sa-thaan-thuut • High class Live + Low class Long vowel Dead ending"
-    },
-    {
-        "thai": "ไปรษณีย์",
-        "tone": "mid",
-        "meaning": "Post office",
-        "transliteration": "prai-sa-nii • Middle class cluster + High class Live ending"
-    },
-    {
-        "thai": "สถานีตำรวจ",
-        "tone": "low",
-        "meaning": "Police station",
-        "transliteration": "sa-thaa-nii-tam-ruat • High/Low/Middle/Low class sequence"
-    },
-    {
-        "thai": "สถานีดับเพลิง",
-        "tone": "mid",
-        "meaning": "Fire station",
-        "transliteration": "sa-thaa-nii-dap-phloeng • Ends with Low class Live ending"
-    },
-    {
         "thai": "ตลาดสด",
         "tone": "low",
         "meaning": "Fresh market",
         "transliteration": "ta-laat-sot • High cluster lead Dead + High class Dead ending"
-    },
-    {
-        "thai": "ห้างสรรพสินค้า",
-        "tone": "high",
-        "meaning": "Department store / Mall",
-        "transliteration": "haang-sap-pha-sin-khaa • High/Low/High/Low mix"
-    },
-    {
-        "thai": "ร้านอาหาร",
-        "tone": "mid",
-        "meaning": "Restaurant",
-        "transliteration": "raan-aa-haan • Low class Mai Tho + Middle/High Live endings"
-    },
-    {
-        "thai": "ร้านกาแฟ",
-        "tone": "mid",
-        "meaning": "Coffee shop / Café",
-        "transliteration": "raan-kaa-fae • Low class Mai Tho + Middle/Low Live endings"
-    },
-    {
-        "thai": "ร้านขายยา",
-        "tone": "mid",
-        "meaning": "Pharmacy / Drugstore",
-        "transliteration": "raan-khaai-yaa • Low Mai Tho + High Live + Low Live"
-    },
-    {
-        "thai": "ร้านเสริมสวย",
-        "tone": "rising",
-        "meaning": "Beauty salon",
-        "transliteration": "raan-soem-suay • Low Mai Tho + High Live + High Live"
-    },
-    {
-        "thai": "ปั๊มน้ำมัน",
-        "tone": "mid",
-        "meaning": "Gas station / Petrol station",
-        "transliteration": "pam-nam-man • Middle Mai Tri + High tone + Low Live ending"
-    },
-    {
-        "thai": "สวนสัตว์",
-        "tone": "low",
-        "meaning": "Zoo",
-        "transliteration": "suan-sat • High class Live ending + High class Short vowel Dead ending"
-    },
-    {
-        "thai": "ฤดูกาล",
-        "tone": "mid",
-        "meaning": "Season (General/Period)",
-        "transliteration": "rue-duu-kaan • Vocalic r + Middle class Live endings"
-    },
-    {
-        "thai": "ศตวรรษ",
-        "tone": "high",
-        "meaning": "Century",
-        "transliteration": "sat-ta-wat • High class initial + Low class Short vowel Dead ending"
     },
     {
         "thai": "อนาคต",
@@ -3906,54 +1938,6 @@
         "transliteration": "a-diit • Middle class initial + Long vowel + Dead ending"
     },
     {
-        "thai": "ปัจจุบัน",
-        "tone": "mid",
-        "meaning": "Present / Current time",
-        "transliteration": "pat-chu-ban • Middle class Dead ending + Low class Live ending"
-    },
-    {
-        "thai": "แผ่นดินไหว",
-        "tone": "rising",
-        "meaning": "Earthquake",
-        "transliteration": "phaen-din-wai • Low class Mai Ek + Middle Live + High class ห lead"
-    },
-    {
-        "thai": "ภูเขาไฟ",
-        "tone": "mid",
-        "meaning": "Volcano",
-        "transliteration": "phu-khao-fai • Low class initials + High class Live ending"
-    },
-    {
-        "thai": "น้ำท่วม",
-        "tone": "falling",
-        "meaning": "Flood",
-        "transliteration": "nam-thuam • High tone syllable + Low class Mai Ek"
-    },
-    {
-        "thai": "สิ่งแวดล้อม",
-        "tone": "falling",
-        "meaning": "Environment",
-        "transliteration": "sing-waet-laawm • High Mai Ek + Low Dead + Low Mai Tho"
-    },
-    {
-        "thai": "ธรรมชาติ",
-        "tone": "falling",
-        "meaning": "Nature",
-        "transliteration": "tham-ma-chaat • Low class initials + Low class Dead ending"
-    },
-    {
-        "thai": "มหาสมุทร",
-        "tone": "low",
-        "meaning": "Ocean",
-        "transliteration": "ma-haa-sa-mut • Low/High Live + High class cluster lead Dead ending"
-    },
-    {
-        "thai": "เกาะ",
-        "tone": "low",
-        "meaning": "Island",
-        "transliteration": "kaw • Middle class initial + Short vowel"
-    },
-    {
         "thai": "น้ำตก",
         "tone": "low",
         "meaning": "Waterfall",
@@ -3966,100 +1950,10 @@
         "transliteration": "tham • High class initial + Mai Tho tone mark"
     },
     {
-        "thai": "ป่าชายเลน",
-        "tone": "mid",
-        "meaning": "Mangrove forest",
-        "transliteration": "paa-chaai-leen • Middle Mai Ek + Low Live + Low Live"
-    },
-    {
-        "thai": "ชนบท",
-        "tone": "low",
-        "meaning": "Countryside / Rural area",
-        "transliteration": "cho-na-bot • Low class initial + Low class Dead ending"
-    },
-    {
-        "thai": "ทุ่งนา",
-        "tone": "mid",
-        "meaning": "Rice field / Paddy",
-        "transliteration": "thung-naa • Low class initial + Mai Ek + Low class Live ending"
-    },
-    {
-        "thai": "ไร่",
-        "tone": "falling",
-        "meaning": "Farm / Plantation (Dry crops)",
-        "transliteration": "rai • Low class initial + Mai Ek tone mark"
-    },
-    {
-        "thai": "พืชผัก",
-        "tone": "low",
-        "meaning": "Crops / Vegetables",
-        "transliteration": "phuet-phak • Low class Dead ending + High class Dead ending"
-    },
-    {
         "thai": "ผลผลิต",
         "tone": "low",
         "meaning": "Product / Yield / Output",
         "transliteration": "phon-la-phlit • High class Live + Low class cluster Dead ending"
-    },
-    {
-        "thai": "โรงงาน",
-        "tone": "mid",
-        "meaning": "Factory / Plant",
-        "transliteration": "roong-ngaan • Low class initials + Live endings"
-    },
-    {
-        "thai": "อุตสาหกรรม",
-        "tone": "mid",
-        "meaning": "Industry",
-        "transliteration": "ut-saa-ha-kam • Complex Sanskrit compound ending in Live sound"
-    },
-    {
-        "thai": "เศรษฐกิจ",
-        "tone": "low",
-        "meaning": "Economy",
-        "transliteration": "set-tha-kit • High class Dead ending + Middle class Dead ending"
-    },
-    {
-        "thai": "ธุรกิจ",
-        "tone": "low",
-        "meaning": "Business",
-        "transliteration": "thu-ra-kit • Low class initial + Middle class Dead ending"
-    },
-    {
-        "thai": "การค้า",
-        "tone": "high",
-        "meaning": "Commerce / Trade",
-        "transliteration": "kaan-khaa • Middle class Live ending + Low class Mai Tho"
-    },
-    {
-        "thai": "โฆษณา",
-        "tone": "mid",
-        "meaning": "Advertisement",
-        "transliteration": "khoot-sa-naa • Low class Dead ending + Low class Live ending"
-    },
-    {
-        "thai": "นโยบาย",
-        "tone": "mid",
-        "meaning": "Policy",
-        "transliteration": "na-yoo-baai • Low class initials + Middle class Live ending"
-    },
-    {
-        "thai": "การเมือง",
-        "tone": "mid",
-        "meaning": "Politics",
-        "transliteration": "kaan-mueang • Middle class Live ending + Low class Live ending"
-    },
-    {
-        "thai": "เลือกตั้ง",
-        "tone": "falling",
-        "meaning": "To elect / Election",
-        "transliteration": "lueak-tang • Low class Dead ending + Middle class Mai Tho"
-    },
-    {
-        "thai": "ประชาชน",
-        "tone": "mid",
-        "meaning": "Citizens / Public / People",
-        "transliteration": "pra-chaa-chon • Middle cluster + Low initials + Live ending"
     },
     {
         "thai": "สังคม",
@@ -4074,64 +1968,10 @@
         "transliteration": "wat-tha-na-tham • Low class initials + Live endings"
     },
     {
-        "thai": "ประเพณี",
-        "tone": "mid",
-        "meaning": "Tradition / Custom",
-        "transliteration": "pra-phee-nii • Middle cluster + Low class Live endings"
-    },
-    {
-        "thai": "ประวัติศาสตร์",
-        "tone": "low",
-        "meaning": "History",
-        "transliteration": "pra-wat-ti-saat • Middle cluster + Low Dead + High Dead ending"
-    },
-    {
-        "thai": "โบราณ",
-        "tone": "mid",
-        "meaning": "Ancient / Antique",
-        "transliteration": "boo-raan • Middle class initial + Low class Live ending"
-    },
-    {
-        "thai": "ศิลปะ",
-        "tone": "low",
-        "meaning": "Art",
-        "transliteration": "sin-la-pa • High class Live ending + Middle class Short vowel"
-    },
-    {
         "thai": "ดนตรี",
         "tone": "mid",
         "meaning": "Music / Musical instrument",
         "transliteration": "don-trii • Middle class initial + Middle class cluster Live ending"
-    },
-    {
-        "thai": "เครื่องดนตรี",
-        "tone": "mid",
-        "meaning": "Musical instruments",
-        "transliteration": "khrueang-don-trii • Prefix เครื่อง + Middle class cluster"
-    },
-    {
-        "thai": "เพลงชาติ",
-        "tone": "falling",
-        "meaning": "National anthem",
-        "transliteration": "phleng-chaat • Low class cluster Live + Low class Dead ending"
-    },
-    {
-        "thai": "ธงชาติ",
-        "tone": "falling",
-        "meaning": "National flag",
-        "transliteration": "thong-chaat • Low class Live ending + Low class Dead ending"
-    },
-    {
-        "thai": "ศาสนา",
-        "tone": "rising",
-        "meaning": "Religion",
-        "transliteration": "saat-sa-naa • High class Dead ending + High class Live ending"
-    },
-    {
-        "thai": "ความเชื่อ",
-        "tone": "falling",
-        "meaning": "Belief / Faith",
-        "transliteration": "khwaam-chuea • Prefix ความ + Low class Mai Ek"
     },
     {
         "thai": "บุญ",
@@ -4146,82 +1986,10 @@
         "transliteration": "baap • Middle class initial + Long vowel + Dead ending"
     },
     {
-        "thai": "เทวดา",
-        "tone": "mid",
-        "meaning": "Angel / Deity",
-        "transliteration": "thee-wa-daa • Low class initials + Middle class Live ending"
-    },
-    {
         "thai": "ผี",
         "tone": "rising",
         "meaning": "Ghost / Spirit",
         "transliteration": "phii • High class initial + Live ending"
-    },
-    {
-        "thai": "ความฝัน",
-        "tone": "mid",
-        "meaning": "A dream",
-        "transliteration": "khwaam-fan • Prefix ความ + High class Live ending"
-    },
-    {
-        "thai": "โชคชะตา",
-        "tone": "mid",
-        "meaning": "Destiny / Fate",
-        "transliteration": "chook-cha-taa • Low Dead + Low Live + Middle Live"
-    },
-    {
-        "thai": "ปาฏิหาริย์",
-        "tone": "mid",
-        "meaning": "Miracle",
-        "transliteration": "paa-ti-haan • Middle Live + Low Live + High Live with silent final"
-    },
-    {
-        "thai": "เวทมนตร์",
-        "tone": "low",
-        "meaning": "Magic / Spell / Charm",
-        "transliteration": "weet-mon • Low class Dead ending + Low class Live ending"
-    },
-    {
-        "thai": "วิทยาศาสตร์",
-        "tone": "low",
-        "meaning": "Science",
-        "transliteration": "wit-tha-yaa-saat • Low/Low initials + High class Long vowel Dead ending"
-    },
-    {
-        "thai": "คณิตศาสตร์",
-        "tone": "low",
-        "meaning": "Mathematics",
-        "transliteration": "kha-nit-ta-saat • Low/Low initials + High class Long vowel Dead ending"
-    },
-    {
-        "thai": "เทคโนโลยี",
-        "tone": "mid",
-        "meaning": "Technology",
-        "transliteration": "thek-noo-loo-yii • Loanword composed of Low class Live endings"
-    },
-    {
-        "thai": "คอมพิวเตอร์",
-        "tone": "falling",
-        "meaning": "Computer",
-        "transliteration": "khom-phiu-toer • Middle class final syllable with Mai Ek tone mark"
-    },
-    {
-        "thai": "อินเทอร์เน็ต",
-        "tone": "low",
-        "meaning": "Internet",
-        "transliteration": "in-thoer-net • Middle class initial + Low class Short vowel Dead ending"
-    },
-    {
-        "thai": "เว็บไซต์",
-        "tone": "high",
-        "meaning": "Website",
-        "transliteration": "wep-sai • Low class Dead ending + High class Live ending"
-    },
-    {
-        "thai": "ข้อมูล",
-        "tone": "mid",
-        "meaning": "Data / Information",
-        "transliteration": "khaaw-muun • High class Mai Thoo + Low class Live ending"
     },
     {
         "thai": "ระบบ",
@@ -4230,64 +1998,10 @@
         "transliteration": "ra-bop • Low class initial + Middle class Short vowel Dead ending"
     },
     {
-        "thai": "โปรแกรม",
-        "tone": "mid",
-        "meaning": "Program / Software",
-        "transliteration": "proo-kraem • Middle class clusters + Live endings"
-    },
-    {
-        "thai": "รหัสผ่าน",
-        "tone": "low",
-        "meaning": "Password",
-        "transliteration": "ra-hat-phaan • Low Dead + High Dead + High class Mai Ek Live ending"
-    },
-    {
         "thai": "หน้าจอ",
         "tone": "mid",
         "meaning": "Screen / Monitor",
         "transliteration": "naa-chaaw • High class ห lead with Mai Thoo + Low class Live ending"
-    },
-    {
-        "thai": "แป้นพิมพ์",
-        "tone": "falling",
-        "meaning": "Keyboard",
-        "transliteration": "paen-phim • Middle class Mai Thoo + Low class Live ending"
-    },
-    {
-        "thai": "กล้องถ่ายรูป",
-        "tone": "high",
-        "meaning": "Camera",
-        "transliteration": "klaawng-thaai-ruup • Ends with Low class Long vowel Dead ending"
-    },
-    {
-        "thai": "ภาพถ่าย",
-        "tone": "low",
-        "meaning": "Photograph / Snapshot",
-        "transliteration": "phaap-thaai • Low class Dead ending + High class Mai Ek Live ending"
-    },
-    {
-        "thai": "วิดีโอ",
-        "tone": "mid",
-        "meaning": "Video",
-        "transliteration": "wi-dii-oo • Low class initials + Middle class Live ending"
-    },
-    {
-        "thai": "สถานีวิทยุ",
-        "tone": "high",
-        "meaning": "Radio station",
-        "transliteration": "sa-thaa-nii-wit-tha-yu • High/Low class mixture ending in Short vowel"
-    },
-    {
-        "thai": "โทรทัศน์",
-        "tone": "high",
-        "meaning": "Television",
-        "transliteration": "thoo-ra-that • Low class initials + Low class Short vowel Dead ending"
-    },
-    {
-        "thai": "ภาพข่าว",
-        "tone": "low",
-        "meaning": "News picture / Press photo",
-        "transliteration": "phaap-khaaw • Low class Dead ending + High class Mai Ek Live ending"
     },
     {
         "thai": "บทความ",
@@ -4296,52 +2010,10 @@
         "transliteration": "bot-khwaam • Low class Dead ending + Low class cluster Live ending"
     },
     {
-        "thai": "นิตยสาร",
-        "tone": "rising",
-        "meaning": "Magazine / Journal",
-        "transliteration": "ni-ta-ya-saan • Low class initials + High class Live ending"
-    },
-    {
         "thai": "โฆษก",
         "tone": "low",
         "meaning": "Spokesperson / Announcer",
         "transliteration": "khoo-sok • Low class initial + High class Short vowel Dead ending"
-    },
-    {
-        "thai": "สัมภาษณ์",
-        "tone": "falling",
-        "meaning": "To interview",
-        "transliteration": "sam-phaat • High class Live ending + Low class Long vowel Dead ending"
-    },
-    {
-        "thai": "รายงาน",
-        "tone": "mid",
-        "meaning": "To report / A report",
-        "transliteration": "raai-ngaan • Low class initials + Live endings"
-    },
-    {
-        "thai": "ประกาศ",
-        "tone": "low",
-        "meaning": "Announcement / Notice",
-        "transliteration": "pra-kaat • Middle class cluster + High class Long vowel Dead ending"
-    },
-    {
-        "thai": "ชื่อเสียง",
-        "tone": "rising",
-        "meaning": "Fame / Reputation",
-        "transliteration": "chue-siang • Low class Mai Ek + High class Live ending"
-    },
-    {
-        "thai": "ความสำเร็จ",
-        "tone": "low",
-        "meaning": "Success",
-        "transliteration": "khwaam-sam-ret • Prefix ความ + Low class Short vowel Dead ending"
-    },
-    {
-        "thai": "เป้าหมาย",
-        "tone": "rising",
-        "meaning": "Goal / Target",
-        "transliteration": "pao-maai • Middle class initial + High class ห lead Live ending"
     },
     {
         "thai": "อนาคต",
@@ -4350,64 +2022,10 @@
         "transliteration": "a-naa-khot • Middle/Low initials + Low class Dead ending"
     },
     {
-        "thai": "ประสบการณ์",
-        "tone": "mid",
-        "meaning": "Experience",
-        "transliteration": "pra-sop-kaan • Middle cluster + Middle Dead + Middle Live ending"
-    },
-    {
-        "thai": "ความสามารถ",
-        "tone": "low",
-        "meaning": "Ability / Capability",
-        "transliteration": "khwaam-saa-maat • Prefix ความ + Low class Long vowel Dead ending"
-    },
-    {
-        "thai": "โอกาส",
-        "tone": "low",
-        "meaning": "Opportunity / Chance",
-        "transliteration": "oo-kaat • Middle class initial + Low class Long vowel Dead ending"
-    },
-    {
-        "thai": "การตัดสินใจ",
-        "tone": "mid",
-        "meaning": "Decision making",
-        "transliteration": "kaan-tat-sin-chai • Prefix การ + Middle Dead + High Live + Middle Live"
-    },
-    {
-        "thai": "ความคิดเห็น",
-        "tone": "rising",
-        "meaning": "Opinion / Viewpoint",
-        "transliteration": "khwaam-khit-hen • Prefix ความ + Low Dead + High Live ending"
-    },
-    {
-        "thai": "เหตุผล",
-        "tone": "rising",
-        "meaning": "Reason / Logic",
-        "transliteration": "heet-phon • Low class Dead ending + High class Live ending"
-    },
-    {
-        "thai": "หลักฐาน",
-        "tone": "rising",
-        "meaning": "Evidence / Proof",
-        "transliteration": "lak-thaan • High class ห lead Dead + High class Live ending"
-    },
-    {
-        "thai": "ความจริง",
-        "tone": "mid",
-        "meaning": "Truth / Reality",
-        "transliteration": "khwaam-ching • Prefix ความ + Middle class cluster Live ending"
-    },
-    {
         "thai": "โกหก",
         "tone": "low",
         "meaning": "To lie / Tell a lie",
         "transliteration": "koo-hok • Middle class initial + High class Short vowel Dead ending"
-    },
-    {
-        "thai": "ความผิด",
-        "tone": "low",
-        "meaning": "Fault / Mistake / Guilt",
-        "transliteration": "khwaam-phit • Prefix ความ + High class Short vowel Dead ending"
     },
     {
         "thai": "ขอโทษ",
@@ -4416,262 +2034,10 @@
         "transliteration": "khaw-thoot • High class Live ending + High class Long vowel Dead ending"
     },
     {
-        "thai": "ให้อภัย",
-        "tone": "mid",
-        "meaning": "To forgive",
-        "transliteration": "hai-a-phai • High class Mai Thoo + Low class Live ending"
-    },
-    {
-        "thai": "ความรู้สึก",
-        "tone": "low",
-        "meaning": "Feeling / Emotion",
-        "transliteration": "khwaam-ruu-suek • Prefix ความ + Low Mai Thoo + High Dead ending"
-    },
-    {
-        "thai": "ความรัก",
-        "tone": "high",
-        "meaning": "Love (Noun)",
-        "transliteration": "khwaam-rak • Prefix ความ + Low class Short vowel Dead ending"
-    },
-    {
-        "thai": "ความเมตตา",
-        "tone": "mid",
-        "meaning": "Kindness / Compassion",
-        "transliteration": "khwaam-meep-taa • Prefix ความ + Low Dead + Middle Live ending"
-    },
-    {
-        "thai": "ความซื่อสัตย์",
-        "tone": "low",
-        "meaning": "Honesty / Loyalty",
-        "transliteration": "khwaam-sue-sat • Prefix ความ + Low Mai Ek + High Short vowel Dead"
-    },
-    {
-        "thai": "ความเคารพ",
-        "tone": "high",
-        "meaning": "Respect / Deference",
-        "transliteration": "khwaam-khao-rop • Prefix ความ + Low Live + Low Short vowel Dead"
-    },
-    {
-        "thai": "ความยุติธรรม",
-        "tone": "mid",
-        "meaning": "Justice / Fairness",
-        "transliteration": "khwaam-yut-ti-tham • Multi-syllable ending in Live sound"
-    },
-    {
-        "thai": "เสรีภาพ",
-        "tone": "low",
-        "meaning": "Freedom / Liberty",
-        "transliteration": "see-rii-phaap • High Live + Low Live + Low class Long vowel Dead ending"
-    },
-    {
-        "thai": "สิทธิ",
-        "tone": "low",
-        "meaning": "Right / Privilege",
-        "transliteration": "sit-thi • High class initial + Short vowel + Dead ending"
-    },
-    {
-        "thai": "หน้าที่",
-        "tone": "falling",
-        "meaning": "Duty / Obligation",
-        "transliteration": "naa-thii • High class ห lead with Mai Thoo + Low class Live ending"
-    },
-    {
-        "thai": "เป้าหมายชีวิต",
-        "tone": "high",
-        "meaning": "Life goal",
-        "transliteration": "pao-maai-chii-wit • Middle Live + High Live + Low Mai Thoo + Low Dead"
-    },
-    {
-        "thai": "ศิลปวัฒนธรรม",
-        "tone": "mid",
-        "meaning": "Arts and culture",
-        "transliteration": "sin-la-pa-wat-tha-na-tham • Multi-syllable Pali-Sanskrit compound"
-    },
-    {
-        "thai": "วรรณกรรม",
-        "tone": "mid",
-        "meaning": "Literature",
-        "transliteration": "wan-na-kam • Low class initial + Live endings"
-    },
-    {
-        "thai": "กวีนิพนธ์",
-        "tone": "mid",
-        "meaning": "Poetry / Poem",
-        "transliteration": "ka-wii-ni-phon • Middle/Low initials + Live endings"
-    },
-    {
-        "thai": "ภาพวาด",
-        "tone": "low",
-        "meaning": "Painting / Drawing",
-        "transliteration": "phaap-waat • Low class Dead ending + Middle class Dead ending"
-    },
-    {
-        "thai": "สถาปัตยกรรม",
-        "tone": "mid",
-        "meaning": "Architecture",
-        "transliteration": "sa-thaa-pat-ta-ya-kam • Multi-syllable compound ending in Live sound"
-    },
-    {
-        "thai": "นิทรรศการ",
-        "tone": "mid",
-        "meaning": "Exhibition / Fair",
-        "transliteration": "ni-that-sa-kaan • Low class initials + Middle class Live ending"
-    },
-    {
-        "thai": "พิธีการ",
-        "tone": "mid",
-        "meaning": "Ceremony / Formalities",
-        "transliteration": "phi-thii-kaan • Low class initials + Middle class Live ending"
-    },
-    {
-        "thai": "เทศกาล",
-        "tone": "mid",
-        "meaning": "Festival",
-        "transliteration": "theet-sa-kaan • High class Dead ending + Middle class Live ending"
-    },
-    {
-        "thai": "คอนเสิร์ต",
-        "tone": "low",
-        "meaning": "Concert",
-        "transliteration": "khon-soet • Low class Live ending + Middle class Dead ending"
-    },
-    {
-        "thai": "เครื่องดนตรี",
-        "tone": "mid",
-        "meaning": "Musical instrument",
-        "transliteration": "khrueang-don-trii • Low Mai Ek + Middle Live + Middle cluster Live"
-    },
-    {
-        "thai": "การท่องเที่ยว",
-        "tone": "falling",
-        "meaning": "Tourism / Traveling",
-        "transliteration": "kaan-thaawng-thiao • Prefix การ + Low Mai Ek + Low Mai Ek"
-    },
-    {
-        "thai": "นักท่องเที่ยว",
-        "tone": "falling",
-        "meaning": "Tourist / Traveler",
-        "transliteration": "nak-thaawng-thiao • Low Short Dead + Low Mai Ek + Low Mai Ek"
-    },
-    {
-        "thai": "แผนที่",
-        "tone": "falling",
-        "meaning": "Map",
-        "transliteration": "phaen-thii • High class Live ending + Low class Mai Ek"
-    },
-    {
-        "thai": "เข็มทิศ",
-        "tone": "low",
-        "meaning": "Compass",
-        "transliteration": "khem-thit • High class Live ending + Low class Short vowel Dead ending"
-    },
-    {
-        "thai": "กระเป๋าเดินทาง",
-        "tone": "mid",
-        "meaning": "Luggage / Suitcase",
-        "transliteration": "kra-pao-doen-thaang • Last two syllables with Low class Live endings"
-    },
-    {
-        "thai": "หนังสือเดินทาง",
-        "tone": "mid",
-        "meaning": "Passport",
-        "transliteration": "nang-sue-doen-thaang • High/High/Low/Low sequence of Live endings"
-    },
-    {
-        "thai": "วีซ่า",
-        "tone": "falling",
-        "meaning": "Visa",
-        "transliteration": "wii-saa • Low class initial + Low class initial with Mai Ek"
-    },
-    {
-        "thai": "ตั๋วเครื่องบิน",
-        "tone": "mid",
-        "meaning": "Airplane ticket",
-        "transliteration": "tua-khrueang-bin • Middle Mai Chatatwa + Low Mai Ek + Middle Live"
-    },
-    {
-        "thai": "เที่ยวบิน",
-        "tone": "mid",
-        "meaning": "Flight",
-        "transliteration": "thiao-bin • Low class initial with Mai Ek + Middle class Live ending"
-    },
-    {
-        "thai": "สายการบิน",
-        "tone": "mid",
-        "meaning": "Airline",
-        "transliteration": "saai-kaan-bin • High Live + Middle Live + Middle Live"
-    },
-    {
-        "thai": "ผู้โดยสาร",
-        "tone": "rising",
-        "meaning": "Passenger",
-        "transliteration": "phu-dooi-saan • Falling tone syllable + Middle Live + High Live ending"
-    },
-    {
-        "thai": "ศุลกากร",
-        "tone": "mid",
-        "meaning": "Customs (Border/Airport)",
-        "transliteration": "sun-la-kaa-khon • High class initial + Live ending"
-    },
-    {
-        "thai": "มัคคุเทศกาล",
-        "tone": "mid",
-        "meaning": "Tour guide",
-        "transliteration": "mak-khu-theet • Low Dead + Low Live + High Dead + Middle Live"
-    },
-    {
-        "thai": "จุดหมายปลายทาง",
-        "tone": "mid",
-        "meaning": "Destination",
-        "transliteration": "chut-maai-plaai-thaang • Middle Dead + High Live + Middle Live + Low Live"
-    },
-    {
-        "thai": "ธรรมชาติ",
-        "tone": "falling",
-        "meaning": "Nature / Natural",
-        "transliteration": "tham-ma-chaat • Low class initials + Low class Dead ending"
-    },
-    {
-        "thai": "สิ่งมหัศจรรย์",
-        "tone": "mid",
-        "meaning": "Wonder / Marvel",
-        "transliteration": "sing-ma-hat-sa-chan • High Mai Ek + Low/Low/High/Low sequence"
-    },
-    {
         "thai": "มลพิษ",
         "tone": "low",
         "meaning": "Pollution",
         "transliteration": "mon-la-phit • Low class Live ending + High class Short vowel Dead ending"
-    },
-    {
-        "thai": "ขยะมูลฝอย",
-        "tone": "rising",
-        "meaning": "Refuse / Garbage / Waste",
-        "transliteration": "kha-ya-muun-faai • Mix of High, Low, and Middle class initials"
-    },
-    {
-        "thai": "การอนุรักษ์",
-        "tone": "high",
-        "meaning": "Conservation / Preservation",
-        "transliteration": "kaan-a-nu-rak • Prefix การ + Low class Short vowel Dead ending"
-    },
-    {
-        "thai": "พลังงาน",
-        "tone": "mid",
-        "meaning": "Energy / Power",
-        "transliteration": "pha-lang-ngaan • Low class initials + Live endings"
-    },
-    {
-        "thai": "พลังงานแสงอาทิตย์",
-        "tone": "high",
-        "meaning": "Solar energy",
-        "transliteration": "pha-lang-ngaan-saeng-aa-thit • Complex compound ending in Dead sound"
-    },
-    {
-        "thai": "ไฟฟ้า",
-        "tone": "high",
-        "meaning": "Electricity",
-        "transliteration": "fai-faa • Low class initial + Low class initial with Mai Tho"
     },
     {
         "thai": "นวัตกรรม",
@@ -4680,130 +2046,10 @@
         "transliteration": "na-wat-ta-kam • Low class initials + Live endings"
     },
     {
-        "thai": "การประดิษฐ์",
-        "tone": "low",
-        "meaning": "Invention",
-        "transliteration": "kaan-pra-dit • Prefix การ + Middle cluster + High Dead ending"
-    },
-    {
-        "thai": "การวิจัย",
-        "tone": "mid",
-        "meaning": "Research",
-        "transliteration": "kaan-wi-chai • Prefix การ + Low class initials + Live ending"
-    },
-    {
-        "thai": "ห้องปฏิบัติการ",
-        "tone": "mid",
-        "meaning": "Laboratory / Lab",
-        "transliteration": "haawng-pa-ti-bat-kaan • High Mai Tho + Middle Dead sequence + Live"
-    },
-    {
-        "thai": "สารเคมี",
-        "tone": "mid",
-        "meaning": "Chemical substance",
-        "transliteration": "saan-khee-mii • High class Live ending + Low class Live endings"
-    },
-    {
         "thai": "อะตอม",
         "tone": "mid",
         "meaning": "Atom",
         "transliteration": "a-tawm • Middle class initial + Middle class Live ending"
-    },
-    {
-        "thai": "โมเลกุล",
-        "tone": "mid",
-        "meaning": "Molecule",
-        "transliteration": "moo-lee-kun • Low class initials + Middle class Live ending"
-    },
-    {
-        "thai": "ฟิสิกส์",
-        "tone": "high",
-        "meaning": "Physics",
-        "transliteration": "fi-sik • Low class Short vowel Dead ending (with silent ส)"
-    },
-    {
-        "thai": "เคมี",
-        "tone": "mid",
-        "meaning": "Chemistry",
-        "transliteration": "khee-mii • Low class initials + Live endings"
-    },
-    {
-        "thai": "ชีววิทยา",
-        "tone": "mid",
-        "meaning": "Biology",
-        "transliteration": "chii-wa-wit-tha-yaa • Low class initials + Live endings"
-    },
-    {
-        "thai": "ดาราศาสตร์",
-        "tone": "low",
-        "meaning": "Astronomy",
-        "transliteration": "daa-raa-saat • Middle/Low Live endings + High class Long Dead ending"
-    },
-    {
-        "thai": "ภูมิศาสตร์",
-        "tone": "low",
-        "meaning": "Geography",
-        "transliteration": "phuu-mi-saat • Low class Live ending + High class Long Dead ending"
-    },
-    {
-        "thai": "ประวัติศาสตร์",
-        "tone": "low",
-        "meaning": "History",
-        "transliteration": "pra-wat-ti-saat • Middle cluster + Low Dead + High class Long Dead ending"
-    },
-    {
-        "thai": "โบราณคดี",
-        "tone": "mid",
-        "meaning": "Archaeology",
-        "transliteration": "boo-raan-na-kha-dii • Middle/Low/Low/Low/Middle sequence"
-    },
-    {
-        "thai": "สังคมศาสตร์",
-        "tone": "low",
-        "meaning": "Social sciences",
-        "transliteration": "sang-khom-ma-saat • High/Low Live + High class Long Dead ending"
-    },
-    {
-        "thai": "รัฐศาสตร์",
-        "tone": "low",
-        "meaning": "Political science",
-        "transliteration": "rat-tha-saat • Low class Short Dead + High class Long Dead ending"
-    },
-    {
-        "thai": "นิติศาสตร์",
-        "tone": "low",
-        "meaning": "Jurisprudence / Law study",
-        "transliteration": "ni-ti-saat • Low class Short Dead + High class Long Dead ending"
-    },
-    {
-        "thai": "เศรษฐศาสตร์",
-        "tone": "low",
-        "meaning": "Economics",
-        "transliteration": "set-tha-saat • High class Long Dead + High class Long Dead ending"
-    },
-    {
-        "thai": "คลังข้อมูล",
-        "tone": "mid",
-        "meaning": "Data warehouse / Repository",
-        "transliteration": "khlang-khaaw-muun • Low cluster Live + High Mai Tho + Low Live"
-    },
-    {
-        "thai": "เครือข่าย",
-        "tone": "low",
-        "meaning": "Network",
-        "transliteration": "khruea-khaai • Low class initial + Low class initial with Mai Ek"
-    },
-    {
-        "thai": "ปัญญาประดิษฐ์",
-        "tone": "low",
-        "meaning": "Artificial Intelligence (AI)",
-        "transliteration": "pan-yaa-pra-dit • Middle/Low Live + Middle cluster + High Dead"
-    },
-    {
-        "thai": "สกุลเงินดิจิทัล",
-        "tone": "mid",
-        "meaning": "Cryptocurrency",
-        "transliteration": "sa-kun-ngoen-di-chi-than • Complex loanword with Live ending"
     },
     {
         "thai": "ธุรกรรม",
@@ -4812,28 +2058,10 @@
         "transliteration": "thu-ra-kam • Low class initials + Live endings"
     },
     {
-        "thai": "การลงทุน",
-        "tone": "mid",
-        "meaning": "Investment",
-        "transliteration": "kaan-long-thun • Prefix การ + Low class Live endings"
-    },
-    {
         "thai": "ผลกำไร",
         "tone": "mid",
         "meaning": "Profit / Gain",
         "transliteration": "phon-kam-rai • High class Live + Middle Live + Low Live"
-    },
-    {
-        "thai": "ขาดทุน",
-        "tone": "mid",
-        "meaning": "To lose money / Deficit",
-        "transliteration": "khaat-thun • High class Long Dead + Low class Live ending"
-    },
-    {
-        "thai": "ตลาดหลักทรัพย์",
-        "tone": "high",
-        "meaning": "Stock market / Exchange",
-        "transliteration": "ta-laat-lak-sap • Sequence ending in Low class Short Dead"
     },
     {
         "thai": "หุ้น",
@@ -4842,243 +2070,15 @@
         "transliteration": "hun • High class initial + Mai Ek tone mark"
     },
     {
-        "thai": "อสังหาริมทรัพย์",
-        "tone": "high",
-        "meaning": "Real estate / Property",
-        "transliteration": "a-sang-haa-ri-ma-sap • Long compound ending in Short Dead sound"
-    },
-    {
-        "thai": "หนี้สิน",
-        "tone": "rising",
-        "meaning": "Debt / Liability",
-        "transliteration": "nii-sin • High class ห lead with Mai Tho + High class Live"
-    },
-    {
-        "thai": "ดอกเบี้ย",
-        "tone": "falling",
-        "meaning": "Interest (Financial)",
-        "transliteration": "dawk-bia • Middle class Long Dead + Low class Mai Tho"
-    },
-    {
-        "thai": "เงินเฟ้อ",
-        "tone": "high",
-        "meaning": "Inflation",
-        "transliteration": "ngoen-foe • Low class Live ending + Low class initial with Mai Tho"
-    },
-    {
-        "thai": "ใบเสร็จ",
-        "tone": "low",
-        "meaning": "Receipt",
-        "transliteration": "bai-set • Middle class Live + High class cluster Short Dead"
-    },
-    {
-        "thai": "ภาษีมูลค่าเพิ่ม",
-        "tone": "falling",
-        "meaning": "Value Added Tax (VAT)",
-        "transliteration": "phaa-sii-muun-la-khaa-phoem • Complex economic term"
-    },
-    {
-        "thai": "ประกันภัย",
-        "tone": "mid",
-        "meaning": "Insurance",
-        "transliteration": "pra-kan-phai • Middle cluster + Middle Live + Low Live"
-    },
-    {
-        "thai": "โรงพยาบาลสัตว์",
-        "tone": "low",
-        "meaning": "Veterinary hospital / Vet clinic",
-        "transliteration": "roong-pha-yaa-baan-sat • Ends in High class Short Dead"
-    },
-    {
-        "thai": "สัตวแพทย์",
-        "tone": "high",
-        "meaning": "Veterinarian / Vet",
-        "transliteration": "sat-ta-wa-phaet • High Short Dead + Low Live + Low Long Dead"
-    },
-    {
-        "thai": "ยาปฏิชีวนะ",
-        "tone": "mid",
-        "meaning": "Antibiotics",
-        "transliteration": "yaa-pa-ti-chii-wa-na • Multi-syllable medical term"
-    },
-    {
-        "thai": "วัคซีน",
-        "tone": "mid",
-        "meaning": "Vaccine",
-        "transliteration": "wak-siin • Low class Short Dead + High class Live ending"
-    },
-    {
-        "thai": "โรคติดต่อ",
-        "tone": "low",
-        "meaning": "Contagious disease",
-        "transliteration": "rook-tit-taaw • Low Long Dead + Middle Short Dead + Middle Mai Ek"
-    },
-    {
-        "thai": "ภูมิคุ้มกัน",
-        "tone": "mid",
-        "meaning": "Immunity",
-        "transliteration": "phuu-mi-khum-kan • Low Live + Low Mai Tho + Middle Live"
-    },
-    {
         "thai": "ศัลยกรรม",
         "tone": "mid",
         "meaning": "Surgery / Plastic surgery",
         "transliteration": "san-ya-kam • High class initial + Live endings"
     },
     {
-        "thai": "ความดันโลหิต",
-        "tone": "low",
-        "meaning": "Blood pressure",
-        "transliteration": "khwaam-dan-loo-hit • Prefix ความ + Middle Live + Low Live + Low Dead"
-    },
-    {
-        "thai": "เบาหวาน",
-        "tone": "rising",
-        "meaning": "Diabetes",
-        "transliteration": "bao-waan • Middle class Live + High class ห lead Live"
-    },
-    {
-        "thai": "ใบสั่งยา",
-        "tone": "mid",
-        "meaning": "Medical prescription",
-        "transliteration": "bai-sang-yaa • Middle Live + High Mai Ek + Low Live"
-    },
-    {
-        "thai": "อาการแทรกซ้อน",
-        "tone": "high",
-        "meaning": "Complications (Medical)",
-        "transliteration": "aa-kaan-saek-saawn • ทร pronounced as ซ (Low class initial)"
-    },
-    {
-        "thai": "การศึกษา",
-        "tone": "rising",
-        "meaning": "Education",
-        "transliteration": "kaan-suek-saa • Prefix การ + High Long Dead + High Live"
-    },
-    {
-        "thai": "ทุนศึกษา",
-        "tone": "rising",
-        "meaning": "Scholarship",
-        "transliteration": "thun-suek-saa • Low Live + High Long Dead + High Live"
-    },
-    {
-        "thai": "ปริญญา",
-        "tone": "mid",
-        "meaning": "Academic degree",
-        "transliteration": "pri-yaa • Middle class cluster + Low class Live ending"
-    },
-    {
-        "thai": "สถาบัน",
-        "tone": "mid",
-        "meaning": "Institute / Academy",
-        "transliteration": "sa-thaa-ban • High Short Live + High Live + Middle Live"
-    },
-    {
-        "thai": "หลักสูตร",
-        "tone": "low",
-        "meaning": "Curriculum / Course",
-        "transliteration": "lak-suut • High class ห lead Short Dead + High class Long Dead"
-    },
-    {
-        "thai": "วิทยานิพนธ์",
-        "tone": "mid",
-        "meaning": "Thesis / Dissertation",
-        "transliteration": "wit-tha-yaa-ni-phon • Low class initials + Live endings"
-    },
-    {
-        "thai": "ศาสตราจารย์",
-        "tone": "mid",
-        "meaning": "Professor",
-        "transliteration": "saat-traa-chaan • High Dead + Middle cluster Live + Middle Live"
-    },
-    {
-        "thai": "วุฒิการศึกษา",
-        "tone": "rising",
-        "meaning": "Educational qualification",
-        "transliteration": "wut-thi-kaan-suek-saa • Multi-syllable formal compound"
-    },
-    {
-        "thai": "การสอบเข้า",
-        "tone": "falling",
-        "meaning": "Entrance examination",
-        "transliteration": "kaan-sawp-khao • Prefix การ + High Long Dead + High Mai Tho"
-    },
-    {
-        "thai": "วิชาบังคับ",
-        "tone": "low",
-        "meaning": "Compulsory subject",
-        "transliteration": "wi-chaa-bang-khap • Low Live + Low Live + Middle Live + Low Dead"
-    },
-    {
-        "thai": "วิชาเลือก",
-        "tone": "low",
-        "meaning": "Elective subject",
-        "transliteration": "wi-chaa-lueak • Low Live + Low Live + Low class Long Dead"
-    },
-    {
-        "thai": "ห้องประชุม",
-        "tone": "mid",
-        "meaning": "Conference room",
-        "transliteration": "haawng-pra-chum • High Mai Tho + Middle cluster + Low Live"
-    },
-    {
-        "thai": "กำหนดการ",
-        "tone": "mid",
-        "meaning": "Schedule / Agenda / Itinerary",
-        "transliteration": "kam-not-kaan • Low Live + Middle Short Dead + Middle Live"
-    },
-    {
-        "thai": "รายงานประจำปี",
-        "tone": "mid",
-        "meaning": "Annual report",
-        "transliteration": "raai-ngaan-pra-cham-pii • Combination of Low and Middle initials"
-    },
-    {
-        "thai": "ความร่วมมือ",
-        "tone": "mid",
-        "meaning": "Cooperation / Collaboration",
-        "transliteration": "khwaam-ruam-mue • Prefix ความ + Low Mai Ek + Low Live"
-    },
-    {
-        "thai": "ความขัดแย้ง",
-        "tone": "high",
-        "meaning": "Conflict / Dispute",
-        "transliteration": "khwaam-khat-yaeng • Prefix ความ + High Short Dead + Low Mai Tho"
-    },
-    {
-        "thai": "การเจรจา",
-        "tone": "mid",
-        "meaning": "Negotiation",
-        "transliteration": "kaan-chen-ra-chaa • Prefix การ + Middle Live + Low Live + Low Live"
-    },
-    {
         "thai": "ข้อตกลง",
         "tone": "mid",
         "meaning": "Agreement / Treaty",
         "transliteration": "khaw-tok-long • High Mai Tho + Middle Short Dead + Low Live"
-    },
-    {
-        "thai": "พันธมิตร",
-        "tone": "low",
-        "meaning": "Ally / Alliance",
-        "transliteration": "phan-tha-mit • Low Live + Low Live + Middle class Long Dead"
-    },
-    {
-        "thai": "มาตรการ",
-        "tone": "mid",
-        "meaning": "Measure / Sanction / Policy",
-        "transliteration": "maat-tra-kaan • Low Long Dead + Middle cluster Live + Middle Live"
-    },
-    {
-        "thai": "งบประมาณ",
-        "tone": "mid",
-        "meaning": "Budget",
-        "transliteration": "ngop-pra-maan • Low Short Dead + Middle cluster Live + Low Live"
-    },
-    {
-        "thai": "ประสิทธิภาพ",
-        "tone": "low",
-        "meaning": "Efficiency / Effectiveness",
-        "transliteration": "pra-sit-thi-phaap • Complex formal word ending in Dead sound"
     }
 ]
