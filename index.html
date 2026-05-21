@@ -1221,7 +1221,7 @@
         async function fetchRandomInternetThaiWord() {
             try {
                 // Fetch dynamic vocabulary arrays using random routing variables via free dictionary/word list brokers
-                const response = await fetch('https://raw.githubusercontent.com/cm602/thai-vocabulary/master/vocabulary.json');
+                const response = await fetch('https://raw.githubusercontent.com/aolmio/thcore/main/tone.json');
                 if (!response.ok) throw new Error('Network payload anomaly');
                 
                 const vocabularyData = await response.json();
